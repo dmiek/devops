@@ -1,2 +1,0 @@
-# devops
-samlingsrepo för DevOps
