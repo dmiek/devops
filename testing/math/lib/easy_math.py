@@ -4,7 +4,7 @@ def setup():
     print("setting stuff up")
 
 def calculate(number1, number2, operation):
-    arithmetic_function = { '+': op.add, '-': op.sub, '*': op.mul, '/': op.div }
+    arithmetic_function = { '+': op.add, '-': op.sub, '*': op.mul, '/': op.floordiv }
     return arithmetic_function[operation](number1, number2)
 
 def teardown():
