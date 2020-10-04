@@ -69,7 +69,8 @@ class Message(object):
              down the alphabet by the input shift
         '''
         #Convert each letter of plaintext to the corrsponding  
-        #encrypted letter in our dictionary creating the cryptext  
+        #encrypted letter in our dictionary creating the cryptext
+        dic=[]
         ciphertext=""  
         for l in plaintext.lower():  
             if l in dic:  
