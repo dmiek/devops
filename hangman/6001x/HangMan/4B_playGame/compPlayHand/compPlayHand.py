@@ -269,7 +269,7 @@ def compPlayHand(hand, wordList, n):
             
             # End the game (break out of the loop)
             break
-z§                
+
         # Otherwise (the input is not a single period):
             
         else:
