@@ -22,8 +22,7 @@ def createDeck():
     return deck
 
 deck = createDeck()
-
-
+print(deck)
 
 
 
