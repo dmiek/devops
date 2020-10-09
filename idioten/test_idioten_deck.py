@@ -3,7 +3,7 @@ from idioten_deck import create_deck
 
 game_active = False
 
-@scenario('Create a proper deck for the game')
+@scenario('feature_idioten_deck.feature', 'Create a proper deck for the game')
 def test_create_deck():
     pass
 
