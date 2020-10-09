@@ -33,4 +33,6 @@ def test_create_deck_allowed_ranks():
 
 @then('new deck is different from previous deck')
 def test_new_deck_previous_deck():
+    previous_deck = create_deck()
+    new_deck = create_deck()
     assert new_deck != previous_deck
