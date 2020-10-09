@@ -5,6 +5,9 @@ game_active = False
 
 # FUNCTIONS:
 
+def no_game_active()
+    game_active = False
+
 def create_deck():
     print("creating deck")
     cardfaces = []

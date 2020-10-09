@@ -4,17 +4,18 @@ from board_list import new_game
 from idioten_board import game_active
 from idioten_deck import create_deck
 
+game_active = False
 
 @scenario('Create a proper deck for the game')
 def test_create_deck():
     pass
 
 @given('no active round')
-def no_active_round
+def no_active_round()
     assert.game_active = False
 
 @when('new round started')
-def new_round_started
+def new_round_started()
     new_game()
 
 
