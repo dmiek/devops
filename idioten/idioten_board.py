@@ -142,8 +142,8 @@ def playGame(board):
         return board
     elif r == "e" or r == "exit":
         sys.exit("ending game, thanks for playing!")
-    elif r == "e" or r == "exit":
-        finishGame()
+    # elif r == "e" or r == "exit":
+    #     finishGame()
     elif r == "m":
         board = moveCard(board)
         return board
