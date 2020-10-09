@@ -5,7 +5,7 @@ game_active = False
 
 # FUNCTIONS:
 
-def no_game_active()
+def no_game_active():
     game_active = False
 
 def create_deck():
@@ -247,7 +247,7 @@ board = [emptyRow()]
 print("empty board created")
 rond = emptyRow()
 print("round emptied")
-deck = createDeck()
+deck = create_deck()
 print("*** SETUP FINISHED ***")
 
 # PLAY:

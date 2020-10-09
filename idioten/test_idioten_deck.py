@@ -1,7 +1,7 @@
 import pytest
 from pytest_bdd import scenario, given, when, then
 
-from board_list import new_game
+from idioten_board import new_game
 from idioten_board import game_active
 from idioten_deck import create_deck
 
