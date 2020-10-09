@@ -1,10 +1,11 @@
 import random
 import sys
 
+game_active = False
 
 # FUNCTIONS:
 
-def createDeck():
+def create_deck():
     print("creating deck")
     cardfaces = []
     suits = ["C", "D", "H", "S"]
@@ -26,11 +27,12 @@ def createDeck():
     return deck
 
 
-def newGame():
+def new_game():
     print("initiating new game")
     board = [emptyRow()]
     deck = createDeck()
     board = dealCards(board, deck)
+    game_active = True
 
     # TEST
     if len(board) != 1:
@@ -142,13 +144,14 @@ def playGame(board):
         return board
     elif r == "e" or r == "exit":
         sys.exit("ending game, thanks for playing!")
+        game_active = False
     # elif r == "e" or r == "exit":
     #     finishGame()
     elif r == "m":
         board = moveCard(board)
         return board
     elif r == "n":
-        board = newGame()
+        board = new_game()
         return board
     elif r == "help":
         helpMenu(board)
@@ -231,6 +234,7 @@ def endGameEvaluationboard(board):
     x = 1
     while len(deck) < 1:
         board = playGame(board)
+    game_active = False
 
 
 # SETUP:
@@ -247,7 +251,7 @@ print("*** SETUP FINISHED ***")
 
 print("***")
 print("*** GAME INITIATED ***")
-newGame()
+new_game()
 displayBoard(board)
 print("***")
 
