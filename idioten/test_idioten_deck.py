@@ -1,3 +1,4 @@
+import pytest
 from pytest_bdd import scenario, given, when, then
 
 from board_list import new_game
@@ -11,12 +12,12 @@ def test_create_deck():
     pass
 
 @given('no active round')
-def no_active_round()
+def no_active_round():
     assert.game_active = False
 
-@when('new round started')
-def new_round_started()
-    new_game()
+@when('new deck is generated')
+def new_round_started():
+    create_deck()
 
 
 @then('deck contains only allowed colours')
