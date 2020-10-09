@@ -15,7 +15,7 @@ class TestNewDeck(unittest.TestCase):
 
     def test_createDeck_allowed_ranks(self):
         # Check that deck contains only allowed ranks.
-        deck = createDeck()
+        deck = create_deck()
         allowed_ranks = ['A','2','3','4','5','6','7','8','9','T','J','Q','K']
         for i in deck:
             self.assertIn(i[0], allowed_ranks)
