@@ -11,7 +11,7 @@ Feature: Deck
         When new deck generated
         Then deck contains only allowed ranks
 
-    Scenario: Deck is shuffled again at the start of each round
+    Scenario: Create a proper deck for the game
         Given no active round
         When new deck generated
         Then new deck is different from previous deck
