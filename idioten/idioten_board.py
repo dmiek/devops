@@ -33,7 +33,7 @@ def create_deck():
 def new_game():
     print("initiating new game")
     board = [emptyRow()]
-    deck = createDeck()
+    deck = create_deck()
     board = dealCards(board, deck)
     game_active = True
 
