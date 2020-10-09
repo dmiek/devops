@@ -1,7 +1,7 @@
 import random
 
 
-def createDeck():
+def create_deck():
 
     cardfaces = []
     suits = ["C", "D", "H", "S"]
@@ -21,8 +21,7 @@ def createDeck():
     random.shuffle(deck)
     return deck
 
-deck = createDeck()
-print(deck)
+deck = create_deck()
 
 
 
