@@ -1,4 +1,4 @@
-from pytest_bdd import scenarion, given, when, then
+from pytest_bdd import scenario, given, when, then
 from idioten_deck import create_deck
 
 game_active = False
