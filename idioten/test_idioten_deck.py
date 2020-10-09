@@ -2,13 +2,13 @@ import unittest
 import pytest
 
 
-from idioten_deck import createDeck
+from idioten_deck import create_deck
 
 class TestNewDeck(unittest.TestCase):
 
     def test_createDeck_allowed_colour(self):
         # Check that deck only contains allowed colours.
-        deck = createDeck()
+        deck = create_deck()
         allowed_colour = ["D","S","C","H"]
         for i in deck:
             self.assertIn(i[1], allowed_colour)
