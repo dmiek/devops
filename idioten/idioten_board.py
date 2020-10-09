@@ -1,5 +1,6 @@
 import random
 import sys
+from idioten_deck import create_deck
 
 game_active = False
 
@@ -7,28 +8,6 @@ game_active = False
 
 def no_game_active():
     game_active = False
-
-def create_deck():
-    print("creating deck")
-    cardfaces = []
-    suits = ["C", "D", "H", "S"]
-    royals = ["A", "T", "J", "Q", "K"]
-    deck = []
-
-    for i in range(2, 10):
-        cardfaces.append(str(i))
-
-    for j in range(len(royals)):
-        cardfaces.append(royals[j])
-
-    for k in range(len(suits)):
-        for l in range(len(cardfaces)):
-            card = (cardfaces[l] + suits[k])
-            deck.append(card)
-    random.shuffle(deck)
-    print("deck created")
-    return deck
-
 
 def new_game():
     print("initiating new game")
