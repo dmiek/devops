@@ -1,3 +1,4 @@
+import pytest
 from pytest_bdd import scenario, given, when, then
 from idioten_deck import create_deck
 
