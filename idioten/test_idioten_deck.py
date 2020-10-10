@@ -54,6 +54,15 @@ def test_deck_type():
     assert type(deck) == list
 
 
+@then('deck contains no duplications')
+def test_unique_card():
+    unique_card = []
+    assert len(new_deck) == 52
+    for i in range(len(deck)):
+        assert deck[i] not in unique_card
+        unique_card.append(deck[i])
+
+
 # @then('new deck is different from previous deck')
 # def test_new_deck_previous_deck():
 #     previous_deck = create_deck()
@@ -63,10 +72,4 @@ def test_deck_type():
 
 
 
-# @then('deck contains no duplications')
-# def test_unique_card():
-#     unique_card = []
-#     assert len(new_deck) == 52
-#     for i in range(len(deck)):
-#         assert deck[i] not in unique_card
-#         unique_card.append(deck[i])
+

@@ -15,3 +15,8 @@ Feature: Deck
         Given existing deck
         When deck shuffled
         Then deck is of correct type
+
+    Scenario: Deck contains no duplications
+        Given existing deck
+        When deck shuffled
+        Then deck contains no duplications
