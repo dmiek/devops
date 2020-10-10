@@ -16,7 +16,18 @@ Feature: Deck
         When deck shuffled
         Then deck is of correct type
 
+    Scenario: Deck contains correct number of cards
+        Given existing deck
+        When deck shuffled
+        Then deck contains all cards
+
     Scenario: Deck contains no duplications
         Given existing deck
         When deck shuffled
         Then deck contains no duplications
+
+    Scenario: Deck is different from previous deck
+        Given existing deck
+        When deck shuffled
+        Then deck is different from previous deck
+
