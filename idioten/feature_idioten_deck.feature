@@ -1,17 +1,27 @@
 Feature: Deck
     The Deck is the foundation of the game.
 
-    Scenario: Deck only contains allowed colours
-        Given no active round
+    Scenario: New deck is different from previous one
+        Given existing deck
         When new deck generated
+        Then new deck is different from previous deck
+
+    Scenario: Deck only contains allowed colours
+        Given no deck
+        When deck shuffled
         Then deck contains only allowed colours
 
     Scenario: Deck only contains allowed ranks
-        Given no active round
-        When new deck generated
+        Given no deck
+        When deck shuffled
         Then deck contains only allowed ranks
 
-    Scenario: Create a proper deck for the game
-        Given no active round
-        When new deck generated
-        Then new deck is different from previous deck
+    Scenario: Deck is of the correct type
+        Given no deck
+        When deck shuffled
+        Then deck is of the correct type
+
+    Scenario: Deck contains no duplications
+        Given no deck
+        When deck shuffled
+        Then deck contains no duplications
