@@ -10,9 +10,9 @@ def test_create_deck():
     pass
 
 
-@given('existing deck')
+@given("existing deck")
 def test_existing_deck():
-    #assert len(previous_deck) == 52
+    assert len(previous_deck) == 52
 
 #
 # @when('deck shuffled')
