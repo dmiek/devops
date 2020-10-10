@@ -3,7 +3,7 @@ Feature: Deck
 
     Scenario: New deck is OK and different from previous one
         Given existing deck
-        When new deck generated
+        When deck shuffled
         Then new deck is different from previous deck
 
     Scenario: Deck only contains allowed colours

@@ -6,32 +6,32 @@ deck = []
 previous_deck = create_deck()
 
 
-# @scenario("idioten_deck.feature", "New deck is OK and different from previous one")
-# def test_createe_deck():
-#     pass
-#
-#
-# @given("existing deck")
-# def test_existing_deck():
-#     previous_deck = create_deck()
-#     assert len(previous_deck) == 52
+@scenario("idioten_deck.feature", "New deck is OK and different from previous one")
+def test_createe_deck():
+    pass
 
 
-#
-# @when('deck shuffled')
-# def new_deck_generated():
-#     deck = create_deck()
-#     assert type(deck) == list
-#     return deck
-#
-#
-# @then('deck contains only allowed colours')
-# def test_create_deck_allowed_colour():
-#     # Check that deck only contains allowed colours.
-#     allowed_colour = ["D", "S", "C", "H"]
-#     for i in deck:
-#         assert i[1] in allowed_colour
-#
+@given("existing deck")
+def test_existing_deck():
+    previous_deck = create_deck()
+    assert len(previous_deck) == 52
+
+
+
+@when('deck shuffled')
+def new_deck_generated():
+    deck = create_deck()
+    assert type(deck) == list
+    return deck
+
+
+@then('deck contains only allowed colours')
+def test_create_deck_allowed_colour():
+    # Check that deck only contains allowed colours.
+    allowed_colour = ["D", "S", "C", "H"]
+    for i in deck:
+        assert i[1] in allowed_colour
+
 #
 # @then('deck contains only allowed ranks')
 # def test_create_deck_allowed_ranks():
