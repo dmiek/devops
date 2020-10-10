@@ -11,8 +11,8 @@ def test_create_deck():
 
 
 @given('existing deck')
-def existing_deck():
-    assert len(previous_deck) == 52
+def test_existing_deck():
+    #assert len(previous_deck) == 52
 
 #
 # @when('deck shuffled')
