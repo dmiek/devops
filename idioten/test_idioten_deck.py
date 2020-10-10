@@ -66,6 +66,7 @@ def deck_type():
 
 @then('deck contains all cards')
 def deck_length(deck):
+    deck = create_deck()
     assert len(deck) == 52
 
 
