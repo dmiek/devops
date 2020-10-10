@@ -6,7 +6,7 @@ deck = []
 previous_deck = create_deck()
 
 
-@scenario("idioten_deck.feature", "New deck is OK and different from previous one")
+@scenario("idioten_deck.feature", "Deck only contains allowed colours")
 def test_createe_deck():
     pass
 
