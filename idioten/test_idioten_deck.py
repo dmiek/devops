@@ -39,7 +39,6 @@ def existing_deck():
 @when(parsers.parse('{deck} shuffled'))
 def deck_shuffled():
     deck = create_deck()
-    #assert type(deck) == list
     return deck
 
 
@@ -64,14 +63,13 @@ def deck_type():
     assert type(deck) == list
 
 
-@then('deck contains all cards')
+@then(parsers.parse('{deck} contains all cards'))
 def deck_length():
-    deck = create_deck()
     assert len(deck) == 52
 
 
-@then('deck contains no duplications')
-def unique_card():
+@then(parsers.parse('{deck} contains no duplications'))
+def unique_card(deck):
     unique_card = []
     for i in range(len(deck)):
         assert deck[i] not in unique_card
