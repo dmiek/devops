@@ -1,4 +1,4 @@
-from pytest_bdd import scenario, given, when, then
+from pytest_bdd import scenario, given, when, then, parsers
 from idioten_deck import create_deck
 
 deck = []
@@ -30,16 +30,16 @@ def test_new_deck_different():
     pass
 
 
-@given("existing deck", previous_deck)
+@given("existing deck")
 def existing_deck():
     previous_deck = create_deck()
     return previous_deck
 
 
-@when('deck shuffled')
+@when('{deck} shuffled')
 def deck_shuffled():
     deck = create_deck()
-    assert type(deck) == list
+    #assert type(deck) == list
     return deck
 
 
@@ -78,8 +78,8 @@ def unique_card():
         unique_card.append(deck[i])
 
 
-@then('deck is different from previous deck', deck, previous_deck)
-def new_deck_previous_deck():
+@then(parsers.parse('{deck} is different from {previous_deck}'))
+def new_deck_previous_deck(deck, previous_deck):
     assert deck != previous_deck
 
 
