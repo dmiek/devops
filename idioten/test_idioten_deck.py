@@ -1,8 +1,8 @@
 from pytest_bdd import scenario, given, when, then
 from idioten_deck import create_deck
 
-deck = create_deck()
-previous_deck = create_deck()
+deck = []
+previous_deck = []
 
 
 @scenario("idioten_deck.feature", "Deck only contains allowed colours")
@@ -78,7 +78,7 @@ def unique_card():
         unique_card.append(deck[i])
 
 
-@then('deck is different from previous deck')
+@then('deck is different from previous deck', deck, previous_deck)
 def new_deck_previous_deck():
     assert deck != previous_deck
 
