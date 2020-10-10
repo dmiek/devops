@@ -6,27 +6,27 @@ previous_deck = []
 
 
 @scenario("idioten_deck.feature", "Deck only contains allowed colours")
-def test_create_deck():
+def test_allowed_colours():
     pass
 
 
 @scenario("idioten_deck.feature", "Deck only contains allowed ranks")
-def test_create_deck():
+def test_allowed_ranks():
     pass
 
 
 @scenario("idioten_deck.feature", "Deck is of the correct type")
-def test_create_deck():
+def test_correct_type():
     pass
 
 
 @scenario("idioten_deck.feature", "Deck contains correct number of cards")
-def test_create_deck():
+def test_correct_number_of_cards():
     pass
 
 
 @scenario("idioten_deck.feature", "Deck is different from previous deck")
-def test_create_deck():
+def test_new_deck_different():
     pass
 
 
