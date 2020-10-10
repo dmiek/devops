@@ -36,7 +36,7 @@ def existing_deck():
     return previous_deck
 
 
-@when('{deck} shuffled')
+@when(parsers.parse('{deck} shuffled'))
 def deck_shuffled():
     deck = create_deck()
     #assert type(deck) == list
