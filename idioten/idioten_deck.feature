@@ -6,3 +6,7 @@ Feature: Deck
         When deck shuffled
         Then deck contains only allowed colours
 
+    Scenario: Deck only contains allowed ranks
+        Given existing deck
+        When deck shuffled
+        Then deck contains only allowed ranks

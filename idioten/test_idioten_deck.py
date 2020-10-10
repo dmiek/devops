@@ -11,11 +11,15 @@ def test_createe_deck():
     pass
 
 
+@scenario("idioten_deck.feature", "Deck only contains allowed ranks")
+def test_createe_deck():
+    pass
+
+
 @given("existing deck")
 def test_existing_deck():
     previous_deck = create_deck()
-    assert len(previous_deck) == 50
-
+    assert len(previous_deck) == 52
 
 
 @when('deck shuffled')
@@ -32,13 +36,12 @@ def test_create_deck_allowed_colour():
     for i in deck:
         assert i[1] in allowed_colour
 
-#
-# @then('deck contains only allowed ranks')
-# def test_create_deck_allowed_ranks():
-#     # Check that deck contains only allowed ranks.
-#     allowed_ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']
-#     for i in new_deck:
-#         assert i[0] in allowed_ranks
+
+@then('deck contains only allowed ranks')
+def test_create_deck_allowed_ranks():
+    allowed_ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']
+    for i in deck:
+        assert i[0] in allowed_ranks
 #
 #
 # @then('new deck is different from previous deck')
