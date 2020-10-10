@@ -11,7 +11,7 @@ def test_create_deck():
 
 
 @given('existing deck')
-def existing_deck(previous_deck):
+def existing_deck():
     assert len(previous_deck) == 52
 
 #
