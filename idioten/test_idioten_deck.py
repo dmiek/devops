@@ -16,6 +16,11 @@ def test_createe_deck():
     pass
 
 
+@scenario("idioten_deck.feature", "Deck is of the correct type")
+def test_createe_deck():
+    pass
+
+
 @given("existing deck")
 def test_existing_deck():
     previous_deck = create_deck()
@@ -42,20 +47,22 @@ def test_create_deck_allowed_ranks():
     allowed_ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']
     for i in deck:
         assert i[0] in allowed_ranks
-#
-#
+
+
+@then('deck is of correct type')
+def test_deck_type():
+    assert type(deck) == list
+
+
 # @then('new deck is different from previous deck')
 # def test_new_deck_previous_deck():
 #     previous_deck = create_deck()
 #     deck = create_deck()
 #     assert deck != previous_deck
-#
-#
-# @then('deck is of the correct type')
-# def test_deck_type():
-#     assert type(deck) == list
-#
-#
+
+
+
+
 # @then('deck contains no duplications')
 # def test_unique_card():
 #     unique_card = []
