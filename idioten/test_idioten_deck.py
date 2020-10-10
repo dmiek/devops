@@ -1,8 +1,8 @@
 from pytest_bdd import scenario, given, when, then
 from idioten_deck import create_deck
 
-deck = []
-previous_deck = []
+deck = create_deck()
+previous_deck = create_deck()
 
 
 @scenario("idioten_deck.feature", "Deck only contains allowed colours")
