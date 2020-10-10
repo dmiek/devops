@@ -30,7 +30,7 @@ def test_new_deck_different():
     pass
 
 
-@given("existing deck")
+@given("existing deck", previous_deck)
 def existing_deck():
     previous_deck = create_deck()
     return previous_deck
