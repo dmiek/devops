@@ -4,10 +4,10 @@ from idioten_deck import create_deck
 deck = []
 previous_deck = create_deck()
 
-#
-# @scenario("idioten_deck.feature", "New deck is OK and different from previous one")
-# def test_create_deck():
-#     pass
+
+@scenario("idioten_deck.feature", "New deck is OK and different from previous one")
+def test_create_deck():
+    pass
 
 
 # @given('existing deck')
