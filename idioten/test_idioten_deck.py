@@ -5,7 +5,7 @@ deck = []
 previous_deck = create_deck()
 
 #
-# @scenario("feature_idioten_deck.feature", "New deck is OK and different from previous one")
+# @scenario("idioten_deck.feature", "New deck is OK and different from previous one")
 # def test_create_deck():
 #     pass
 
