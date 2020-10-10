@@ -1,7 +1,7 @@
 Feature: Deck
     The Deck is the foundation of the game.
 
-    Scenario: New deck is different from previous one
+    Scenario: New deck is OK and different from previous one
         Given existing deck
         When new deck generated
         Then new deck is different from previous deck
