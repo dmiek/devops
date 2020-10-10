@@ -6,15 +6,15 @@ deck = []
 previous_deck = create_deck()
 
 
-@scenario("idioten_deck.feature", "New deck is OK and different from previous one")
-def test_createe_deck():
-    pass
-
-
-@given("existing deck")
-def test_existing_deck():
-    previous_deck = create_deck()
-    assert len(previous_deck) == 52
+# @scenario("idioten_deck.feature", "New deck is OK and different from previous one")
+# def test_createe_deck():
+#     pass
+#
+#
+# @given("existing deck")
+# def test_existing_deck():
+#     previous_deck = create_deck()
+#     assert len(previous_deck) == 52
 
 
 #
