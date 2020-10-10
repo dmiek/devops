@@ -65,6 +65,7 @@ def deck_type():
 
 @then(parsers.parse('{deck} contains all cards'))
 def deck_length(deck):
+    print(len(deck))
     assert len(deck) == 52
 
 
