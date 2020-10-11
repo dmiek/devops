@@ -37,11 +37,14 @@ def card_deck():
     deck = create_deck()
     return deck
 
-
-@given("existing deck")
-def existing_deck():
+def previous_card_deck():
     previous_deck = create_deck()
     return previous_deck
+
+
+@given("existing deck")
+def existing_deck(previous_deck):
+    assert len(previous_deck) == 52
 
 
 @when(parsers.parse('{deck} shuffled'))
