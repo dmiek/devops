@@ -45,8 +45,8 @@ def existing_deck():
 
 
 @when('deck shuffled')
-def create_deck(shuffle_deck):
-    card_deck = shuffle_deck
+def build_deck():
+    card_deck = create_deck()
     assert type(card_deck) == list
     assert len(card_deck) == 52
     return card_deck
