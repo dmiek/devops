@@ -2,9 +2,15 @@ import pytest
 from pytest_bdd import scenario, given, when, then, parsers
 from idioten_deck import create_deck
 
-deck = []
+card_deck = []
 previous_deck = create_deck()
 unique_card = []
+
+
+#@pytest.fixture
+#def shuffle_deck():
+#    deck = create_deck()
+#    return deck
 
 
 @scenario("idioten_deck.feature", "Deck is of the correct type")
@@ -22,9 +28,6 @@ def test_allowed_colours():
 #     pass
 
 
-
-
-
 # @scenario("idioten_deck.feature", "Deck contains correct number of cards")
 # def test_correct_number_of_cards():
 #     pass
@@ -35,19 +38,13 @@ def test_allowed_colours():
 #     pass
 
 
-#@pytest.fixture
-#def shuffle_deck():
-#    deck = create_deck()
-#    return deck
-
-
 @given("existing deck", previous_deck)
 def existing_deck():
     assert len(previous_deck) == 52
     assert type(previous_deck) == list
 
 
-@when('deck shuffled', previous_deck)
+@when('deck shuffled')
 def create_deck(shuffle_deck):
     card_deck = shuffle_deck
     assert type(card_deck) == list
