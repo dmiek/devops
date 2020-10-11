@@ -21,8 +21,6 @@ def create_deck():
     random.shuffle(deck)
     return deck
 
-deck = create_deck()
-print(deck)
 
 
 
