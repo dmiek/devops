@@ -63,7 +63,7 @@ def deck_type():
     assert type(deck) == list
 
 
-@then('deck contains all cards'))
+@then('deck contains all cards')
 def deck_length(deck):
     assert len(deck) == 52
 
