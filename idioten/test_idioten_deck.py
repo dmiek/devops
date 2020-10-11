@@ -20,9 +20,9 @@ def test_correct_type():
     pass
 
 
-@scenario("idioten_deck.feature", "Deck contains correct number of cards")
-def test_correct_number_of_cards():
-    pass
+# @scenario("idioten_deck.feature", "Deck contains correct number of cards")
+# def test_correct_number_of_cards():
+#     pass
 
 
 @scenario("idioten_deck.feature", "Deck is different from previous deck")
