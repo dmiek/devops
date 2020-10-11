@@ -7,19 +7,22 @@ previous_deck = create_deck()
 unique_card = []
 
 
-# @scenario("idioten_deck.feature", "Deck only contains allowed colours")
-# def test_allowed_colours():
-#     pass
-#
-#
+@scenario("idioten_deck.feature", "Deck is of the correct type")
+def test_correct_type():
+    pass
+
+
+@scenario("idioten_deck.feature", "Deck only contains allowed colours")
+def test_allowed_colours():
+    pass
+
+
 # @scenario("idioten_deck.feature", "Deck only contains allowed ranks")
 # def test_allowed_ranks():
 #     pass
 
 
-@scenario("idioten_deck.feature", "Deck is of the correct type")
-def test_correct_type():
-    pass
+
 
 
 # @scenario("idioten_deck.feature", "Deck contains correct number of cards")
@@ -56,14 +59,14 @@ def deck_type(card_deck):
     assert type(card_deck) == list
     assert len(card_deck) == 52
 
-# @then('deck contains only allowed colours')
-# def allowed_colour():
-#     # Check that deck only contains allowed colours.
-#     allowed_colours = ["D", "S", "C", "H"]
-#     for i in deck:
-#         assert i[1] in allowed_colours
-#
-#
+@then('deck contains only allowed colours', card_deck)
+def allowed_colour():
+    # Check that deck only contains allowed colours.
+    allowed_colours = ["D", "S", "C", "H"]
+    for i in card_deck:
+        assert i[1] in allowed_colours
+
+
 # @then('deck contains only allowed ranks')
 # def allowed_rank():
 #     allowed_ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']
