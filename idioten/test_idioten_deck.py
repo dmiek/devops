@@ -34,17 +34,15 @@ def test_new_deck_different():
 
 @pytest.fixture
 def card_deck():
-    deck = create_deck()
-    return deck
+    return create_deck()
 
 def previous_card_deck():
-    previous_deck = create_deck()
-    return previous_deck
+    return create_deck()
 
 
 @given("existing deck")
-def existing_deck(previous_deck):
-    assert len(previous_deck) == 52
+def existing_deck(previous_card_deck):
+    assert len(previous_card_deck) == 52
 
 
 @when(parsers.parse('{deck} shuffled'))
