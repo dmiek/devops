@@ -3,6 +3,7 @@ from pytest_bdd import scenario, given, when, then, parsers
 from idioten_deck import create_deck
 
 previous_deck = create_deck()
+deck = create_deck()
 
 
 @pytest.fixture
@@ -51,13 +52,13 @@ def build_deck():
     return card_deck
 
 
-@then('deck is of correct type', card_deck)
+@then('deck is of correct type', deck)
 def deck_type(card_deck):
     assert type(card_deck) == list
     #assert len(card_deck) == 52
 
 
-@then('deck contains only allowed colours', card_deck)
+@then('deck contains only allowed colours', deck)
 def allowed_colour():
     # Check that deck only contains allowed colours.
     allowed_colours = ["D", "S", "C", "H"]
