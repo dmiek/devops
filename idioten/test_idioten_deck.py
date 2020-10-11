@@ -58,7 +58,7 @@ def allowed_ranks():
         assert i[0] in allowed_ranks
 
 
-@then(parsers.parse('{deck} is of correct type'))
+@then(parsers.parse('{deck:l} is of correct type'))
 def deck_type(deck):
     assert type(deck) == list
     assert len(deck) == 52
