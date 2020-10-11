@@ -35,10 +35,10 @@ def test_allowed_colours():
 #     pass
 
 
-@pytest.fixture
-def card_deck():
-    deck = create_deck()
-    return deck
+#@pytest.fixture
+#def shuffle_deck():
+#    deck = create_deck()
+#    return deck
 
 
 @given("existing deck", previous_deck)
@@ -47,8 +47,9 @@ def existing_deck():
     assert type(previous_deck) == list
 
 
-@when('deck shuffled')
-def shuffle_deck(card_deck):
+@when('deck shuffled', previous_deck)
+def create_deck(shuffle_deck):
+    card_deck = shuffle_deck
     assert type(card_deck) == list
     assert len(card_deck) == 52
     return card_deck
