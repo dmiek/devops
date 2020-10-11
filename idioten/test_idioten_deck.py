@@ -37,6 +37,7 @@ def card_deck():
     deck = create_deck()
     return deck
 
+@pytest.fixture
 def previous_card_deck():
     previous_deck = create_deck()
     return previous_deck
