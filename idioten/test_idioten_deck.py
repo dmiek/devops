@@ -62,7 +62,7 @@ def deck_type():
 def allowed_colour():
     # Check that deck only contains allowed colours.
     allowed_colours = ["D", "S", "C", "H"]
-    for i in range(len(deck)):
+    for i in len(deck):
         assert i[1] in allowed_colours
 
 
