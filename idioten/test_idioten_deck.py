@@ -3,6 +3,7 @@ from idioten_deck import create_deck
 
 deck = []
 previous_deck = []
+unique_card = []
 
 
 @scenario("idioten_deck.feature", "Deck only contains allowed colours")
@@ -60,10 +61,11 @@ def allowed_ranks():
 @then('deck is of correct type')
 def deck_type():
     assert type(deck) == list
+    assert len(deck) == 52
 
 
 @then('deck contains all cards')
-def deck_length():
+def deck_langd():
     assert len(deck) == 52
 
 
