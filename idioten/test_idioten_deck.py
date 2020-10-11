@@ -59,12 +59,12 @@ def deck_type(card_deck):
     assert type(card_deck) == list
     assert len(card_deck) == 52
 
+
 @then('deck contains only allowed colours', card_deck)
 def allowed_colour():
     # Check that deck only contains allowed colours.
     allowed_colours = ["D", "S", "C", "H"]
-    deck = card_deck
-    for i in deck:
+    for i in range(len(card_deck)):
         assert i[1] in allowed_colours
 
 
