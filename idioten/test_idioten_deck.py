@@ -70,6 +70,8 @@ def deck_length():
 @then(parsers.parse('{deck} contains no duplications'))
 def unique_card(deck):
     unique_card = []
+    assert type(deck) == list
+    assert len(deck) == 52
     for i in range(len(deck)):
         assert deck[i] not in unique_card
         unique_card.append(deck[i])
