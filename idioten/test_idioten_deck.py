@@ -56,10 +56,10 @@ def shuffle_deck(card_deck):
     return card_deck
 
 
-@then('deck is of correct type', deck)
-def deck_type(deck):
-    assert type(deck) == list
-    assert len(deck) == 52
+@then('deck is of correct type', card_deck)
+def deck_type(card_deck):
+    assert type(card_deck) == list
+    assert len(card_deck) == 52
 
 # @then('deck contains only allowed colours')
 # def allowed_colour():
