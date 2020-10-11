@@ -3,7 +3,7 @@ from pytest_bdd import scenario, given, when, then, parsers
 from idioten_deck import create_deck
 
 deck = []
-previous_deck = []
+previous_deck = create_deck()
 unique_card = []
 
 
