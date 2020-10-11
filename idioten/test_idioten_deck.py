@@ -40,8 +40,8 @@ def card_deck():
 
 @given("existing deck", previous_deck)
 def existing_deck():
-    assert len(existingg_deck) == 52
-    assert type(existingg_deck) == list
+    assert len(previous_deck) == 52
+    assert type(previous_deck) == list
 
 
 @when('deck shuffled')
