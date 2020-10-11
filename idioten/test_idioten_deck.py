@@ -8,6 +8,7 @@ previous_deck = create_deck()
 @pytest.fixture
 def card_deck():
     deck = create_deck()
+    assert len(deck) == 52
     return deck
 
 
