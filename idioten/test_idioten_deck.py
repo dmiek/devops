@@ -59,12 +59,12 @@ def allowed_ranks():
 
 @then('deck is of correct type')
 def deck_type():
-    print(deck)
     assert type(deck) == list
 
 
 @then('deck contains all cards')
 def deck_length(deck):
+    assert type(deck) == list
     assert len(deck) == 52
 
 
