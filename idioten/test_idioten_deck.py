@@ -18,9 +18,9 @@ def test_correct_type():
     pass
 
 
-@scenario("idioten_deck.feature", "Deck only contains allowed colours")
-def test_allowed_colours():
-    pass
+# @scenario("idioten_deck.feature", "Deck only contains allowed colours")
+# def test_allowed_colours():
+#     pass
 
 
 # @scenario("idioten_deck.feature", "Deck only contains allowed ranks")
