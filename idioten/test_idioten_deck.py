@@ -69,7 +69,7 @@ def allowed_colour(card_deck):
 # def allowed_rank():
 #     allowed_ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']
 #     for i in deck:
-#         assert i[0] in allowed_ranks
+#         assert card_deck[i][0] in allowed_ranks
 
 
 
