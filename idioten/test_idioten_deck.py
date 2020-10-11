@@ -17,9 +17,9 @@ def test_correct_type():
     pass
 
 
-# @scenario("idioten_deck.feature", "Deck only contains allowed colours")
-# def test_allowed_colours():
-#     pass
+@scenario("idioten_deck.feature", "Deck only contains allowed colours")
+def test_allowed_colours():
+    pass
 
 
 # @scenario("idioten_deck.feature", "Deck only contains allowed ranks")
@@ -57,12 +57,13 @@ def deck_type(card_deck):
     assert len(card_deck) == 52
 
 
-# @then('deck contains only allowed colours', deck)
-# def allowed_colour():
-#     # Check that deck only contains allowed colours.
-#     allowed_colours = ["D", "S", "C", "H"]
-#     for i in len(deck):
-#         assert i[1] in allowed_colours
+@then('deck contains only allowed colours', card_deck)
+def allowed_colour(card_deck):
+    # Check that deck only contains allowed colours.
+    allowed_colours = ["D", "S", "C", "H"]
+    deck = length(card_deck)
+    for i in range(len(deck)):
+        assert i[1] in allowed_colours
 
 
 # @then('deck contains only allowed ranks')
