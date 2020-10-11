@@ -40,19 +40,21 @@ def existing_deck():
 @when(parsers.parse('{deck} shuffled'))
 def deck_shuffled():
     deck = create_deck()
+    assert type(deck) == list
+    assert len(deck) == 52
     return deck
 
 
 @then('deck contains only allowed colours')
 def allowed_colour():
     # Check that deck only contains allowed colours.
-    allowed_colour = ["D", "S", "C", "H"]
+    allowed_colours = ["D", "S", "C", "H"]
     for i in deck:
-        assert i[1] in allowed_colour
+        assert i[1] in allowed_colours
 
 
 @then('deck contains only allowed ranks')
-def allowed_ranks():
+def allowed_rank():
     allowed_ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']
     for i in deck:
         assert i[0] in allowed_ranks
