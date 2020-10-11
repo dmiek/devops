@@ -43,8 +43,8 @@ def previous_card_deck():
     return previous_deck
 
 
-@given("existing deck")
-def existing_deck(previous_card_deck):
+@given("existing deck", previous_deck)
+def existing_deck():
     assert len(previous_card_deck) == 52
     assert type(previous_card_deck) == list
 
