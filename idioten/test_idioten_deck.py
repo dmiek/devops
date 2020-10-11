@@ -54,7 +54,7 @@ def build_deck():
 
 @then('deck is of correct type', deck)
 def deck_type():
-    assert type(card) == list
+    assert type(deck) == list
     #assert len(card_deck) == 52
 
 
