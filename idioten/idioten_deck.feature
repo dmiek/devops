@@ -1,6 +1,12 @@
 Feature: Deck
     The Deck is the foundation of the game.
 
+
+    Scenario: Deck is of the correct type
+        Given existing deck
+        When deck shuffled
+        Then deck is of correct type
+
 #    Scenario: Deck only contains allowed colours
 #        Given existing deck
 #        When deck shuffled
@@ -10,11 +16,6 @@ Feature: Deck
 #        Given existing deck
 #        When deck shuffled
 #        Then deck contains only allowed ranks
-
-    Scenario: Deck is of the correct type
-        Given existing deck
-        When deck shuffled
-        Then deck is of correct type
 
 #    Scenario: Deck contains correct number of cards
 #        Given existing deck

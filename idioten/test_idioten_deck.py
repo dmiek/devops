@@ -34,25 +34,31 @@ def test_correct_type():
 
 @pytest.fixture
 def card_deck():
-    return create_deck()
+    deck = create_deck()
+    return deck
 
 def previous_card_deck():
-    return create_deck()
+    previous_deck = create_deck()
+    return previous_deck
 
 
 @given("existing deck")
 def existing_deck(previous_card_deck):
-    previous_deck = previous_card_deck()
-    assert len(previous_deck) == 52
+    assert len(previous_card_deck) == 52
+    assert type(previous_card_deck) == list
 
 
-@when(parsers.parse('{deck} shuffled'))
-def deck_shuffled():
-    deck = create_deck()
+@when('deck shuffled')
+def shuffle_deck(card_deck):
+    assert type(card_deck) == list
+    assert len(card_deck) == 52
+    return card_deck
+
+
+@then('deck is of correct type')
+def deck_type():
     assert type(deck) == list
     assert len(deck) == 52
-    return deck
-
 
 # @then('deck contains only allowed colours')
 # def allowed_colour():
@@ -69,10 +75,7 @@ def deck_shuffled():
 #         assert i[0] in allowed_ranks
 
 
-@then('deck is of correct type')
-def deck_type():
-    assert type(deck) == list
-    assert len(deck) == 52
+
 
 
 # @then('deck contains all cards')
