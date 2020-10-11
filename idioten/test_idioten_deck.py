@@ -52,18 +52,18 @@ def build_deck():
     return card_deck
 
 
-@then('deck is of correct type', deck)
-def deck_type():
-    assert type(deck) == list
-    #assert len(card_deck) == 52
+@then('deck is of correct type', card_deck)
+def deck_type(card_deck):
+    assert type(card_deck) == list
+    assert len(card_deck) == 52
 
 
-@then('deck contains only allowed colours', deck)
-def allowed_colour():
-    # Check that deck only contains allowed colours.
-    allowed_colours = ["D", "S", "C", "H"]
-    for i in len(deck):
-        assert i[1] in allowed_colours
+# @then('deck contains only allowed colours', deck)
+# def allowed_colour():
+#     # Check that deck only contains allowed colours.
+#     allowed_colours = ["D", "S", "C", "H"]
+#     for i in len(deck):
+#         assert i[1] in allowed_colours
 
 
 # @then('deck contains only allowed ranks')
