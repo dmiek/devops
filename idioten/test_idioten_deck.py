@@ -31,6 +31,12 @@ def test_new_deck_different():
     pass
 
 
+@pytest.fixture
+def card_deck():
+    deck = create_deck()
+    return deck
+
+
 @given("existing deck")
 def existing_deck():
     previous_deck = create_deck()
