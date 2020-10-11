@@ -3,7 +3,6 @@ from pytest_bdd import scenario, given, when, then, parsers
 from idioten_deck import create_deck
 
 previous_deck = create_deck()
-deck = create_deck()
 
 
 @pytest.fixture
