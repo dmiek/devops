@@ -26,9 +26,9 @@ Feature: Deck
 #        Given existing deck
 #        When deck shuffled
 #        Then deck contains no duplications
-#
-#    Scenario: Deck is different from previous deck
-#        Given existing deck
-#        When deck shuffled
-#        Then deck is different from previous deck
+
+    Scenario: Deck is different from previous deck
+        Given existing deck
+        When deck shuffled
+        Then deck is different from previous deck
 

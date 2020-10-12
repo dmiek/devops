@@ -32,9 +32,9 @@ def test_correct_number_of_cards():
     pass
 
 
-# @scenario("idioten_deck.feature", "Deck is different from previous deck")
-# def test_new_deck_different():
-#     pass
+@scenario("idioten_deck.feature", "Deck is different from previous deck")
+def test_new_deck_different():
+    pass
 
 
 @given("existing deck", previous_deck)
@@ -75,21 +75,20 @@ def allowed_rank(card_deck):
 @then('deck contains all cards', card_deck)
 def deck_length(card_deck):
     assert len(card_deck) == 52
-#
-#
-# @then(parsers.parse('{deck} contains no duplications'))
-# def unique_card(deck):
-#     unique_card = []
-#     assert type(deck) == list
-#     assert len(deck) == 52
-#     for i in range(len(deck)):
-#         assert deck[i] not in unique_card
-#         unique_card.append(deck[i])
-#
-#
-# @then(parsers.parse('{deck} is different from {previous_deck}'))
-# def new_deck_previous_deck(deck, previous_deck):
-#     assert deck != previous_deck
+
+
+@then('deck contains no duplications', card_deck, previous_deck)
+def unique_card(card_deck, previous_deck):
+    unique_card = []
+    assert type(deck) == list
+    assert len(deck) == 52
+    for i in range(len(deck)):
+        assert deck[i] not in unique_card
+        unique_card.append(deck[i])
+
+@then('deck is different from previous deck', card_deck, previous_deck)
+def new_deck_previous_deck(card_deck, previous_deck):
+    assert card_deck != previous_deck
 
 
 
