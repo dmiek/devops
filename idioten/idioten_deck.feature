@@ -1,7 +1,6 @@
 Feature: Deck
     The Deck is the foundation of the game.
 
-
     Scenario: Deck is of the correct type
         Given existing deck
         When deck shuffled
@@ -27,8 +26,8 @@ Feature: Deck
         When deck shuffled
         Then deck contains no duplications
 
-#    Scenario: Deck is different from previous deck
-#        Given existing deck
-#        When deck shuffled
-#        Then deck is different from previous deck
+    Scenario: Deck is different from previous deck
+        Given existing deck
+        When deck shuffled
+        Then deck is different from previous deck
 

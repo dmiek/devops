@@ -32,9 +32,9 @@ def test_correct_number_of_cards():
     pass
 
 
-#@scenario("idioten_deck.feature", "Deck is different from previous deck")
-#def test_new_deck_different():
-#    pass
+@scenario("idioten_deck.feature", "Deck is different from previous deck")
+def test_new_deck_different():
+    pass
 
 
 @given("existing deck", previous_deck)
@@ -86,9 +86,9 @@ def unique_card(card_deck):
         assert card_deck[i] not in unique
         unique.append(card_deck[i])
 
-#@then('deck is different from previous deck', card_deck, previous_deck)
-#def new_deck_previous_deck(card_deck, previous_deck):
-#    assert card_deck != previous_deck
+@then('deck is different from previous deck', card_deck, previous_deck)
+def new_deck_previous_deck(card_deck, previous_deck):
+    assert card_deck != previous_deck
 
 
 
