@@ -11,11 +11,11 @@ Feature: Deck
         Given existing deck
         When deck shuffled
         Then deck contains only allowed colours
-#
-#    Scenario: Deck only contains allowed ranks
-#        Given existing deck
-#        When deck shuffled
-#        Then deck contains only allowed ranks
+
+    Scenario: Deck only contains allowed ranks
+        Given existing deck
+        When deck shuffled
+        Then deck contains only allowed ranks
 
 #    Scenario: Deck contains correct number of cards
 #        Given existing deck

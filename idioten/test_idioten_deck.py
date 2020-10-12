@@ -22,9 +22,9 @@ def test_allowed_colours():
     pass
 
 
-# @scenario("idioten_deck.feature", "Deck only contains allowed ranks")
-# def test_allowed_ranks():
-#     pass
+ @scenario("idioten_deck.feature", "Deck only contains allowed ranks")
+ def test_allowed_ranks():
+     pass
 
 
 # @scenario("idioten_deck.feature", "Deck contains correct number of cards")
@@ -65,14 +65,11 @@ def allowed_colour(card_deck):
         assert card_deck[i][1] in allowed_colours
 
 
-# @then('deck contains only allowed ranks')
-# def allowed_rank():
-#     allowed_ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']
-#     for i in deck:
-#         assert card_deck[i][0] in allowed_ranks
-
-
-
+@then('deck contains only allowed ranks', card_deck)
+def allowed_rank(card_deck):
+    allowed_ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']
+    for i in range(len(card_deck)):
+        assert card_deck[i][0] in allowed_ranks
 
 
 # @then('deck contains all cards')
