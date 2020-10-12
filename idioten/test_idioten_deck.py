@@ -86,8 +86,10 @@ def unique_card(card_deck):
         assert card_deck[i] not in unique
         unique.append(card_deck[i])
 
-@then('deck is different from previous deck', card_deck, previous_deck)
+@then('deck is different from previous deck', card_deck)
 def new_deck_previous_deck(card_deck, previous_deck):
+    assert len(card_deck) == 52
+    assert len(previous_deck) == 52
     assert card_deck != previous_deck
 
 
