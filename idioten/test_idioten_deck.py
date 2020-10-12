@@ -27,9 +27,9 @@ def test_allowed_ranks():
     pass
 
 
-# @scenario("idioten_deck.feature", "Deck contains correct number of cards")
-# def test_correct_number_of_cards():
-#     pass
+@scenario("idioten_deck.feature", "Deck contains correct number of cards")
+def test_correct_number_of_cards():
+    pass
 
 
 # @scenario("idioten_deck.feature", "Deck is different from previous deck")
@@ -72,9 +72,9 @@ def allowed_rank(card_deck):
         assert card_deck[i][0] in allowed_ranks
 
 
-# @then('deck contains all cards')
-# def deck_langd():
-#     assert len(deck) == 52
+@then('deck contains all cards', card_deck)
+def deck_length(card_deck):
+    assert len(card_deck) == 52
 #
 #
 # @then(parsers.parse('{deck} contains no duplications'))

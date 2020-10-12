@@ -17,11 +17,11 @@ Feature: Deck
         When deck shuffled
         Then deck contains only allowed ranks
 
-#    Scenario: Deck contains correct number of cards
-#        Given existing deck
-#        When deck shuffled
-#        Then deck contains all cards
-#
+    Scenario: Deck contains correct number of cards
+        Given existing deck
+        When deck shuffled
+        Then deck contains all cards
+
 #    Scenario: Deck contains no duplications
 #        Given existing deck
 #        When deck shuffled
