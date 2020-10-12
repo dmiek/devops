@@ -22,9 +22,9 @@ def test_allowed_colours():
     pass
 
 
- @scenario("idioten_deck.feature", "Deck only contains allowed ranks")
- def test_allowed_ranks():
-     pass
+@scenario("idioten_deck.feature", "Deck only contains allowed ranks")
+def test_allowed_ranks():
+    pass
 
 
 # @scenario("idioten_deck.feature", "Deck contains correct number of cards")
