@@ -42,7 +42,7 @@ def test_new_deck_different():
 
 
 @given("existing deck", previous_deck)
-def existing_deck():
+def existing_deck(previous_deck):
     assert len(previous_deck) == 52
     assert type(previous_deck) == list
 
