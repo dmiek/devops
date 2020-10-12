@@ -2,14 +2,18 @@ import pytest
 from pytest_bdd import scenario, given, when, then, parsers
 from idioten_deck import create_deck
 
-previous_deck = create_deck()
-
 
 @pytest.fixture
 def card_deck():
     deck = create_deck()
     assert len(deck) == 52
     return deck
+
+@pytest.fixture
+def previous_deck():
+    previous_deck = create_deck()
+    assert len(previous_deck) == 52
+    return previous_deck
 
 
 @scenario("idioten_deck.feature", "Deck is of the correct type")
