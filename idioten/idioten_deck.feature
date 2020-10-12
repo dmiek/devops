@@ -22,13 +22,13 @@ Feature: Deck
         When deck shuffled
         Then deck contains all cards
 
-#    Scenario: Deck contains no duplications
-#        Given existing deck
-#        When deck shuffled
-#        Then deck contains no duplications
-
-    Scenario: Deck is different from previous deck
+    Scenario: Deck contains no duplications
         Given existing deck
         When deck shuffled
-        Then deck is different from previous deck
+        Then deck contains no duplications
+
+#    Scenario: Deck is different from previous deck
+#        Given existing deck
+#        When deck shuffled
+#        Then deck is different from previous deck
 
