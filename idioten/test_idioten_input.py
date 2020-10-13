@@ -5,7 +5,7 @@ from idioten_input import kb_input
 
 @pytest.fixture
 def game_is_active():
-    return game_active = True
+    return game_active == True
 
 @scenario('idioten_input.feature', 'Game accepts all correct input values')
 def test_ok_input():
@@ -13,7 +13,7 @@ def test_ok_input():
 
 @given('game is running')
 def game_running(game_is_active):
-    assert game_is_active = True
+    assert game_is_active == True
 
 @when('keyboard input given')
 def keyboard_input(kb_input):
