@@ -41,7 +41,7 @@ def test_new_deck_different():
     pass                    #Calling for scenario
 
 
-@given("existing deck", previous_deck)
+@given("existing deck")
 def existing_deck(previous_deck):
     assert len(previous_deck) == 52
     assert type(previous_deck) == list
@@ -54,12 +54,12 @@ def build_deck():
     assert len(card_deck) == 52
 
 
-@then('deck is of correct type', card_deck)
+@then('deck is of correct type')
 def deck_type(card_deck):
     assert type(card_deck) == list
 
 
-@then('deck contains only allowed colours', card_deck)
+@then('deck contains only allowed colours')
 def allowed_colour(card_deck):
     # Check that deck only contains allowed colours.
     allowed_colours = ["D", "S", "C", "H"]
@@ -67,19 +67,19 @@ def allowed_colour(card_deck):
         assert card_deck[i][1] in allowed_colours
 
 
-@then('deck contains only allowed ranks', card_deck)
+@then('deck contains only allowed ranks')
 def allowed_rank(card_deck):
     allowed_ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']
     for i in range(len(card_deck)):
         assert card_deck[i][0] in allowed_ranks
 
 
-@then('deck contains all cards', card_deck)
+@then('deck contains all cards')
 def deck_length(card_deck):
     assert len(card_deck) == 52
 
 
-@then('deck contains no duplications', card_deck)
+@then('deck contains no duplications')
 def unique_card(card_deck):
     unique = []
     assert type(card_deck) == list
@@ -88,7 +88,7 @@ def unique_card(card_deck):
         assert card_deck[i] not in unique
         unique.append(card_deck[i])
 
-@then('deck is different from previous deck', card_deck)
+@then('deck is different from previous deck')
 def new_deck_previous_deck(card_deck, previous_deck):
     assert len(card_deck) == 52
     assert len(previous_deck) == 52
