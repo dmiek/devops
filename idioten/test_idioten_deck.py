@@ -41,6 +41,13 @@ def test_new_deck_different():
     pass                    #Calling for scenario
 
 
+@scenario("idioten_deck.feature", 'Deck contains no duplications')
+def unique_card():
+       Given no deck
+       When deck shuffled
+       Then deck contains no duplications
+
+
 @given("existing deck")
 def existing_deck(previous_deck):
     assert len(previous_deck) == 52
@@ -79,6 +86,13 @@ def deck_length(card_deck):
     assert len(card_deck) == 52
 
 
+@then('deck is different from previous deck')
+def new_deck_previous_deck(card_deck, previous_deck):
+    assert len(card_deck) == 52
+    assert len(previous_deck) == 52
+    assert card_deck != previous_deck
+
+
 @then('deck contains no duplications')
 def unique_card(card_deck):
     unique = []
@@ -87,14 +101,6 @@ def unique_card(card_deck):
     for i in range(len(card_deck)):
         assert card_deck[i] not in unique
         unique.append(card_deck[i])
-
-@then('deck is different from previous deck')
-def new_deck_previous_deck(card_deck, previous_deck):
-    assert len(card_deck) == 52
-    assert len(previous_deck) == 52
-    assert card_deck != previous_deck
-
-
 
 
 
