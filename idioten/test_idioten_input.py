@@ -24,7 +24,7 @@ def game_running(game_is_active):
     assert game_is_active == 1
 
 @when('player is prompted for keyboard input')
-def keyboard_input(kb_input):
+def keyboard_input():
     """Keyboard input"""
     pass
 
