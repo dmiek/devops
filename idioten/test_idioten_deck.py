@@ -43,9 +43,7 @@ def test_new_deck_different():
 
 @scenario("idioten_deck.feature", 'Deck contains no duplications')
 def unique_card():
-       Given no deck
-       When deck shuffled
-       Then deck contains no duplications
+    pass
 
 
 @given("existing deck")
