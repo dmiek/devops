@@ -1,17 +1,22 @@
+"""
+Module for handling game input.
+"""
+
 def kb_input():
-print("Select action: ")
-print("1-4 = remove card in column")
-print("d = deal cards")
-print("n = new game")
+    """Keyboard input."""
+    print("Select action: ")
+    print("1-4 = remove card in column")
+    print("d = deal cards")
+    print("n = new game")
 
-r = input()
-print(r)
+    inp = input()
+    print(inp)
 
-if r == "d":
-    print("dealing cards")
-elif r == "1" or r == "2" or r == "3" or r == "4":
-    print("removing card in column")
-elif r == "n":
-    print("dealing new game")
-else:
-    print("input not mapped to action")
+    if inp == "d":
+        print("dealing cards")
+    elif inp in ('1', '2', '3', '4'):
+        print("removing card in column")
+    elif inp == "n":
+        print("dealing new game")
+    else:
+        print("input not mapped to action")
