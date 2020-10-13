@@ -42,8 +42,8 @@ def test_new_deck_different():
 
 
 @scenario("idioten_deck.feature", 'Deck contains no duplications')
-def unique_card():
-    pass
+def no_duplications():
+    pass                    #Calling for scenario
 
 
 @given("existing deck")
@@ -99,6 +99,3 @@ def unique_card(card_deck):
     for i in range(len(card_deck)):
         assert card_deck[i] not in unique
         unique.append(card_deck[i])
-
-
-
