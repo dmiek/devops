@@ -1,4 +1,4 @@
-
+def kb_input():
 print("Select action: ")
 print("1-4 = remove card in column")
 print("d = deal cards")
