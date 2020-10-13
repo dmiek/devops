@@ -20,14 +20,20 @@ def test_ok_input():
 
 @given('game is running')
 def game_running(game_is_active):
+    """Game active-flag set to True"""
     assert game_is_active == True
 
-@when('keyboard input given')
+@when('player is prompted for keyboard input')
 def keyboard_input(kb_input):
     """Keyboard input"""
     pass
 
-@then('input is of correct type')
+@when('player inputs accepted value')
+def accepted_values():
+    """Accepted values inserted"""
+    pass
+
+@then('game accepts input')
 def input_type():
-    """"""
+    """Input is accpeted by game"""
     pass
