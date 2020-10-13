@@ -75,7 +75,7 @@ def allowed_rank(card_deck):
 
 
 @then('deck contains all cards', card_deck)
-def deck_length():
+def deck_length(card_deck):
     assert len(card_deck) == 52
 
 
