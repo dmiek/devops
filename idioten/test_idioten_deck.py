@@ -18,27 +18,27 @@ def previous_deck():
 
 @scenario("idioten_deck.feature", "Deck is of the correct type")
 def test_correct_type():
-    pass
+    pass                    #Calling for scenario
 
 
 @scenario("idioten_deck.feature", "Deck only contains allowed colours")
 def test_allowed_colours():
-    pass
+    pass                    #Calling for scenario
 
 
 @scenario("idioten_deck.feature", "Deck only contains allowed ranks")
 def test_allowed_ranks():
-    pass
+    pass                    #Calling for scenario
 
 
 @scenario("idioten_deck.feature", "Deck contains correct number of cards")
 def test_correct_number_of_cards():
-    pass
+    pass                    #Calling for scenario
 
 
 @scenario("idioten_deck.feature", "Deck is different from previous deck")
 def test_new_deck_different():
-    pass
+    pass                    #Calling for scenario
 
 
 @given("existing deck", previous_deck)
