@@ -3,7 +3,7 @@ Module for testing Idioten input functionality
 """
 
 import pytest
-from pytest_bdd import parsers, scenario, given, when, then
+from pytest_bdd import scenario, given, when, then
 from idioten_input import kb_input
 
 
@@ -23,6 +23,7 @@ def game_is_not_active():
 
 @pytest.fixture
 def allowed_values():
+    """ Fixture for allowed values. """
     allowed_input = ('d', 'e', 'n', '1', '2', '3', '4')
     return allowed_input
 
@@ -31,9 +32,10 @@ def test_return_ok_values():
     """Test that valid values are returned"""
     pass
 
-@given('player is prompted for input', GAME_ACTIVE)
-def game_running(game_active):
+@given('player is prompted for input', game_is_active)
+def game_running(game_is_active):
     """_"""
+    game_active = game_is_active
     kb_input(game_active)
 
 @when('OK input provided')
