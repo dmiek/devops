@@ -1,6 +1,7 @@
 import random
 import sys
 from idioten_deck import create_deck
+from idioten_input import kb_input
 
 game_active = False
 
@@ -116,8 +117,11 @@ def helpMenu(board):
 def playGame(board):
     cleanUpBoard(board)
     displayBoard(board)
-    print("select action:")
-    r = input()
+    if game_active == 0:
+        print('start new game by intering "n"')
+    else:
+        print("select action:")
+    r = kb_input()
     if r == "d":
         board = dealCards(board, deck)
         return board
@@ -126,7 +130,7 @@ def playGame(board):
         return board
     elif r == "e" or r == "exit":
         sys.exit("ending game, thanks for playing!")
-        game_active = False
+
     # elif r == "e" or r == "exit":
     #     finishGame()
     elif r == "m":

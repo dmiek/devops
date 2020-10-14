@@ -9,24 +9,33 @@ GAME_ACTIVE = 1
 
 
 def kb_input(game_active):
-    """Keyboard input."""
+    """
+    Keyboard input.
+    """
     if game_active == 0:
-        sys.exit('Exiting program; no game active.')
+        print("Game over. Start a new game.")
+    else:
+        print("Select action: \n1-4 = Remove card in column \nd = Deal cards\nn = New game")
 
-    print("Select Action: \n1-4 = Remove Card in Column \nd = Deal Cards\nn = New Game ")
     inp = input()
     print(inp)
 
-    if inp == "d":
-        print("Dealing Cards")
+
+    if inp != 'n':
+        if game_active == 0:
+            print('Game not running')
+        else:
+            print("Dealing new game")
+
+    elif inp == "d":
+        print("Dealing cards")
     elif inp in ('1', '2', '3', '4'):
-        print("Removing Card in Column " + inp)
-    elif inp == "n":
-        print("Dealing New Game")
+        print("Removing card in column " + inp)
+
     elif inp == 'e':
         sys.exit('Player exiting program.')
     else:
-        print("Input Not Mapped to Action")
+        print("Input not mapped to action")
     return inp
 
 
