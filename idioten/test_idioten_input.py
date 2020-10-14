@@ -38,16 +38,16 @@ def game_running(game_is_active):
     #game_active = game_is_active
     #kb_input(game_active)
 
-@when('OK input provided')
-def keyboard_input():
-    """Keyboard input"""
-    pass
+# @when('OOOOOOK input provided')
+# def keyboard_input():
+#     """Keyboard input"""
+#     pass
 
-@when('player inputs accepted value')
-def accepted_values(inp):
+@when('OK input provided')
+def accepted_values():
     """Accepted values inserted"""
     inp = monkeypatch.setattr('builtins.input', lambda _: "n")
-    assert inp == 'm'
+    assert inp == 'n'
 
 @then('input is returned')
 def input_type():
