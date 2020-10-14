@@ -47,7 +47,7 @@ def keyboard_input():
 def accepted_values(inp):
     """Accepted values inserted"""
     inp = monkeypatch.setattr('builtins.input', lambda _: "n")
-    assert inp == 'n'
+    assert inp == 'm'
 
 @then('input is returned')
 def input_type():
