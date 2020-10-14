@@ -17,7 +17,10 @@ def kb_input():
         print("removing card in column")
     elif inp == "n":
         print("dealing new game")
+    elif inp == 'e':
+        print('exiting')
     else:
         print("input not mapped to action")
 
-kb_input()
+
+#while inp != kb_input()
