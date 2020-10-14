@@ -30,4 +30,3 @@ Feature: Deck
         Given existing deck
         When deck shuffled
         Then deck is different from previous deck
-
