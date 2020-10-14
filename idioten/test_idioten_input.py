@@ -31,10 +31,10 @@ def test_return_ok_values():
     """Test that valid values are returned"""
     pass
 
-@given('player is prompted for input')
-def game_running(game_is_active):
+@given('player is prompted for input', GAME_ACTIVE)
+def game_running(game_active):
     """_"""
-    kb_input()
+    kb_input(game_active)
 
 @when('OK input provided')
 def keyboard_input():
