@@ -24,7 +24,7 @@ def kb_input(game_active):
     elif inp == "n":
         print("Dealing New Game")
     elif inp == 'e':
-        print('Player exiting program')
+        sys.exit('Player exiting program.')
     else:
         print("Input Not Mapped to Action")
     return inp
