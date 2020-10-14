@@ -49,7 +49,7 @@ def accepted_values(input):
     input = monkeypatch.setattr('builtins.input', lambda _: "n")
     assert input == 'n'
 
-@then('game accepts input')
+@then('input is returned')
 def input_type():
     """Input is accepted by game"""
     pass
