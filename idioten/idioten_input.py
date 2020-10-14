@@ -30,5 +30,5 @@ def kb_input(game_active):
     return inp
 
 
-while INPUT != 'e':
-    INPUT = kb_input(GAME_ACTIVE)
+#while INPUT != 'e':
+#    INPUT = kb_input(GAME_ACTIVE)
