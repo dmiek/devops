@@ -5,8 +5,9 @@ Module for testing Idioten input functionality
 import pytest
 from pytest_bdd import scenario, given, when, then
 from idioten_input import kb_input
+from _pytest.monkeypatch import MonkeyPatch
 
-
+monkeypatch = MonkeyPatch()
 GAME_ACTIVE = None
 
 @pytest.fixture
