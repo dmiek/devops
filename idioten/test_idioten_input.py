@@ -44,10 +44,10 @@ def keyboard_input():
     pass
 
 @when('player inputs accepted value')
-def accepted_values(input):
+def accepted_values(inp):
     """Accepted values inserted"""
-    input = monkeypatch.setattr('builtins.input', lambda _: "n")
-    assert input == 'n'
+    inp = monkeypatch.setattr('builtins.input', lambda _: "n")
+    assert inp == 'n'
 
 @then('input is returned')
 def input_type():
