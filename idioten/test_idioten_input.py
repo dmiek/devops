@@ -35,8 +35,8 @@ def test_return_ok_values():
 @given('player is prompted for input', game_is_active)
 def game_running(game_is_active):
     """_"""
-    game_active = game_is_active
-    kb_input(game_active)
+    #game_active = game_is_active
+    #kb_input(game_active)
 
 @when('OK input provided')
 def keyboard_input():
