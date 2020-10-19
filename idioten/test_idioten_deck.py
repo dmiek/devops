@@ -8,27 +8,13 @@ from pytest_bdd import scenario, given, when, then
 from idioten_deck import create_deck
 
 
-class Decks():
-
-    def new_deck(self):
-        deck = create_deck()
-
-
 
 @pytest.fixture
-def card_deck():
+def decks():
     """ Fixture for card deck. """
-    deck = create_deck()
-    assert len(deck) == 52
-    return deck
-
-
-@pytest.fixture
-def previous_deck():
-    """ Fixture for previous deck. """
-    old_deck = create_deck()
-    assert len(old_deck) == 52
-    return old_deck
+    decks = {"current": create_deck(), "new": create_deck()}
+    assert len(decks["current"]) == 52
+    return decks
 
 
 @scenario("idioten_deck.feature", "Deck is of the correct type")
@@ -62,68 +48,65 @@ def test_new_deck_different():
 
 
 @scenario("idioten_deck.feature", 'Deck contains no duplications')
-def no_duplications():
+def test_no_duplications():
     """ Scenario for testing for duplications. """
     pass
 
 
 @given("existing deck")
-def existing_deck(previous_deck):
+def existing_deck(decks):
     """ Asserting existing deck is of correct size and type. """
-    assert len(previous_deck) == 52
-    assert type(previous_deck) == list
+    assert len(decks["current"]) == 52
+    assert type(decks["current"]) == list
 
 
 @when('deck shuffled')
-def build_deck():
+def build_deck(decks):
     """ Shuffling deck. """
-    card_deck = create_deck()
-    assert type(card_deck) == list
-    assert len(card_deck) == 52
+    assert len(decks["new"]) == 52
+    assert type(decks["new"]) == list
+
 
 
 @then('deck is of correct type')
-def deck_type(card_deck):
+def deck_type(decks):
     """ Testing deck is of correct type. """
-    assert type(card_deck) == list
+    assert type(decks["new"]) == list
 
 
 @then('deck contains only allowed colours')
-def allowed_colour(card_deck):
+def allowed_colour(decks):
     """ Testing deck contains correct colours. """
     allowed_colours = ["D", "S", "C", "H"]
-    for i in range(len(card_deck)):
-        assert card_deck[i][1] in allowed_colours
+    for i in range(len(decks["new"])):
+        assert decks["new"][i][1] in allowed_colours
 
 
 @then('deck contains only allowed ranks')
-def allowed_rank(card_deck):
+def allowed_rank(decks):
     """ Testing deck contains correct ranks. """
     allowed_ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']
-    for i in range(len(card_deck)):
-        assert card_deck[i][0] in allowed_ranks
+    for i in range(len(decks["new"])):
+        assert decks["new"][i][0] in allowed_ranks
 
 
 @then('deck contains all cards')
-def deck_length(card_deck):
+def deck_length(decks):
     """ Testing deck is of the correct size. """
-    assert len(card_deck) == 52
+    assert len(decks["new"]) == 52
 
 
 @then('deck is different from previous deck')
-def new_deck_previous_deck(card_deck, previous_deck):
+def new_deck_previous_deck(decks):
     """ Testing deck shuffling. """
-    assert len(card_deck) == 52
-    assert len(previous_deck) == 52
-    assert card_deck != previous_deck
+
+    assert decks["new"] != decks["current"]
 
 
 @then('deck contains no duplications')
-def unique_card(card_deck):
+def unique_card(decks):
     """ Testing deck contains no duplications. """
     unique = []
-    assert type(card_deck) == list
-    assert len(card_deck) == 52
-    for i in range(len(card_deck)):
-        assert card_deck[i] not in unique
-        unique.append(card_deck[i])
+    for i in range(len(decks["new"])):
+        assert decks["new"][i] not in unique
+        unique.append(decks["new"][i])
