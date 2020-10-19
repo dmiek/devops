@@ -4,8 +4,15 @@ Module for testing the deck generator.
 
 
 import pytest
-from pytest_bdd import scenario, given, when, then, parsers
+from pytest_bdd import scenario, given, when, then
 from idioten_deck import create_deck
+
+
+class Decks():
+
+    def new_deck(self):
+        deck = create_deck()
+
 
 
 @pytest.fixture
@@ -15,48 +22,49 @@ def card_deck():
     assert len(deck) == 52
     return deck
 
+
 @pytest.fixture
 def previous_deck():
     """ Fixture for previous deck. """
-    previous_deck = create_deck()
-    assert len(previous_deck) == 52
-    return previous_deck
+    old_deck = create_deck()
+    assert len(old_deck) == 52
+    return old_deck
 
 
 @scenario("idioten_deck.feature", "Deck is of the correct type")
 def test_correct_type():
     """ Scenario for testing deck type. """
-    pass                    #Calling for scenario
+    pass
 
 
 @scenario("idioten_deck.feature", "Deck only contains allowed colours")
 def test_allowed_colours():
     """ Scenario for testing colours. """
-    pass                    #Calling for scenario
+    pass
 
 
 @scenario("idioten_deck.feature", "Deck only contains allowed ranks")
 def test_allowed_ranks():
     """ Scenario for testing ranks. """
-    pass                    #Calling for scenario
+    pass
 
 
 @scenario("idioten_deck.feature", "Deck contains correct number of cards")
 def test_correct_number_of_cards():
     """ Scenario for testing card deck size. """
-    pass                    #Calling for scenario
+    pass
 
 
 @scenario("idioten_deck.feature", "Deck is different from previous deck")
 def test_new_deck_different():
     """ Scenario for testing deck shuffling. """
-    pass                    #Calling for scenario
+    pass
 
 
 @scenario("idioten_deck.feature", 'Deck contains no duplications')
 def no_duplications():
     """ Scenario for testing for duplications. """
-    pass                    #Calling for scenario
+    pass
 
 
 @given("existing deck")

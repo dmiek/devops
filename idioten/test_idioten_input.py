@@ -2,25 +2,15 @@
 Module for testing Idioten input functionality
 """
 
+
 import pytest
 from pytest_bdd import scenario, given, when, then
-from idioten_input import kb_input
 from _pytest.monkeypatch import MonkeyPatch
+from idioten_input import kb_input
 
-monkeypatch = MonkeyPatch()
-GAME_ACTIVE = None
 
-@pytest.fixture
-def game_is_active():
-    """Flag to indicate game active"""
-    game_active = 1
-    return game_active
+MONKEYPATCH = MonkeyPatch()
 
-@pytest.fixture
-def game_is_not_active():
-    """Flag to indicate game not active"""
-    game_active = 0
-    return game_active
 
 @pytest.fixture
 def allowed_values():
@@ -28,29 +18,45 @@ def allowed_values():
     allowed_input = ('d', 'e', 'n', '1', '2', '3', '4')
     return allowed_input
 
-@scenario('idioten_input.feature', 'Input function returns only valid values')
-def test_return_ok_values():
-    """Test that valid values are returned"""
-    pass
 
-@given('player is prompted for input', game_is_active)
-def game_running(game_is_active):
-    """_"""
-    #game_active = game_is_active
-    #kb_input(game_active)
-
-# @when('OOOOOOK input provided')
-# def keyboard_input():
-#     """Keyboard input"""
+# @scenario('idioten_input.feature', 'Input function returns only valid values')
+# def test_return_ok_values():
+#     """Test that valid values are returned"""
 #     pass
 
-@when('OK input provided')
-def accepted_values():
-    """Accepted values inserted"""
-    inp = monkeypatch.setattr('builtins.input', lambda _: "n")
-    assert inp == 'n'
-
-@then('input is returned')
-def input_type():
-    """Input is accepted by game"""
+@scenario('idioten_input.feature', 'Keep prompting until valid values are given')
+def test_valid_values():
     pass
+
+
+@given('game waiting for input')
+def game_waiting_for_input():
+    pass
+
+
+@when('invalid input given')
+def invalid_input_given():
+    pass
+
+
+@then('game waiting for input')
+def game_still_waiting_for_input():
+    pass
+
+
+# @given('player is prompted for input')
+# def game_running():
+#     """_"""
+#
+#
+# @when('OK input provided')
+# def accepted_values():
+#     """Accepted values inserted"""
+#     inp = MONKEYPATCH.setattr('builtins.input', lambda _: "n")
+#     assert inp == 'n'
+#
+#
+# @then('input is returned')
+# def input_type():
+#     """Input is accepted by game"""
+#     pass
