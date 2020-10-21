@@ -8,7 +8,7 @@ BOARD = []
 
 @pytest.fixture()
 def board_empty():
-    board = []
+    board == []
     return board
 
 @scenario('idioten_setup.feature', 'Verify board setup and empty when initiated')
@@ -18,7 +18,7 @@ def test_board_set_up():
 @given('board not setup', BOARD)
 def board_not_setup(board_empty):
     board = board_empty()
-    assert board = []
+    assert board == []
 
 @when('setup is called', BOARD)
 def call_setup(BOARD):
@@ -27,4 +27,4 @@ def call_setup(BOARD):
 
 @then('board is setup', BOARD)
 def board_is_setup():
-    assert
+    pass
