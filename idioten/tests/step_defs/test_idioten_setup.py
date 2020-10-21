@@ -2,7 +2,7 @@
 Test module to test board setup.
 """
 from pytest_bdd import scenario, given, when, then
-from idioten_setup import game_setup
+from code.idioten_setup import game_setup
 
 BOARD = []
 

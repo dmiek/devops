@@ -1,5 +1,4 @@
-import pytest
-from idioten_deck import create_deck
+from code.idioten_deck import create_deck
 
 
 

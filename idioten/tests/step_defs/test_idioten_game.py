@@ -1,5 +1,4 @@
 from pytest_bdd import scenario, given, when, then
-import idioten_game
 
 
 @scenario('idioten_game.feature', 'Run game')

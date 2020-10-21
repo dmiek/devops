@@ -1,7 +1,6 @@
-import random
 import sys
-from idioten_deck import create_deck
-from idioten_input import kb_input
+from code.idioten_deck import create_deck
+from code.idioten_input import kb_input
 
 game_active = 1
 
