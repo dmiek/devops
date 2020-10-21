@@ -3,7 +3,7 @@ Module for keeping fixtures.
 """
 
 
-from code.idioten_deck import create_deck
+from idioten_deck import create_deck
 import pytest
 
 
