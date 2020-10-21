@@ -3,9 +3,8 @@ Module for keeping fixtures.
 """
 
 
-from code.idioten_deck import create_deck
+from ..code.idioten_deck import create_deck
 import pytest
-
 
 @pytest.fixture
 def decks():

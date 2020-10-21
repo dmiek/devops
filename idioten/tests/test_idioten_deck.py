@@ -3,36 +3,36 @@ Module for testing the deck generator.
 """
 
 
-from code.idioten_deck import create_deck
+from ..code.idioten_deck import create_deck
 from pytest_bdd import scenario, given, when, then
 
 
-@scenario("../features/idioten_deck.feature", "Deck is of the correct type")
+@scenario("features/idioten_deck.feature", "Deck is of the correct type")
 def test_correct_type():
     """ Scenario for testing deck type. """
 
 
-@scenario("../features/idioten_deck.feature", "Deck only contains allowed colours")
+@scenario("features/idioten_deck.feature", "Deck only contains allowed colours")
 def test_allowed_colours():
     """ Scenario for testing colours. """
 
 
-@scenario("../features/idioten_deck.feature", "Deck only contains allowed ranks")
+@scenario("features/idioten_deck.feature", "Deck only contains allowed ranks")
 def test_allowed_ranks():
     """ Scenario for testing ranks. """
 
 
-@scenario("../features/idioten_deck.feature", "Deck contains correct number of cards")
+@scenario("features/idioten_deck.feature", "Deck contains correct number of cards")
 def test_correct_number_of_cards():
     """ Scenario for testing card deck size. """
 
 
-@scenario("../features/idioten_deck.feature", "Deck is different from previous deck")
+@scenario("features/idioten_deck.feature", "Deck is different from previous deck")
 def test_new_deck_different():
     """ Scenario for testing deck shuffling. """
 
 
-@scenario("../features/idioten_deck.feature", 'Deck contains no duplications')
+@scenario("features/idioten_deck.feature", 'Deck contains no duplications')
 def test_no_duplications():
     """ Scenario for testing for duplications. """
 
