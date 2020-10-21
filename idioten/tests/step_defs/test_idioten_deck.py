@@ -3,7 +3,7 @@ Module for testing the deck generator.
 """
 
 
-from idioten_deck import create_deck
+from code.idioten_deck import create_deck
 from pytest_bdd import scenario, given, when, then
 
 
