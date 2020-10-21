@@ -10,6 +10,7 @@ import pytest
 @pytest.fixture
 def decks():
     """ Fixture for card deck. """
-    cards = {"current": create_deck(), "new": create_deck()}
+    cards = {"current": create_deck()}
     assert len(cards["current"]) == 52
+    assert isinstance(cards["current"], list)
     return cards

@@ -3,6 +3,7 @@ Module for testing the deck generator.
 """
 
 
+from code.idioten_deck import create_deck
 from pytest_bdd import scenario, given, when, then
 
 
@@ -46,9 +47,9 @@ def existing_deck(decks):
 @when('deck shuffled')
 def build_deck(decks):
     """ Shuffling deck. """
+    decks["new"] = create_deck()
     assert len(decks["new"]) == 52
     assert isinstance(decks["new"], list)
-
 
 
 @then('deck is of correct type')
