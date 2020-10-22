@@ -1,8 +1,8 @@
 """
 Module for setting up a new game.
 """
-from code.idioten_board import emptyRow
-from code.idioten_deck import create_deck
+from application.idioten_board import emptyRow
+from application.idioten_deck import create_deck
 
 deck = []
 board = []

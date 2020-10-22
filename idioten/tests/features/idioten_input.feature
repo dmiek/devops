@@ -11,3 +11,5 @@ Feature: Input
     Given game waiting for input
     When invalid input given
     Then game waiting for input
+
+  Scenario: 

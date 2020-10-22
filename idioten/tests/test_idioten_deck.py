@@ -4,8 +4,7 @@ Module for testing the deck generator.
 
 
 from pytest_bdd import scenario, given, when, then
-from ..code.idioten_deck import create_deck
-
+from idioten.application.idioten_deck import create_deck
 
 
 @scenario("features/idioten_deck.feature", "Deck is of the correct type")

@@ -4,7 +4,7 @@ Module for keeping fixtures.
 
 
 import pytest
-from ..code.idioten_deck import create_deck
+from ..application.idioten_deck import create_deck
 
 
 @pytest.fixture
