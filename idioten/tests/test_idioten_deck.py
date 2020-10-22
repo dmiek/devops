@@ -37,14 +37,14 @@ def test_no_duplications():
     """ Scenario for testing for duplications. """
 
 
-@given("existing deck")
+@given("an existing deck")
 def existing_deck(decks):
     """ Asserting existing deck is of correct size and type. """
     assert len(decks["current"]) == 52
     assert isinstance(decks["current"], list)
 
 
-@when('deck shuffled')
+@when('deck is shuffled')
 def build_deck(decks):
     """ Shuffling deck. """
     decks["new"] = create_deck()
@@ -80,13 +80,6 @@ def deck_length(decks):
     assert len(decks["new"]) == 52
 
 
-@then('deck is different from previous deck')
-def new_deck_previous_deck(decks):
-    """ Testing deck shuffling. """
-
-    assert decks["new"] != decks["current"]
-
-
 @then('deck contains no duplications')
 def unique_card(decks):
     """ Testing deck contains no duplications. """
@@ -94,3 +87,9 @@ def unique_card(decks):
     for i in range(len(decks["new"])):
         assert decks["new"][i] not in unique
         unique.append(decks["new"][i])
+
+
+@then('new deck is different from previous deck')
+def new_deck_previous_deck(decks):
+    """ Testing deck shuffling. """
+    assert decks["new"] != decks["current"]
