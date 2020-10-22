@@ -8,8 +8,11 @@ Feature: Input
     Then input is returned
 
   Scenario: Keep prompting until valid values are given
-    Given game waiting for input
+    Given game is waiting for input
     When invalid input given
-    Then game waiting for input
+    Then game is still waiting for input
 
-  Scenario: 
+  Scenario: Keep asking for input intil valid input is given
+    Given game is waiting for input
+    When invalid input is given "["
+    Then game is still waiting for input
