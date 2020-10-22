@@ -20,15 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8509dbe-ccdc-472c-9c18-67da106add1e" name="Default Changelist" comment="more refactoring">
+      <change beforePath="$PROJECT_DIR$/.idea/DevOps.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DevOps.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/idioten/application/idioten_input.py" beforeDir="false" afterPath="$PROJECT_DIR$/idioten/application/idioten_input.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/idioten/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/idioten/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/idioten/tests/test_idioten_input.py" beforeDir="false" afterPath="$PROJECT_DIR$/idioten/tests/test_idioten_input.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,6 +46,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -51,27 +58,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python tests.pytest in test_idioten_input.py">
-    <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DevOps" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/idioten/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/idioten/tests/conftest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="idioten_input" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DevOps" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -93,35 +79,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_idioten_deck.test_no_duplications" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_monkeypatching.test_adding" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="DevOps" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/idioten/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Projekt" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_idioten_deck.test_no_duplications&quot;" />
+      <option name="_new_target" value="&quot;test_monkeypatching.test_adding&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_idioten_input.test_return_ok_values" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_monkeypatching.test_double" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="DevOps" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/idioten/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Projekt" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_idioten_input.test_return_ok_values&quot;" />
+      <option name="_new_target" value="&quot;test_monkeypatching.test_double&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -141,13 +127,29 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_monkeypatching.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="DevOps" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Projekt" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/../Projekt/test_monkeypatching.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.pytest in test_idioten_input.py" />
         <item itemvalue="Python.idioten_input" />
-        <item itemvalue="Python tests.pytest for test_idioten_input.test_return_ok_values" />
-        <item itemvalue="Python tests.pytest for test_idioten_deck.test_no_duplications" />
-        <item itemvalue="Python.conftest" />
+        <item itemvalue="Python tests.pytest in test_monkeypatching.py" />
+        <item itemvalue="Python tests.pytest for test_monkeypatching.test_adding" />
+        <item itemvalue="Python tests.pytest for test_monkeypatching.test_double" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +183,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603392548920</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added core for testing input.">
+      <created>1603395670683</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603395670683</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Test core applied and running.">
+      <created>1603400001631</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603400001631</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,28 +216,37 @@
     <MESSAGE value="more refactoring" />
     <MESSAGE value="refactored readability." />
     <MESSAGE value="Added core for testing input." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added core for testing input." />
+    <MESSAGE value="Test core applied and running." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test core applied and running." />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="357" key="GridCell.Tab.0.bottom" timestamp="1603395421966">
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1603395703264">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="357" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603395421966" />
-    <state width="1899" height="357" key="GridCell.Tab.0.center" timestamp="1603395421966">
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603395703264" />
+    <state width="1899" height="357" key="GridCell.Tab.0.bottom" timestamp="1603400008955">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="357" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603395421966" />
-    <state width="1899" height="357" key="GridCell.Tab.0.left" timestamp="1603395421965">
+    <state width="1899" height="357" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603400008955" />
+    <state width="1899" height="357" key="GridCell.Tab.0.center" timestamp="1603400008955">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="357" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603395421965" />
-    <state width="1899" height="357" key="GridCell.Tab.0.right" timestamp="1603395421966">
+    <state width="1899" height="357" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603400008955" />
+    <state width="1899" height="357" key="GridCell.Tab.0.left" timestamp="1603400008955">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="357" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603395421966" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603392560260">
+    <state width="1899" height="357" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603400008955" />
+    <state width="1899" height="357" key="GridCell.Tab.0.right" timestamp="1603400008955">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603392560260" />
+    <state width="1899" height="357" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603400008955" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1603396310528">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603396310528" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603400003184">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603400003184" />
   </component>
 </project>
