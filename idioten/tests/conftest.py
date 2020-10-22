@@ -5,6 +5,7 @@ Module for keeping fixtures.
 
 import pytest
 from idioten.application.idioten_deck import create_deck
+from idioten.application.idioten_input import VALID_INPUT
 
 
 @pytest.fixture
@@ -19,5 +20,5 @@ def decks():
 @pytest.fixture
 def allowed_values():
     """ Fixture for allowed values. """
-    allowed_input = ('d', 'e', 'n', '1', '2', '3', '4')
+    allowed_input = VALID_INPUT
     return allowed_input

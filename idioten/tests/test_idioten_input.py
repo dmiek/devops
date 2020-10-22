@@ -2,10 +2,12 @@
 Module for testing Idioten input functionality
 """
 
-
+import sys
+import pytest
 from pytest_bdd import scenario, given, when, then
 from _pytest.monkeypatch import MonkeyPatch
-#
+from idioten.application.idioten_input import kb_input, VALID_INPUT
+
 # MONKEYPATCH = MonkeyPatch()
 
 
@@ -21,10 +23,14 @@ def test_return_ok_values():
 
 
 @given('game is waiting for input')
-def game_waiting_for_input():
+def game_waiting_for_input(capsys):
     """ Given game is waiting for input. """
-    pass
-
+    kb_input()
+    d = ["Waiting for input\n", "world"]
+    captured = capsys.readouterr()
+    print(captured)
+    assert captured.out in d
+    return
 
 @when('invalid input is given "["')
 def invalid_input_given():

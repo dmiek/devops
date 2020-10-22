@@ -3,12 +3,19 @@ Module for handling game input.
 """
 import sys
 
-INPUT = ()
 VALID_INPUT = ('d', '1', '2', '3', '4', 'n', 'e')
-GAME_ACTIVE = 1
 
 
-def kb_input(game_active):
+def kb_input():
+    """ Method for handling game input through keyboard. Will only accept values defined in VALID_INPUT. """
+    print("Waiting for input")
+    inputs = input()
+    print(inputs)
+    if len(inputs) != 1:
+        print("Waiting for input")
+
+
+def nput(game_active):
     """
     Keyboard input.
     """
@@ -41,3 +48,4 @@ def kb_input(game_active):
 
 #while INPUT != 'e':
 #    INPUT = kb_input(GAME_ACTIVE)
+kb_input()
