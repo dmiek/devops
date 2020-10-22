@@ -22,3 +22,11 @@ def allowed_values():
     """ Fixture for allowed values. """
     allowed_input = VALID_INPUT
     return allowed_input
+
+
+@pytest.fixture
+def input_fixture():
+    inputs = {"keyboard": ''}
+    assert len(inputs) == 1
+    assert len(inputs["keyboard"]) == 0
+    return inputs

@@ -8,11 +8,13 @@ VALID_INPUT = ('d', '1', '2', '3', '4', 'n', 'e')
 
 def kb_input():
     """ Method for handling game input through keyboard. Will only accept values defined in VALID_INPUT. """
-    print("Waiting for input")
-    inputs = input()
-    print(inputs)
-    if len(inputs) != 1:
-        print("Waiting for input")
+    inputs = input('Waiting for input')
+    if inputs in VALID_INPUT:
+        return 'OK'
+    else:
+        return 'NOK'
+
+
 
 
 def nput(game_active):
@@ -48,4 +50,3 @@ def nput(game_active):
 
 #while INPUT != 'e':
 #    INPUT = kb_input(GAME_ACTIVE)
-kb_input()
