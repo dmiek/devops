@@ -7,12 +7,12 @@ Feature: Input
     When OK input provided
     Then input is returned
 
-  Scenario: Keep prompting until valid values are given
-    Given game is waiting for input
-    When invalid input given
-    Then game is still waiting for input
+  Scenario: Flag valid input as valid
+    Given status of input is unknown
+    When valid input is given
+    Then game flags input as valid
 
-  Scenario: Keep asking for input intil valid input is given
-    Given game is waiting for input
-    When invalid input is given "["
-    Then game is still waiting for input
+  Scenario: Flag invalid input as invalid
+    Given status of input is unknown
+    When invalid input is given
+    Then game flags input as invalid

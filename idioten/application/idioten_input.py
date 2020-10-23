@@ -4,17 +4,17 @@ Module for handling game input.
 import sys
 
 VALID_INPUT = ('d', '1', '2', '3', '4', 'n', 'e')
-
+INPUTS = {"keyboard": '', "status": 'unknown'}
 
 def kb_input():
-    """ Method for handling game input through keyboard. Will only accept values defined in VALID_INPUT. """
-    inputs = input('Waiting for input')
-    if inputs in VALID_INPUT:
+    """
+    Method for handling game input through keyboard.
+    Will only accept values defined in VALID_INPUT.
+    """
+    INPUTS["keyboard"] = input('Waiting for input')
+    if INPUTS["keyboard"] in VALID_INPUT:
         return 'OK'
-    else:
-        return 'NOK'
-
-
+    return 'NOK'
 
 
 def nput(game_active):
