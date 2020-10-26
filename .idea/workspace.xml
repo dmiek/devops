@@ -103,6 +103,22 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_idioten_input.test_outlined" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="DevOps" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/idioten/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_idioten_input.test_outlined&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest for test_idioten_input.test_reject_ok_values" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="DevOps" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,29 +151,13 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_monkeypatching.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="DevOps" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Projekt" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/../Projekt/test_monkeypatching.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.pytest in test_idioten_input.py" />
-        <item itemvalue="Python tests.pytest for test_idioten_input.test_reject_ok_values" />
+        <item itemvalue="Python tests.pytest for test_idioten_input.test_outlined" />
         <item itemvalue="Python.idioten_input" />
         <item itemvalue="Python.conftest" />
-        <item itemvalue="Python tests.pytest in test_monkeypatching.py" />
+        <item itemvalue="Python tests.pytest for test_idioten_input.test_reject_ok_values" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603400151905</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added scenarios for testing valid and invalid input example values.">
+      <created>1603454496420</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603454496420</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,7 +239,8 @@
     <MESSAGE value="refactored readability." />
     <MESSAGE value="Added core for testing input." />
     <MESSAGE value="Test core applied and running." />
-    <option name="LAST_COMMIT_MESSAGE" value="Test core applied and running." />
+    <MESSAGE value="added scenarios for testing valid and invalid input example values." />
+    <option name="LAST_COMMIT_MESSAGE" value="added scenarios for testing valid and invalid input example values." />
   </component>
   <component name="WindowStateProjectService">
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1603438240318">
@@ -243,29 +251,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603395703264" />
-    <state width="1899" height="357" key="GridCell.Tab.0.bottom" timestamp="1603453949667">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2539" height="357" key="GridCell.Tab.0.bottom" timestamp="1603698493556">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1899" height="357" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603453949667" />
-    <state width="1899" height="357" key="GridCell.Tab.0.center" timestamp="1603453949667">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="357" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603489181221" />
+    <state width="2539" height="357" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603698493556" />
+    <state width="2539" height="357" key="GridCell.Tab.0.center" timestamp="1603698493556">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1899" height="357" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603453949667" />
-    <state width="1899" height="357" key="GridCell.Tab.0.left" timestamp="1603453949667">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="357" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603489181221" />
+    <state width="2539" height="357" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603698493556" />
+    <state width="2539" height="357" key="GridCell.Tab.0.left" timestamp="1603698493556">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1899" height="357" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603453949667" />
-    <state width="1899" height="357" key="GridCell.Tab.0.right" timestamp="1603453949667">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="357" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603489181220" />
+    <state width="2539" height="357" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603698493556" />
+    <state width="2539" height="357" key="GridCell.Tab.0.right" timestamp="1603698493556">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1899" height="357" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603453949667" />
+    <state width="1899" height="357" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603489181221" />
+    <state width="2539" height="357" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603698493556" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1603400102894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603400102894" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603400155836">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603454497733">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603400155836" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603454497733" />
   </component>
 </project>

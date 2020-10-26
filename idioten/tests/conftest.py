@@ -5,7 +5,6 @@ Module for keeping fixtures.
 
 import pytest
 from idioten.application.idioten_deck import create_deck
-from idioten.application.idioten_input import VALID_INPUT
 
 
 @pytest.fixture

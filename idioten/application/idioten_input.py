@@ -6,6 +6,7 @@ import sys
 VALID_INPUT = ('d', '1', '2', '3', '4', 'n', 'e')
 INPUTS = {"keyboard": '', "status": 'unknown'}
 
+
 def kb_input():
     """
     Method for handling game input through keyboard.
@@ -13,8 +14,13 @@ def kb_input():
     """
     INPUTS["keyboard"] = input('Waiting for input')
     if INPUTS["keyboard"] in VALID_INPUT:
-        return 'OK'
-    return 'NOK'
+        INPUTS["status"] = 'OK'
+        print(INPUTS)
+        return INPUTS
+    else:
+        INPUTS["status"] = 'NOK'
+        print(INPUTS)
+        return INPUTS
 
 
 def nput(game_active):
@@ -48,5 +54,8 @@ def nput(game_active):
     return inp
 
 
-#while INPUT != 'e':
-#    INPUT = kb_input(GAME_ACTIVE)
+# t = Input('test input', 'unknown')
+# print(t.keyboard)
+# print(t.status)
+
+#kb_input()
