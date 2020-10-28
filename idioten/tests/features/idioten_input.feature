@@ -8,7 +8,13 @@ Feature: Input
     When I eat <inputvalue> cucumbers
     Then I should have <endstate> cucumbers
 
-    Examples: Vertical
-    | startstate  | unknown | unknown | unknown | unknown | unknown | unknown | unknown | unknown |
-    | inputvalue  | e       | b       |   .     |   [     |   d     |   dd    |   5     |   ee    |
-    | endstate    | OK      | NOK     |   NOK   |   NOK   |   OK    |   NOK   |   NOK   |   NOK   |
+    Examples: Input values
+    | startstate  | inputvalue  | endstate  |
+    |   unknown   |     e       |   OK      |
+    |   unknown   |     b       |   NOK     |
+    |   unknown   |     .       |   NOK     |
+    |   unknown   |     [       |   NOK     |
+    |   unknown   |     d       |   OK      |
+    |   unknown   |     dd      |   NOK     |
+    |   unknown   |     5       |   NOK     |
+    |   unknown   |     ee      |   NOK     |
