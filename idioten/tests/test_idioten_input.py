@@ -21,7 +21,7 @@ def test_input_values():
     """
 
 
-@given("there are <startstate> cucumbers", target_fixture="start_input")
+@given("input status is <startstate>")
 def start_input(startstate, input_fixture):
     """ Given game is waiting for input. """
     assert len(input_fixture) == 2
@@ -32,7 +32,7 @@ def start_input(startstate, input_fixture):
     return dict(start=startstate)
 
 
-@when("I eat <inputvalue> cucumbers")
+@when("keyboard input of <inputvalue> is inserted")
 def eat_cucumbers(input_fixture, inputvalue, monkeypatch):
     """ When valid but too long input is given. """
     char_inputs = StringIO(inputvalue + '\n')
@@ -43,7 +43,7 @@ def eat_cucumbers(input_fixture, inputvalue, monkeypatch):
     assert isinstance(inputvalue, str)
 
 
-@then("I should have <endstate> cucumbers")
+@then("input function should flag input as <endstate>")
 def should_have_left_cucumbers(input_fixture, endstate):
     """ Verifying function returns correct values as stated in feature table. """
     assert isinstance(endstate, str)

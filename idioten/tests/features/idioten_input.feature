@@ -4,9 +4,9 @@ Feature: Input
 
 
   Scenario Outline: Tests different input and asserts corresponding assessment returned
-    Given there are <startstate> cucumbers
-    When I eat <inputvalue> cucumbers
-    Then I should have <endstate> cucumbers
+    Given input status is <startstate>
+    When keyboard input of <inputvalue> is inserted
+    Then input function should flag input as <endstate>
 
     Examples: Input values
     | startstate  | inputvalue  | endstate  |
