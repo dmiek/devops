@@ -1,4 +1,6 @@
-
+"""
+Testing the empty_row functionality.
+"""
 from idioten.application.idioten_empty_row import empty_row
 from pytest_bdd import scenario, given, when, then
 
@@ -22,4 +24,5 @@ def empty_row_on_board(board_fixture):
 
 @then('board is empty and prepared for playing')
 def board_prepared_and_empty(board_fixture):
+    """ Board is empty but prepared for playing. """
     assert board_fixture["void"] == ["- ", "- ", "- ", "- "]
