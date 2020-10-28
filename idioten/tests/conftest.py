@@ -29,5 +29,5 @@ def input_fixture():
 @pytest.fixture()
 def board_fixture():
     """ Creating initial board. """
-    board = {"void": [], "pop": ['TD', 'AS', '9H', '3C']}
-    return board
+    test_board = {"void": [], "pop": ['TD', 'AS', '9H', '3C']}
+    return test_board
