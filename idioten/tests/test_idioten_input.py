@@ -6,7 +6,7 @@ The input module takes input of length "1" only.
 
 from io import StringIO
 from pytest_bdd import scenario, given, when, then
-from idioten.application.idioten_input import kb_input, INPUTS
+from idioten.application.idioten_input import kb_input
 
 
 @scenario('features/idioten_input.feature', 'Flag invalid input as invalid')
@@ -19,7 +19,10 @@ def test_accept_ok_values():
     """Test that valid values are returned"""
 
 
-@scenario('features/idioten_input.feature', 'Flag invalid when characters valid but length is too long')
+@scenario(
+            'features/idioten_input.feature',
+            'Flag invalid when characters valid but length is too long'
+)
 def test_reject_ok_long_values():
     """Test that valid but too long values are rejected. """
 
@@ -74,14 +77,16 @@ def game_flags_input_as_invalid(input_fixture):
     assert input_fixture["status"] == 'NOK'
 
 
-
 @scenario(
     "features/idioten_input.feature",
-    "Outlined given, when, thens",
-    example_converters=dict(start=str, eat=str, left=str)
+    "Tests different input and asserts corresponding assessment returned",
+    example_converters=dict(start=str, eat=float, left=str)
 )
 def test_outlined():
-    pass
+    """
+    Parsing table in feature in order to use as test input.
+    Stating what type each component of the table is.
+    """
 
 
 @given("there are <startstate> cucumbers", target_fixture="start_input")
@@ -107,6 +112,7 @@ def eat_cucumbers(input_fixture, inputvalue, monkeypatch):
 
 
 @then("I should have <endstate> cucumbers")
-def should_have_left_cucumbers(input_fixture, startstate, inputvalue, endstate):
+def should_have_left_cucumbers(input_fixture, endstate):
+    """ Verifying function returns correct values as stated in feature table. """
     assert isinstance(endstate, str)
     assert input_fixture["status"] == endstate
