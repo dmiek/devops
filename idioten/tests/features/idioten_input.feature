@@ -20,11 +20,11 @@ Feature: Input
 
 
   Scenario Outline: Outlined given, when, thens
-    Given there are <start> cucumbers
-    When I eat <eat> cucumbers
-    Then I should have <left> cucumbers
+    Given there are <startstate> cucumbers
+    When I eat <inputvalue> cucumbers
+    Then I should have <endstate> cucumbers
 
     Examples: Vertical
-    | start | 12 | 2 |
-    | eat   | 5  | 1 |
-    | left  | 7  | 1 |
+    | startstate  | unknown | unknown | unknown | unknown | unknown | unknown |
+    | inputvalue  | e       | b       |   .     |   [     |   d     |   dd    |
+    | endstate    | OK      | NOK     |   NOK   |   NOK   |   OK    |   NOK   |

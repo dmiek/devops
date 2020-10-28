@@ -78,60 +78,35 @@ def game_flags_input_as_invalid(input_fixture):
 @scenario(
     "features/idioten_input.feature",
     "Outlined given, when, thens",
-    example_converters=dict(start=int, eat=float, left=str)
+    example_converters=dict(start=str, eat=str, left=str)
 )
 def test_outlined():
     pass
 
 
-@given("there are <start> cucumbers", target_fixture="start_input")
-def start_input(start):
-    assert isinstance(start, int)
-    return dict(start=start)
+@given("there are <startstate> cucumbers", target_fixture="start_input")
+def start_input(startstate, input_fixture):
+    """ Given game is waiting for input. """
+    assert len(input_fixture) == 2
+    assert len(input_fixture["keyboard"]) == 0
+    assert input_fixture["status"] == 'unknown'
+    assert input_fixture["keyboard"] == ''
+    assert isinstance(startstate, str)
+    return dict(start=startstate)
 
 
-@when("I eat <eat> cucumbers")
-def eat_cucumbers(start_input, eat):
-    assert isinstance(eat, float)
-    start_input["eat"] = eat
+@when("I eat <inputvalue> cucumbers")
+def eat_cucumbers(input_fixture, inputvalue, monkeypatch):
+    """ When valid but too long input is given. """
+    char_inputs = StringIO(inputvalue + '\n')
+    monkeypatch.setattr('sys.stdin', char_inputs)
+    temp_input = kb_input()
+    input_fixture["keyboard"] = temp_input["keyboard"]
+    input_fixture["status"] = temp_input["status"]
+    assert isinstance(inputvalue, str)
 
 
-@then("I should have <left> cucumbers")
-def should_have_left_cucumbers(start_input, start, eat, left):
-    assert isinstance(left, str)
-    assert start - eat == int(left)
-    assert start_input["start"] == start
-    assert start_input["eat"] == eat
-
-
-# @scenario(
-#     "features/idioten_input.feature",
-#     "Outlined given, when, thens",
-#     example_converters=dict(keyboard=str, status=str)
-# )
-# def test_outlined():
-#     pass
-#
-#
-# @given("status of input is unknown", target_fixture="start_cucumbers")
-# def start_cucumbers():
-#     pass
-#
-#
-# @when("I enter <keyboard> input with <status> status")
-# def eat_cucumbers(input_fixture, keyboard, status, monkeypatch):
-#     input_fixture["keyboard"] = keyboard
-#     input_fixture["status"] = status
-#     print(keyboard)
-#     sling = str(keyboard) + '\n'
-#     assert isinstance(keyboard, str)
-#     monkeypatch.setattr('sys.stdin', sling)
-#     temp_input = kb_input(INPUTS)
-#     input_fixture["keyboard"] = temp_input["keyboard"]
-#     input_fixture["status"] = temp_input["status"]
-#
-#
-# @then("game flags the <status> accordingly")
-# def should_have_left_cucumbers(input_fixture, keyboard, status):
-#     assert input_fixture["status"] == status
-#     assert input_fixture["keyboard"] == keyboard
+@then("I should have <endstate> cucumbers")
+def should_have_left_cucumbers(input_fixture, startstate, inputvalue, endstate):
+    assert isinstance(endstate, str)
+    assert input_fixture["status"] == endstate
