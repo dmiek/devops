@@ -12,7 +12,7 @@ from idioten.application.idioten_input import kb_input
 @scenario(
     "features/idioten_input.feature",
     "Tests different input and asserts corresponding assessment returned",
-    example_converters=dict(start=str, eat=float, left=str)
+    example_converters=dict(startstate=str, inputvalue=str, endstate=str)
 )
 def test_input_values():
     """
