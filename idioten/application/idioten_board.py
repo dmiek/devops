@@ -115,10 +115,10 @@ def helpMenu(board):
 def playGame(board):
     cleanUpBoard(board)
     displayBoard(board)
-    if game_active == 0:
-        print('start new game by intering "n"')
-    else:
-        print("select action:")
+    # if game_active == 0:
+    #     print('start new game by intering "n"')
+    # else:
+    #     print("select action:")
     r = kb_input()
     if r == "d":
         board = dealCards(board, deck)
