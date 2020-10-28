@@ -6,10 +6,7 @@ Test module to test board setup.
 #
 # BOARD = []
 #
-# @pytest.fixture()
-# def board_empty():
-#     board == []
-#     return board
+
 #
 # @scenario('idioten_setup.feature', 'Verify board setup and empty when initiated')
 # def test_board_set_up():

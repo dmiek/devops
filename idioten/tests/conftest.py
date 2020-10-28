@@ -19,8 +19,15 @@ def decks():
 @pytest.fixture
 def input_fixture():
     """ Fixture for creating input object. """
-    inputs = {"keyboard": '', 'status': 'unknown'}
+    inputs = {"keyboard": '', "status": 'unknown'}
     assert len(inputs) == 2
     assert len(inputs["keyboard"]) == 0
     assert inputs["status"] == 'unknown'
     return inputs
+
+
+@pytest.fixture()
+def board_fixture():
+    """ Creating initial board. """
+    board = {"void": []}
+    return board

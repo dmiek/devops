@@ -2,7 +2,6 @@ import sys
 from application.idioten_deck import create_deck
 from application.idioten_input import kb_input
 
-game_active = 1
 
 # FUNCTIONS:
 
@@ -14,7 +13,7 @@ def new_game():
     board = [emptyRow()]
     deck = create_deck()
     board = dealCards(board, deck)
-    game_active = True
+
 
     # TEST
     if len(board) != 1:
