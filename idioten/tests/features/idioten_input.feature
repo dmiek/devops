@@ -3,22 +3,6 @@ Feature: Input
   The input module takes input of length "1" only.
 
 
-  Scenario: Flag valid input as valid
-    Given status of input is unknown
-    When valid input is given
-    Then game flags input as valid
-
-  Scenario: Flag invalid input as invalid
-    Given status of input is unknown
-    When invalid input is given
-    Then game flags input as invalid
-
-  Scenario: Flag invalid when characters valid but length is too long
-    Given status of input is unknown
-    When valid but too long input is given
-    Then game flags input as invalid
-
-
   Scenario Outline: Tests different input and asserts corresponding assessment returned
     Given there are <startstate> cucumbers
     When I eat <inputvalue> cucumbers
