@@ -42,14 +42,14 @@ def empty_row_on_pop_board(board_fixture):
 
 
 @then('void board is empty and prepared for playing')
-def board_void_prepared_and_empty(board_fixture):
+def board_void_prepared_and_empty(board_fixture, empty_row_fixture):
     """ Board is empty but prepared for playing. """
-    assert board_fixture["void"] == bench_board
+    assert board_fixture["void"] == empty_row_fixture
     assert len(board_fixture["void"]) == 4
 
 
 @then('populated board is empty and prepared for playing')
-def board_pop_prepared_and_empty(board_fixture):
+def board_pop_prepared_and_empty(board_fixture, empty_row_fixture):
     """ Board is empty but prepared for playing. """
-    assert board_fixture["pop"] == bench_board
+    assert board_fixture["pop"] == empty_row_fixture
     assert len(board_fixture["pop"]) == 4
