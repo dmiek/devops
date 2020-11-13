@@ -21,10 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c8509dbe-ccdc-472c-9c18-67da106add1e" name="Default Changelist" comment="more refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/idioten/application/idioten_input.py" beforeDir="false" afterPath="$PROJECT_DIR$/idioten/application/idioten_input.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/idioten/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/idioten/tests/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/idioten/tests/features/idioten_input.feature" beforeDir="false" afterPath="$PROJECT_DIR$/idioten/tests/features/idioten_input.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/idioten/tests/test_idioten_input.py" beforeDir="false" afterPath="$PROJECT_DIR$/idioten/tests/test_idioten_input.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/idioten/tests/test_idioten_deck.py" beforeDir="false" afterPath="$PROJECT_DIR$/idioten/tests/test_idioten_deck.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/idioten/tests/test_idioten_empty_row.py" beforeDir="false" afterPath="$PROJECT_DIR$/idioten/tests/test_idioten_empty_row.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,9 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,50 +63,8 @@
       <recent name="C:\PyCharm\DevOps\idioten\application" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_idioten_input.py">
-    <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DevOps" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/idioten/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/idioten/tests/conftest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="idioten_input" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DevOps" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/idioten/application" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/idioten/application/idioten_input.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_idioten_input.test_outlined" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.pytest in test_idioten_deck.py">
+    <configuration name="pytest for test_idioten_input.test_input_values" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="DevOps" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -115,7 +76,7 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_idioten_input.test_outlined&quot;" />
+      <option name="_new_target" value="&quot;test_idioten_input.test_input_values&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -133,6 +94,38 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_idioten_input.test_reject_ok_values&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_idioten_deck.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="DevOps" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/idioten/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/idioten/tests/test_idioten_deck.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_idioten_empty_row.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="DevOps" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/idioten/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/idioten/tests/test_idioten_empty_row.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="pytest in test_idioten_input.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -153,10 +146,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test_idioten_deck.py" />
+        <item itemvalue="Python tests.pytest in test_idioten_empty_row.py" />
+        <item itemvalue="Python tests.pytest for test_idioten_input.test_input_values" />
         <item itemvalue="Python tests.pytest in test_idioten_input.py" />
-        <item itemvalue="Python tests.pytest for test_idioten_input.test_outlined" />
-        <item itemvalue="Python.idioten_input" />
-        <item itemvalue="Python.conftest" />
         <item itemvalue="Python tests.pytest for test_idioten_input.test_reject_ok_values" />
       </list>
     </recent_temporary>
@@ -219,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603454496420</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="created table structure.">
+      <created>1603729979933</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1603729979933</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,7 +240,8 @@
     <MESSAGE value="Added core for testing input." />
     <MESSAGE value="Test core applied and running." />
     <MESSAGE value="added scenarios for testing valid and invalid input example values." />
-    <option name="LAST_COMMIT_MESSAGE" value="added scenarios for testing valid and invalid input example values." />
+    <MESSAGE value="created table structure." />
+    <option name="LAST_COMMIT_MESSAGE" value="created table structure." />
   </component>
   <component name="WindowStateProjectService">
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1603438240318">
@@ -251,33 +252,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603395703264" />
-    <state width="2539" height="357" key="GridCell.Tab.0.bottom" timestamp="1603698493556">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1899" height="241" key="GridCell.Tab.0.bottom" timestamp="1605283755975">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="357" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603489181221" />
-    <state width="2539" height="357" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603698493556" />
-    <state width="2539" height="357" key="GridCell.Tab.0.center" timestamp="1603698493556">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1899" height="241" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605283755975" />
+    <state width="2539" height="345" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1604940588407" />
+    <state width="1899" height="241" key="GridCell.Tab.0.center" timestamp="1605283755975">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="357" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603489181221" />
-    <state width="2539" height="357" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603698493556" />
-    <state width="2539" height="357" key="GridCell.Tab.0.left" timestamp="1603698493556">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1899" height="241" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605283755975" />
+    <state width="2539" height="345" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1604940588406" />
+    <state width="1899" height="241" key="GridCell.Tab.0.left" timestamp="1605283755975">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="357" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603489181220" />
-    <state width="2539" height="357" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603698493556" />
-    <state width="2539" height="357" key="GridCell.Tab.0.right" timestamp="1603698493556">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1899" height="241" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605283755975" />
+    <state width="2539" height="345" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1604940588406" />
+    <state width="1899" height="241" key="GridCell.Tab.0.right" timestamp="1605283755975">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="357" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603489181221" />
-    <state width="2539" height="357" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603698493556" />
+    <state width="1899" height="241" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605283755975" />
+    <state width="2539" height="345" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1604940588406" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1603400102894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603400102894" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603454497733">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="736" y="341" key="Vcs.Push.Dialog.v2" timestamp="1603729982830">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603454497733" />
+    <state x="736" y="341" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1603729982830" />
   </component>
 </project>

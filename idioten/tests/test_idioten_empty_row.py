@@ -5,8 +5,6 @@ from idioten.application.idioten_empty_row import empty_row
 from pytest_bdd import scenario, given, when, then
 
 
-bench_board = ['- ', '- ', '- ', '- ']
-
 @scenario('features/idioten_empty_row.feature', 'Empty void board')
 def test_reset_void_board():
     """ Test the resetting of an empty board. """
