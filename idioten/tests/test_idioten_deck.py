@@ -38,58 +38,58 @@ def test_no_duplications():
 
 
 @given("an existing deck")
-def existing_deck(decks):
+def existing_deck(decks_fixture):
     """ Asserting existing deck is of correct size and type. """
-    assert len(decks["current"]) == 52
-    assert isinstance(decks["current"], list)
+    assert len(decks_fixture["current"]) == 52
+    assert isinstance(decks_fixture["current"], list)
 
 
 @when('deck is shuffled')
-def build_deck(decks):
+def build_deck(decks_fixture):
     """ Shuffling deck. """
-    decks["new"] = create_deck()
-    assert len(decks["new"]) == 52
-    assert isinstance(decks["new"], list)
+    decks_fixture["new"] = create_deck()
+    assert len(decks_fixture["new"]) == 52
+    assert isinstance(decks_fixture["new"], list)
 
 
 @then('deck is of correct type')
-def deck_type(decks):
+def deck_type(decks_fixture):
     """ Testing deck is of correct type. """
-    assert isinstance(decks["new"], list)
+    assert isinstance(decks_fixture["new"], list)
 
 
 @then('deck contains only allowed colours')
-def allowed_colour(decks):
+def allowed_colour(decks_fixture):
     """ Testing deck contains correct colours. """
     allowed_colours = ["D", "S", "C", "H"]
-    for i in range(len(decks["new"])):
-        assert decks["new"][i][1] in allowed_colours
+    for i in range(len(decks_fixture["new"])):
+        assert decks_fixture["new"][i][1] in allowed_colours
 
 
 @then('deck contains only allowed ranks')
-def allowed_rank(decks):
+def allowed_rank(decks_fixture):
     """ Testing deck contains correct ranks. """
     allowed_ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']
-    for i in range(len(decks["new"])):
-        assert decks["new"][i][0] in allowed_ranks
+    for i in range(len(decks_fixture["new"])):
+        assert decks_fixture["new"][i][0] in allowed_ranks
 
 
 @then('deck contains all cards')
-def deck_length(decks):
+def deck_length(decks_fixture):
     """ Testing deck is of the correct size. """
-    assert len(decks["new"]) == 52
+    assert len(decks_fixture["new"]) == 52
 
 
 @then('deck contains no duplications')
-def unique_card(decks):
+def unique_card(decks_fixture):
     """ Testing deck contains no duplications. """
     unique = []
-    for i in range(len(decks["new"])):
-        assert decks["new"][i] not in unique
-        unique.append(decks["new"][i])
+    for i in range(len(decks_fixture["new"])):
+        assert decks_fixture["new"][i] not in unique
+        unique.append(decks_fixture["new"][i])
 
 
 @then('new deck is different from previous deck')
-def new_deck_previous_deck(decks):
+def new_deck_previous_deck(decks_fixture):
     """ Testing deck shuffling. """
-    assert decks["new"] != decks["current"]
+    assert decks_fixture["new"] != decks_fixture["current"]
