@@ -18,3 +18,12 @@ Feature: Input
     |   unknown   |     dd      |   NOK     |
     |   unknown   |     5       |   NOK     |
     |   unknown   |     ee      |   NOK     |
+    |   unknown   | dwdwadwadwa |   NOK     |
+    |   unknown   | 43435435646 |   NOK     |
+    |   unknown   |     1       |   OK      |
+
+
+
+
+
+
