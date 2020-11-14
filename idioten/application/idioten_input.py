@@ -3,7 +3,7 @@ Module for handling game input.
 """
 import sys
 
-VALID_INPUT = ('d', '1', '2', '3', '4', 'n', 'e')
+VALID_INPUT = ('d', '1', '2', '3', '4', 'n', 'e', 'hello')
 INPUTS = {"keyboard": '', "status": 'unknown'}
 
 
