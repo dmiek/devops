@@ -1,6 +1,7 @@
 import sys
 from application.idioten_deck import create_deck
 from application.idioten_input import kb_input
+from application.idioten_empty_row import empty_row
 
 
 # FUNCTIONS:
@@ -150,11 +151,6 @@ def displayBoard(board):
     print("displaying current board")
     for i in range(len(board)):
         print(*board[i])
-
-
-def emptyRow():
-    row = ["- ", "- ", "- ", "- "]
-    return row
 
 
 def moveCard(board):
