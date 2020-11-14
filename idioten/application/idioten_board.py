@@ -11,7 +11,7 @@ def no_game_active():
 
 def new_game():
     print("initiating new game")
-    board = [emptyRow()]
+    board = [empty_row()]
     deck = create_deck()
     board = dealCards(board, deck)
 
@@ -58,7 +58,7 @@ def dealCards(board, deck):
         displayBoard(board)
     else:                               # Some elements in last row empty
         print("adding cards to the current asymmetric last row")
-        board.append(emptyRow())
+        board.append(empty_row())
         print("adding empty row to current board")
         displayBoard(board)
         for i in range(4):
@@ -220,9 +220,9 @@ def endGameEvaluationboard(board):
 # SETUP:
 print("***")
 print("*** SETUPING UP GAME ***")
-board = [emptyRow()]
+board = [empty_row()]
 print("empty board created")
-rond = emptyRow()
+rond = empty_row()
 print("round emptied")
 deck = create_deck()
 print("*** SETUP FINISHED ***")
