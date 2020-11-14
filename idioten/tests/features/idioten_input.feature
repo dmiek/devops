@@ -21,6 +21,7 @@ Feature: Input
     |   unknown   | dwdwadwadwa |   NOK     |
     |   unknown   | 43435435646 |   NOK     |
     |   unknown   |     1       |   OK      |
+    |   unknown   |   hello     |   OK      |
 
 
 
