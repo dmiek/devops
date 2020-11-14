@@ -5,6 +5,14 @@ Module for keeping fixtures.
 
 import pytest
 from idioten.application.idioten_deck import create_deck
+from idioten.application.idioten_empty_row import empty_row
+
+
+@pytest.fixture
+def boards_fixture():
+    """ Dict holding all boards. """
+    boards = {"empty_board": empty_row(), "void": [], "pop": ['TD', 'AS', '9H', '3C']}
+    return boards
 
 
 @pytest.fixture
@@ -25,12 +33,6 @@ def input_fixture():
     assert inputs["status"] == 'unknown'
     return inputs
 
-
-@pytest.fixture()
-def board_fixture():
-    """ Creating initial board. """
-    test_board = {"void": [], "pop": ['TD', 'AS', '9H', '3C']}
-    return test_board
 
 @pytest.fixture()
 def empty_row_fixture():
