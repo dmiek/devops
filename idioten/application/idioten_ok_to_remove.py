@@ -23,7 +23,6 @@ def ok_to_remove(row, pos):
         status_ok = 0
         return status_ok
 
-
     # get the colour and rank of the card
     colour = row[pos][1]
     rank = row[pos][0]
@@ -46,7 +45,7 @@ def ok_to_remove(row, pos):
     # is there any other card of the same colour as the card to be removed?
     gov_colour = []
     gov_rank = []
-    for i in range(len(row)):
+    for i, _ in enumerate(row):
         if row[i][1] == colour:
             gov_colour.append(row[i])
     if len(gov_colour) == 0:
@@ -54,9 +53,9 @@ def ok_to_remove(row, pos):
         return status_ok
 
     # check the ranks of the cards of the same colour
-    for j in range(len(gov_colour)):
+    for j, _ in enumerate(gov_colour):
         gov_rank.append(gov_colour[j][0])
-    for k in range(len(gov_rank)):
+    for k, _ in enumerate(gov_rank):
         if gov_rank[k] == 'A':
             gov_rank[k] = A
         elif gov_rank[k] == 'K':
@@ -71,15 +70,11 @@ def ok_to_remove(row, pos):
             gov_rank[k] = int(gov_rank[k])
 
     # check if any value of the other cards exceed
-    for m in range(len(gov_rank)):
-        if gov_rank[m] > rank:
+    for c, _ in enumerate(gov_rank):
+        if gov_rank[c] > rank:
             print('card OK to remove')
             status_ok = 1
             return status_ok
     print('card NOK to remove')
     status_ok = 0
     return status_ok
-
-# rows = ['TS', '- ', '2H', 'KD']
-# test = ok_to_remove(rows, 1)
-# print(test)

@@ -4,6 +4,7 @@ from pytest_bdd import scenario, given, when, then
 from idioten.application.idioten_ok_to_remove import ok_to_remove
 from idioten.application.idioten_input_modifier import input_modifier
 
+
 @scenario(
     "features/idioten_ok_to_remove.feature",
     "Test if card is OK to remove or not",
