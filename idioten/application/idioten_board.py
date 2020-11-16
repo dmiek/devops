@@ -81,25 +81,6 @@ def dealCards(board, deck):
     return board
 
 
-def removeCard(board, r):
-    print("attempting to remove card")
-    row = board[0]
-    p = -1
-    h = (int(r) - 1)
-    if row[h] == "- ":
-        print("column empty, cannot remove card")
-        return board
-    row = board[p]
-    while row[h] == "- ":
-        p = p - 1
-        row = board[p]
-    if row[h] != "- ":
-        row[h] = "- "
-    # replace row in board
-    board[p] = row
-    print("removed card in column")
-    return board
-
 
 def helpMenu(board):
     print("*** HELP MENU ***")
@@ -189,18 +170,6 @@ def cleanUpBoard(board):
     else:
         print("board only one row")
         return board
-
-
-def okToRemove(board):
-    print("checking if remove request is ok or not")
-
-
-def okToMove(board, r):
-    row = board[0]
-    if row[r] == "- ":
-        return True
-    else:
-        return False
 
 
 def countCardsDealt():

@@ -57,6 +57,15 @@ def boards_fixture():
             ['5C', '4H', 'KC', 'QS'],
             ['TD', '2C', '3S', 'KD'],
             ['- ', '6C', '7D', 'QH']
+        ],
+        "move_single_pop_NOK": [
+            ['5C', '4H', 'KC', 'QS']
+        ],
+        "move_single_pop_OK_pre": [
+            ['- ', '2C', '3S', 'KD']
+        ],
+        "move_single_pop_OK_post": [
+            ['2C', '- ', '3S', 'KD']
         ]
     }
     return boards
