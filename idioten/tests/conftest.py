@@ -46,7 +46,7 @@ def rows_fixture():
         "void":                 [],
         "empty_row":            ['- ', '- ', '- ', '- '],
         "populated_OK_1":       ['TD', '3C', '2H', 'KD'],
-        "populated_OK_2":       ['TD', '3C', '5C', '2C'],
+        "populated_clubs":      ['TC', '3C', '5C', '2C'],
         "populated_NOK_1":      ['TS', '3C', '2H', 'KD'],
         "populated_NOK_4":      ['TD', '3C', '2H', 'KD'],
         "position_empty_2":     ['TD', '- ', '2H', 'KD'],
