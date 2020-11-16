@@ -1,11 +1,11 @@
 """ Test cases to test the OK_to_remove-functionality. """
 
 from pytest_bdd import scenario, given, when, then
-from idioten.application.idioten_OK_to_remove import ok_to_remove
+from idioten.application.idioten_ok_to_remove import ok_to_remove
 from idioten.application.idioten_input_modifier import input_modifier
 
 @scenario(
-    "features/idioten_OK_to_remove.feature",
+    "features/idioten_ok_to_remove.feature",
     "Test if card is OK to remove or not",
     example_converters=dict(startstate=str, inputvalue=str, endstate=int)
 )
