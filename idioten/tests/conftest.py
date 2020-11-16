@@ -41,6 +41,7 @@ def boards_fixture():
 
 @pytest.fixture
 def rows_fixture():
+    """ Method containing rows for testing. """
     rows = {
         "void":                 [],
         "empty_row":            ['- ', '- ', '- ', '- '],
@@ -49,8 +50,7 @@ def rows_fixture():
         "populated_NOK_1":      ['TS', '3C', '2H', 'KD'],
         "populated_NOK_4":      ['TD', '3C', '2H', 'KD'],
         "position_empty_2":     ['TD', '- ', '2H', 'KD'],
-        "royals_OK_3":          ['JS', 'QS', 'KS', 'AS'],
-        "royals_NOK_4":         ['JS', 'QS', 'KS', 'AS']
+        "royals":               ['JS', 'QS', 'KS', 'AS']
     }
     return rows
 

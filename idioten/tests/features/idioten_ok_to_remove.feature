@@ -14,5 +14,7 @@ Feature: Feature keeping track of valid removal of cards.
     | populated_NOK_1   |  1  |     0      |
     | populated_NOK_4   |  4  |     0      |
     | position_empty_2  |  2  |     0      |
-    | royals_OK_3       |  3  |     1      |
-    | royals_NOK_4      |  4  |     0      |
+    | royals            |  1  |     1      |
+    | royals            |  2  |     1      |
+    | royals            |  3  |     1      |
+    | royals            |  4  |     0      |
