@@ -39,7 +39,6 @@ def ok_to_move(board, k_b_f, k_b_t):
         print(board)
         return board
 
-
     # if board is 2 rows or larger, continue to last row of board
     print('assessing if OK to remove')
     row = board[last_row]
