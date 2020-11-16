@@ -6,9 +6,6 @@ from application.idioten_empty_row import empty_row
 
 # FUNCTIONS:
 
-def no_game_active():
-    game_active = False
-
 def new_game():
     print("initiating new game")
     board = [empty_row()]
@@ -94,38 +91,38 @@ def helpMenu(board):
     return board
 
 
-def playGame(board):
-    cleanUpBoard(board)
-    displayBoard(board)
-    # if game_active == 0:
-    #     print('start new game by intering "n"')
-    # else:
-    #     print("select action:")
-    r = kb_input()
-    if r == "d":
-        board = dealCards(board, deck)
-        return board
-    elif r == "1" or r == "2" or r == "3" or r == "4":
-        board = removeCard(board, r)
-        return board
-    elif r == "e" or r == "exit":
-        sys.exit("ending game, thanks for playing!")
-
-    # elif r == "e" or r == "exit":
-    #     finishGame()
-    elif r == "m":
-        board = moveCard(board)
-        return board
-    elif r == "n":
-        board = new_game()
-        return board
-    elif r == "help":
-        helpMenu(board)
-        return board
-    else:
-        print("input not mapped to action")
-        print("type 'help' to display available commands")
-        return board
+# def playGame(board):
+#     cleanUpBoard(board)
+#     displayBoard(board)
+#     # if game_active == 0:
+#     #     print('start new game by intering "n"')
+#     # else:
+#     #     print("select action:")
+#     r = kb_input()
+#     if r == "d":
+#         board = dealCards(board, deck)
+#         return board
+#     elif r == "1" or r == "2" or r == "3" or r == "4":
+#         board = removeCard(board, r)
+#         return board
+#     elif r == "e" or r == "exit":
+#         sys.exit("ending game, thanks for playing!")
+#
+#     # elif r == "e" or r == "exit":
+#     #     finishGame()
+#     elif r == "m":
+#         board = move_card(board)
+#         return board
+#     elif r == "n":
+#         board = new_game()
+#         return board
+#     elif r == "help":
+#         helpMenu(board)
+#         return board
+#     else:
+#         print("input not mapped to action")
+#         print("type 'help' to display available commands")
+#         return board
 
 
 def displayBoard(board):
@@ -134,25 +131,25 @@ def displayBoard(board):
         print(*board[i])
 
 
-def moveCard(board):
-    print("attempting to move card to empty spot")
-    # Args: board, m = which card to move (1-4), r = to which position (1-4).
-    m = (int(input("select a card to move: ")) - 1)
-    r = (int(input("select a position to move to: ")) - 1)
-    if okToMove(board, r) == False:     # Verify position of first row empty.
-        print("not ok to move")
-        return board
-    p = -1                              # Look at last row of board
-    row = board[p]
-    while row[m] == "- ":               # While element empty,
-        p = p - 1                       # look in the previous row.
-        row = board[p]
-    element = row[m]                    # When element not emtpy, copy
-    row[m] = "- "                       # and replace with empty element.
-    board[p] = row                      # Replace row in board with emptied row.
-    row = board[0]                      # Copy first row of board,
-    row[r] = element                    # and replace empty position with element.
-    return board
+# def move_card(board):
+#     print("attempting to move card to empty spot")
+    # # Args: board, m = which card to move (1-4), r = to which position (1-4).
+    # m = (int(input("select a card to move: ")) - 1)
+    # r = (int(input("select a position to move to: ")) - 1)
+    # if ok_to_move(board, m, r) == False:     # Verify position of first row empty.
+    #     print("not ok to move")
+    #     return board
+    # p = -1                              # Look at last row of board
+    # row = board[p]
+    # while row[m] == "- ":               # While element empty,
+    #     p = p - 1                       # look in the previous row.
+    #     row = board[p]
+    # element = row[m]                    # When element not emtpy, copy
+    # row[m] = "- "                       # and replace with empty element.
+    # board[p] = row                      # Replace row in board with emptied row.
+    # row = board[0]                      # Copy first row of board,
+    # row[r] = element                    # and replace empty position with element.
+    # return board
 
 
 def cleanUpBoard(board):
