@@ -182,30 +182,3 @@ def finishGame():
 #         board = playGame(board)
 #     game_active = False
 
-
-# SETUP:
-print("***")
-print("*** SETUPING UP GAME ***")
-board = [empty_row()]
-print("empty board created")
-rond = empty_row()
-print("round emptied")
-deck = create_deck()
-print("*** SETUP FINISHED ***")
-
-# PLAY:
-
-print("***")
-print("*** GAME INITIATED ***")
-new_game()
-displayBoard(board)
-print("***")
-
-while len(deck) > 0:
-    print("playing game")
-    board = playGame(board)
-    print("***")
-
-print("*** DECK EMPTY ***")
-
-endGameEvaluationboard(board)
