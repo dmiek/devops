@@ -6,23 +6,24 @@ ROYALS = {'A': 14, 'K': 13, 'Q': 12, 'J': 11, 'T': 10}
 
 def ok_to_remove(row, pos):
     """ Method to evaluate if card is OK to remove or not. """
+    wor = row
     # check if there is anything to remove
     # void:
-    if len(row) == 0:
+    if len(wor) == 0:
         print('row is void, nothing to remove')
         status_ok = 0
         return status_ok
 
     # position empty:
-    if row[pos] == '- ':
+    if wor[pos] == '- ':
         print('position empty, nothing to remove')
         status_ok = 0
         return status_ok
 
     # get the colour and rank of the card
-    colour = row[pos][1]
-    rank = row[pos][0]
-    row.pop(pos)
+    colour = wor[pos][1]
+    rank = wor[pos][0]
+    wor.pop(pos)
 
     # convert rank to int value
     if rank in ROYALS:
@@ -34,7 +35,7 @@ def ok_to_remove(row, pos):
     gov_colour = []
     gov_rank = []
     for i, _ in enumerate(row):
-        if row[i][1] == colour:
+        if wor[i][1] == colour:
             gov_colour.append(row[i])
     if len(gov_colour) == 0:
         status_ok = 0
