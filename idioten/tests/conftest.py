@@ -31,9 +31,27 @@ def boards_fixture():
         "populated_single_NOK": [
             ['TH', '2C', '3S', 'KD']
         ],
-        "populated_double_OK": [
+        "populated_double_OK_pre": [
             ['5C', '4H', 'KC', 'QS'],
             ['TD', '2C', '3S', 'KD']
+        ],
+        "populated_double_OK_post": [
+            ['5C', '4H', 'KC', 'QS'],
+            ['- ', '2C', '3S', 'KD']
+        ],
+        "populated_double_NOK": [
+            ['5C', '4H', 'KC', 'QS'],
+            ['TH', '2C', '3S', 'KD']
+        ],
+        "populated_triple_OK_pre": [
+            ['5C', '4H', 'KC', 'QS'],
+            ['TD', '2C', '3S', 'KD'],
+            ['- ', '6C', '7D', 'QH']
+        ],
+        "populated_triple_OK_post": [
+            ['5C', '4H', 'KC', 'QS'],
+            ['- ', '2C', '3S', 'KD'],
+            ['- ', '6C', '7D', 'QH']
         ]
     }
     return boards

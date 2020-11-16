@@ -20,22 +20,20 @@ def test_empty_board_removal():
     """ Tests that no card is removed if board is empty. """
 
 
-@given("a board consisting of <a> <b> <c> <d>")
-def empty_board(a, b, c, d):
-    """ Create an empty board and verify it's empty. """
-    board = [a, b, c, d]
-    for n in range(len(board)):
-        board[n] = board[n] + ' '
-    assert type(board) == list
-    assert type(empty_ref_board) == list
-    assert board == empty_ref_board
+@given("a board consisting of <start_board>")
+def empty_board(boards_fixture, start_board):
+    """ Setup a board to test. """
+    boards_fixture["play"] = boards_fixture[start_board]
+    assert type(boards_fixture["play"]) == list
 
 
 @when("a card removal is attempted at <x> position")
-def card_removal_attempted(x):
-    pass
+def card_removal_attempted(boards_fixture, x):
+    """ Card is removed from board. """
+    boards_fixture["play"] = remove_card(boards_fixture["play"], x)
 
 
 @then("board is according to <end_board>")
-def board_after_removal(end_board):
-    pass
+def board_after_removal(boards_fixture, end_board):
+    """ Assert board is modified accordingly. """
+    assert boards_fixture["play"] == boards_fixture[end_board]
