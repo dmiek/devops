@@ -71,21 +71,3 @@ def remove_card(boards, k_b):
 
         print('card NOK to remove')
         return board
-
-#
-# boards = [
-#     ['TD', '2C', '3S', 'KD']
-# ]
-
-#boards = [
-# ['- ', '- ', '- ', '- ']
-# ]
-
-# boards = {"play": [
-#     ['TD', '2C', '3S', 'KD'],
-#     ['- ', '- ', '- ', '- ']
-# ]
-# }
-# r = 1
-# board2 = remove_card(boards, 1)
-# print(board2)
