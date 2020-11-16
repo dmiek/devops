@@ -176,11 +176,11 @@ def countCardsDealt():
 def finishGame():
     print("trying to evaluate victory")
 
-def endGameEvaluationboard(board):
-    x = 1
-    while len(deck) < 1:
-        board = playGame(board)
-    game_active = False
+# def endGameEvaluationboard(board):
+#     x = 1
+#     while len(deck) < 1:
+#         board = playGame(board)
+#     game_active = False
 
 
 # SETUP:
