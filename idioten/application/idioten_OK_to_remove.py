@@ -8,7 +8,7 @@ J = 11
 T = 10
 
 
-def OK_to_remove(row, pos):
+def ok_to_remove(row, pos):
     """ Method to evaluate if card is OK to remove or not. """
     # check if there is anything to remove
     # void:
@@ -80,6 +80,6 @@ def OK_to_remove(row, pos):
     status_ok = 0
     return status_ok
 
-rows = ['TS', '- ', '2H', 'KD']
-test = OK_to_remove(rows, 1)
-print(test)
+# rows = ['TS', '- ', '2H', 'KD']
+# test = ok_to_remove(rows, 1)
+# print(test)
