@@ -52,6 +52,11 @@ def boards_fixture():
             ['5C', '4H', 'KC', 'QS'],
             ['- ', '2C', '3S', 'KD'],
             ['- ', '6C', '7D', 'QH']
+        ],
+        "populated_triple_NOK": [
+            ['5C', '4H', 'KC', 'QS'],
+            ['TD', '2C', '3S', 'KD'],
+            ['- ', '6C', '7D', 'QH']
         ]
     }
     return boards

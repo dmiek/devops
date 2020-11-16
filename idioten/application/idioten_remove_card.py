@@ -41,46 +41,35 @@ def remove_card(boards, k_b):
             print(row)
             board[0] = row
             return board
-        else:
-            # do not remove card from position
-            print('card NOK to remove')
+        # do not remove card from position
+        print('card NOK to remove')
+        return board
+
+    # if board is 2 rows or larger, continue to last row of board
+    print('assessing if OK to remove')
+    row = board[last_row]  #
+    print(row)
+
+    # evaluate if position in last row is populated
+    # if row is empty, ascend one row until non-empty row is found
+    while row[pos] == '- ':
+        last_row = last_row - 1
+        row = board[last_row]
+        print('ascended one level')
+    # when row is no longer empty
+    print('row no longer empty')
+    if row[pos] != '- ':      # assert row no longer empty
+        print('assess if OK to remove')
+        wor = []
+        wor.extend(row)
+        remove_ok_status = ok_to_remove(wor, pos)
+        if remove_ok_status == 1:
+            row[pos] = '- '
+            board[last_row] = row
+            print('removed card in column')
             return board
 
-    # if board is larger than one row
-    else:
-        # if board is 2 rows or larger, continue to last row of board
-        print('assessing if OK to remove')
-        row = board[last_row]  #
-        print(row)
-
-        # evaluate if position in last row is populated
-        # if row is empty, ascend one row until non-empty row is found
-        while row[pos] == '- ':
-            last_row = last_row - 1
-            row = board[last_row]
-            print('ascended one level')
-
-        # when row is no longer empty
-        print('row no longer empty')
-        if row[pos] != '- ':      # assert row no longer empty
-            print('assess if OK to remove')
-            print(row)
-            wor = []
-            wor.extend(row)
-            remove_ok_status = ok_to_remove(wor, pos)
-            if remove_ok_status == 1:
-                row[pos] = '- '
-                board[last_row] = row
-                print('removed card in column')
-                print(*board)
-                return board
-            else:
-                print('card NOK to remove')
-                print(*board)
-                return board
-
-        # replace row in board with current row
-        board[last_row] = row
+        print('card NOK to remove')
         return board
 
 #

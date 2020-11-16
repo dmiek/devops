@@ -17,3 +17,4 @@ Feature: Input
     | populated_triple_OK_pre | 1 | populated_triple_OK_post  |
     | populated_single_NOK    | 1 | populated_single_NOK      |
     | populated_double_NOK    | 1 | populated_double_NOK      |
+    | populated_triple_NOK    | 3 | populated_triple_NOK      |
