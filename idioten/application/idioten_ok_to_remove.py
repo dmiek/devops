@@ -1,11 +1,7 @@
 """ Module to evaluate if card is OK to remove or not. """
 
 
-A = 14
-K = 13
-Q = 12
-J = 11
-T = 10
+ROYALS = {'A': 14, 'K': 13, 'Q': 12, 'J': 11, 'T': 10}
 
 
 def ok_to_remove(row, pos):
@@ -29,16 +25,8 @@ def ok_to_remove(row, pos):
     row.pop(pos)
 
     # convert rank to int value
-    if rank == 'A':
-        rank = A
-    elif rank == 'K':
-        rank = K
-    elif rank == 'Q':
-        rank = Q
-    elif rank == 'J':
-        rank = J
-    elif rank == 'T':
-        rank = T
+    if rank in ROYALS:
+        rank = ROYALS[rank]
     else:
         rank = int(rank)
 
@@ -56,22 +44,14 @@ def ok_to_remove(row, pos):
     for j, _ in enumerate(gov_colour):
         gov_rank.append(gov_colour[j][0])
     for k, _ in enumerate(gov_rank):
-        if gov_rank[k] == 'A':
-            gov_rank[k] = A
-        elif gov_rank[k] == 'K':
-            gov_rank[k] = K
-        elif gov_rank[k] == 'Q':
-            gov_rank[k] = Q
-        elif gov_rank[k] == 'J':
-            gov_rank[k] = J
-        elif gov_rank[k] == 'T':
-            gov_rank[k] = T
+        if gov_rank[k] in ROYALS:
+            gov_rank[k] = ROYALS[gov_rank[k]]
         else:
             gov_rank[k] = int(gov_rank[k])
 
     # check if any value of the other cards exceed
-    for c, _ in enumerate(gov_rank):
-        if gov_rank[c] > rank:
+    for ccc, _ in enumerate(gov_rank):
+        if gov_rank[ccc] > rank:
             print('card OK to remove')
             status_ok = 1
             return status_ok
