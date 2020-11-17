@@ -18,24 +18,20 @@ def ok_to_move(board, k_b_f, k_b_t):
         return board
 
     # assess if to-position is occupied
-    if row[t_o] != "- ":
+    if board[0][t_o] != "- ":
         print('position not empty, cannot perform move')
         return board
 
     # assess if the card to be moved exists
-    if row[f_r] == "- ":
+    if board[0][f_r] == "- ":
         print('cannot move a non-existing card')
         return board
 
     # assess size of board
     if len(board) == 1:
         print('board is 1 row')
-        print(row)
-        row[t_o] = row[f_r]
-        print(row)
-        row[f_r] = '- '
-        print(row)
-        board[0] = row
+        board[0][t_o] = board[0][f_r]
+        board[0][f_r] = '- '
         print(board)
         return board
 
@@ -44,11 +40,17 @@ def ok_to_move(board, k_b_f, k_b_t):
     row = board[last_row]
     print(row)
 
-    # evaluate if position in last row is populated
+    # determine from-position in board
     # if row is empty, ascend one row until non-empty row is found
-    while row[t_o] == '- ':
-        last_row = last_row - 1
-        row = board[last_row]
+    while row_fr[f_r] == '- ':
+        pos_fr = pos_fr - 1
+        row_fr = board[pos_fr]
         print('ascended one level')
     # when row is no longer empty
-    print('row no longer empty')
+    print('row from no longer empty')
+
+    # perform the move
+    board[row_to][t_o] = board[pos_fr][f_r]
+    board[pos_fr][f_r] = '- '
+    print(board)
+    return board
