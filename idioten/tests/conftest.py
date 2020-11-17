@@ -85,7 +85,42 @@ def boards_fixture():
         "move_single_pop_OK_post4": [
             ['KD', '2C', '3S', '- ']
         ],
-
+        "move_double_pop_OK_pre": [
+            ['5C', '4H', 'KC', '- '],
+            ['TH', '2C', '3S', '- ']
+        ],
+        "move_double_pop_OK_post1": [
+            ['5C', '4H', 'KC', 'TH'],
+            ['- ', '2C', '3S', '- ']
+        ],
+        "move_double_pop_OK_post2": [
+            ['5C', '4H', 'KC', '2C'],
+            ['TH', '- ', '3S', '- ']
+        ],
+        "move_double_pop_OK_post3": [
+            ['5C', '4H', 'KC', '3S'],
+            ['TH', '2C', '- ', '- ']
+        ],
+        "move_triple_pop_OK_pre": [
+            ['5C', '- ', 'KC', 'QS'],
+            ['TD', '- ', '3S', 'KD'],
+            ['2C', '- ', '7D', 'QH']
+        ],
+        "move_triple_pop_OK_post1": [
+            ['5C', '2C', 'KC', 'QS'],
+            ['TD', '- ', '3S', 'KD'],
+            ['- ', '- ', '7D', 'QH']
+        ],
+        "move_triple_pop_OK_post3": [
+            ['5C', '7D', 'KC', 'QS'],
+            ['TD', '- ', '3S', 'KD'],
+            ['2C', '- ', '- ', 'QH']
+        ],
+        "move_triple_pop_OK_post4": [
+            ['5C', 'QH', 'KC', 'QS'],
+            ['TD', '- ', '3S', 'KD'],
+            ['2C', '- ', '7D', '- ']
+        ],
     }
     return boards
 
