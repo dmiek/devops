@@ -25,4 +25,8 @@ Feature: Input
     | move_double_pop_OK_pre  |  1  | 4   |   move_double_pop_OK_post1  |
     | move_double_pop_OK_pre  |  2  | 4   |   move_double_pop_OK_post2  |
     | move_double_pop_OK_pre  |  3  | 4   |   move_double_pop_OK_post3  |
+    | move_double_pop_OK_pre  |  3  | 4   |   move_double_pop_OK_post3  |
+    | move_quad_asym_OK_pre   |  2  | 1   |   move_quad_asym_OK_post2   |
+    | move_quad_asym_OK_pre   |  3  | 1   |   move_quad_asym_OK_post3   |
+    | move_quad_asym_OK_pre   |  4  | 1   |   move_quad_asym_OK_post4   |
 

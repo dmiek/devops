@@ -38,16 +38,13 @@ def ok_to_move(board, k_b_f, k_b_t):
         board[0][f_r] = '- '
         return board
 
+    # determine from-position in board
     # if board is 2 rows or larger, continue to last row of board
     print('assessing if OK to remove')
-    row = board[last_row]
-    print(row)
 
-    # determine from-position in board
     # if row is empty, ascend one row until non-empty row is found
-    while row[f_r] == '- ':
+    while board[last_row][f_r] == '- ':
         last_row = last_row - 1
-        last_row = board[last_row]
         print('ascended one level')
     # when row is no longer empty
     print('row from no longer empty')
