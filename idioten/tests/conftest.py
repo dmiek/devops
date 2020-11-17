@@ -15,7 +15,7 @@ def boards_fixture():
         "empty_board_single": [
             empty_row()
         ],
-        "empty_row_double": [
+        "empty_board_double": [
             empty_row(),
             empty_row()
         ],
