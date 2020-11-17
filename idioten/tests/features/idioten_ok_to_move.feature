@@ -29,4 +29,11 @@ Feature: Input
     | move_quad_asym_OK_pre   |  2  | 1   |   move_quad_asym_OK_post2   |
     | move_quad_asym_OK_pre   |  3  | 1   |   move_quad_asym_OK_post3   |
     | move_quad_asym_OK_pre   |  4  | 1   |   move_quad_asym_OK_post4   |
-
+    | move_quad_asym_NOK1     |  1  | 2   |   move_quad_asym_NOK1       |
+    | move_quad_asym_NOK1     |  2  | 1   |   move_quad_asym_NOK1       |
+    | move_quad_asym_NOK1     |  1  | 2   |   move_quad_asym_NOK1       |
+    | move_quad_asym_NOK1     |  1  | 3   |   move_quad_asym_NOK1       |
+    | move_quad_asym_NOK1     |  1  | 4   |   move_quad_asym_NOK1       |
+    | move_quad_asym_NOK1     |  3  | 1   |   move_quad_asym_NOK1       |
+    | move_quad_asym_NOK1     |  4  | 1   |   move_quad_asym_NOK1       |
+    | move_quad_asym_NOK2     |  2  | 1   |   move_quad_asym_NOK2       |
