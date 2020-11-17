@@ -22,6 +22,9 @@ def boards_fixture():
         "void": [
 
         ],
+        "void2": [
+            []
+        ],
         "populated_single_OK_pre": [
             ['TD', '2C', '3S', 'KD']
         ],
@@ -61,12 +64,28 @@ def boards_fixture():
         "move_single_pop_NOK": [
             ['5C', '4H', 'KC', 'QS']
         ],
+        "move_double_pop_NOK": [
+            ['5C', '4H', 'KC', 'QS'],
+            ['TH', '2C', '3S', 'KD']
+        ],
+        "move_triple_pop_NOK": [
+            ['5C', '4H', 'KC', 'QS'],
+            ['TD', '2C', '3S', 'KD'],
+            ['- ', '6C', '7D', 'QH']
+        ],
         "move_single_pop_OK_pre": [
             ['- ', '2C', '3S', 'KD']
         ],
-        "move_single_pop_OK_post": [
+        "move_single_pop_OK_post2": [
             ['2C', '- ', '3S', 'KD']
-        ]
+        ],
+        "move_single_pop_OK_post3": [
+            ['3S', '2C', '- ', 'KD']
+        ],
+        "move_single_pop_OK_post4": [
+            ['KD', '2C', '3S', '- ']
+        ],
+
     }
     return boards
 

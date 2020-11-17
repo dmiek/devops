@@ -8,11 +8,16 @@ Feature: Input
     Then board is according to <end_board>
 
     Examples: Input values
-    | start_board             | fr  | to  |   end_board               |
-    | empty_board_single      |  1  | 1   |   empty_board_single      |
-    | empty_row_double        |  1  | 1   |   empty_row_double        |
-    | move_single_pop_OK_pre  |  1  | 1   |   move_single_pop_OK_pre  |
-    | empty_board_single      |  2  | 1   |   empty_board_single      |
-    | empty_row_double        |  2  | 1   |   empty_row_double        |
-    | move_single_pop_NOK     |  2  | 1   |   move_single_pop_NOK     |
-    | move_single_pop_OK_pre  |  2  | 1   |   move_single_pop_OK_post |
+    | start_board             | fr  | to  |   end_board                 |
+    | empty_board_single      |  1  | 1   |   empty_board_single        |
+    | empty_row_double        |  1  | 1   |   empty_row_double          |
+    | move_single_pop_OK_pre  |  1  | 1   |   move_single_pop_OK_pre    |
+    | empty_board_single      |  2  | 1   |   empty_board_single        |
+    | empty_row_double        |  2  | 1   |   empty_row_double          |
+    | move_single_pop_NOK     |  2  | 1   |   move_single_pop_NOK       |
+    | move_double_pop_NOK     |  4  | 1   |   move_double_pop_NOK       |
+    | move_triple_pop_NOK     |  4  | 1   |   move_triple_pop_NOK       |
+    | move_single_pop_OK_pre  |  2  | 1   |   move_single_pop_OK_post2  |
+    | move_single_pop_OK_pre  |  3  | 1   |   move_single_pop_OK_post3  |
+    | move_single_pop_OK_pre  |  4  | 1   |   move_single_pop_OK_post4  |
+
