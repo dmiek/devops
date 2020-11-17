@@ -156,7 +156,7 @@ def boards_fixture():
             ['- ', 'AD', '3S', 'KD'],
             ['- ', '- ', '7D', 'QH'],
             ['- ', '- ', '- ', '5C']
-        ],
+        ]
     }
     return boards
 
