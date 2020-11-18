@@ -1,14 +1,19 @@
+"""
+Module to create the playing deck for the game.
+"""
+
+
 import random
 
 
-def create_deck():
-
+def create_deck(board):
+    """ Method to generate playing deck. """
     cardfaces = []
     suits = ["C", "D", "H", "S"]
     royals = ["A", "T", "J", "Q", "K"]
     deck = []
 
-    for i in range(2,10):
+    for i in range(2, 10):
         cardfaces.append(str(i))
 
     for j in range(len(royals)):
@@ -19,9 +24,5 @@ def create_deck():
             card = (cardfaces[l] + suits[k])
             deck.append(card)
     random.shuffle(deck)
+    board["deck"] = deck
     return deck
-
-
-
-
-
