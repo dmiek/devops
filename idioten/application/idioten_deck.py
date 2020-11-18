@@ -16,12 +16,12 @@ def create_deck():
     for i in range(2, 10):
         cardfaces.append(str(i))
 
-    for j in range(len(royals)):
-        cardfaces.append(royals[j])
+    for i in range(len(royals)):
+        cardfaces.append(royals[i])
 
-    for k in range(len(suits)):
-        for l in range(len(cardfaces)):
-            card = (cardfaces[l] + suits[k])
+    for i in range(len(suits)):
+        for j in range(len(cardfaces)):
+            card = (cardfaces[j] + suits[i])
             deck.append(card)
     random.shuffle(deck)
     return deck
