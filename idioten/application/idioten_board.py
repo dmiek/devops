@@ -1,7 +1,8 @@
 import sys
-from application.idioten_deck import create_deck
+from idioten.idioten_deck import create_deck
 from application.idioten_input import kb_input
-from application.idioten_empty_row import empty_row
+from idioten.idioten_empty_row import empty_row
+from idioten.application.idioten_new_cards import new_cards
 
 
 # FUNCTIONS:
@@ -19,7 +20,7 @@ def dealCards(board, deck):
         print("deck empty; try to finish game")
         return board
     print("still cards left in deck")
-    rond = addCards(deck)
+    rond = new_cards(deck)
     print("cards to be added this round", *rond)
     lastRow = board[-1]
     check = []
