@@ -161,6 +161,33 @@ def boards_fixture():
             ['- ', 'AD', '3S', 'KD'],
             ['- ', '- ', '7D', 'QH'],
             ['- ', '- ', '- ', '5C']
+        ],
+        "clean_double_OK_pre": [
+            ['- ', '- ', '7D', 'QH'],
+            ['- ', '- ', '- ', '- ']
+        ],
+        "clean_double_OK_post": [
+            ['- ', '- ', '7D', 'QH']
+        ],
+        "clean_triple_OK_pre": [
+            ['- ', '2C', '3S', 'KD'],
+            ['- ', '- ', '7D', 'QH'],
+            ['- ', '- ', '- ', '- ']
+        ],
+        "clean_triple_OK_post": [
+            ['- ', '2C', '3S', 'KD'],
+            ['- ', '- ', '7D', 'QH']
+        ],
+        "clean_quad_OK_pre": [
+            ['5C', 'TD', 'KC', 'QS'],
+            ['- ', '2C', '3S', 'KD'],
+            ['- ', '- ', '7D', 'QH'],
+            ['- ', '- ', '- ', '- ']
+        ],
+        "clean_quad_OK_post": [
+            ['5C', 'TD', 'KC', 'QS'],
+            ['- ', '2C', '3S', 'KD'],
+            ['- ', '- ', '7D', 'QH']
         ]
     }
     return boards

@@ -61,7 +61,6 @@ def dealCards(board, deck):
     return board
 
 
-
 def helpMenu(board):
     print("*** HELP MENU ***")
     print("d = deal cards")
@@ -112,23 +111,6 @@ def displayBoard(board):
     print("displaying current board")
     for i in range(len(board)):
         print(*board[i])
-
-
-def cleanUpBoard(board):
-    lastRow = board[-1]                     # Copy last row of board.
-    check = []                              # Create check list.
-    if len(board) > 1:                      # Given board is larger than 1 row.
-        for i in range(len(lastRow)):       # When the last row consist of empty elements only.
-            if lastRow[i] == "- ":          # Check if element in last row is empty.
-                check.append("x")           # If true, add counter to check list.
-        if len(check) == 4:                 # Then the last row is removed.
-            del board[-1]                   # Delete last row of board.
-            return board
-        else:
-            return board
-    else:
-        print("board only one row")
-        return board
 
 
 def countCardsDealt():
