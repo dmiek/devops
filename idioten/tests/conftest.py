@@ -12,6 +12,11 @@ from idioten.application.idioten_empty_row import empty_row
 def boards_fixture():
     """ Dict holding all boards. """
     boards = {
+        "deck": ['9C', '4D', 'AH', '8D', 'JS', '3D', 'JC', '8S', 'KC', '2D', '2C', '2S', '5H',
+                 '3H', 'TC', '6H', 'QC', '6C', '6D', '5S', 'QD', 'JH', '7D', '8C', '3C', 'TS',
+                 'QS', '4C', '9H', '4H', 'KS', 'TD', 'QH', 'KH', '9D', '5C', '5D', 'AS', '7H',
+                 'AC', '7S', '3S', 'KD', '7C', 'AD', '4S', '8H', 'TH', 'JD', '2H', '9S', '6S'],
+
         "empty_board_single": [
             empty_row()
         ],

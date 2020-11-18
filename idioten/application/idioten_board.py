@@ -13,24 +13,6 @@ def new_game():
     board = dealCards(board, deck)
 
 
-    # TEST
-    if len(board) != 1:
-        print("new board not of correct size")
-        sys.exit("exiting")
-    print("*** NEW GAME INITIATED ***")
-    return board
-
-
-def addCards(deck):
-    print("adding cards from deck to new round")
-    rond = []
-    for i in range(4):
-        rond.append(deck[0])
-        deck.pop(0)
-    print("cards added to round")
-    return rond
-
-
 def dealCards(board, deck):
     print("attempting to deal cards to board")
     if len(deck) < 1:
@@ -131,35 +113,14 @@ def displayBoard(board):
         print(*board[i])
 
 
-# def move_card(board):
-#     print("attempting to move card to empty spot")
-    # # Args: board, m = which card to move (1-4), r = to which position (1-4).
-    # m = (int(input("select a card to move: ")) - 1)
-    # r = (int(input("select a position to move to: ")) - 1)
-    # if ok_to_move(board, m, r) == False:     # Verify position of first row empty.
-    #     print("not ok to move")
-    #     return board
-    # p = -1                              # Look at last row of board
-    # row = board[p]
-    # while row[m] == "- ":               # While element empty,
-    #     p = p - 1                       # look in the previous row.
-    #     row = board[p]
-    # element = row[m]                    # When element not emtpy, copy
-    # row[m] = "- "                       # and replace with empty element.
-    # board[p] = row                      # Replace row in board with emptied row.
-    # row = board[0]                      # Copy first row of board,
-    # row[r] = element                    # and replace empty position with element.
-    # return board
-
-
 def cleanUpBoard(board):
     lastRow = board[-1]                     # Copy last row of board.
     check = []                              # Create check list.
-    if len(board) > 1:                  # Given board is larger than 1 row.
-        for i in range(len(lastRow)):   # When the last row consist of empty elements only.
+    if len(board) > 1:                      # Given board is larger than 1 row.
+        for i in range(len(lastRow)):       # When the last row consist of empty elements only.
             if lastRow[i] == "- ":          # Check if element in last row is empty.
                 check.append("x")           # If true, add counter to check list.
-        if len(check) == 4:             # Then the last row is removed.
+        if len(check) == 4:                 # Then the last row is removed.
             del board[-1]                   # Delete last row of board.
             return board
         else:
