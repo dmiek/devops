@@ -17,7 +17,7 @@ def test_moving_card():
 def start_board(boards_fixture, start_board):
     """ Setup a board to test. """
     boards_fixture["play"] = boards_fixture[start_board]
-    assert type(boards_fixture["play"]) == list
+    assert isinstance(boards_fixture["play"], list)
 
 
 @when("moving a card is attempted from <fr> position to <to> position")
