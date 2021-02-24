@@ -1,4 +1,6 @@
 Feature: Deal cards
+  Module for generating card decks. The deck consists of 52 cards and is using French suits.
+  https://en.wikipedia.org/wiki/Standard_52-card_deck
 
   Scenario: Cards drawn from the deck no longer exists in the deck
     Given an existing deck
