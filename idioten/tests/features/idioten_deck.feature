@@ -1,5 +1,6 @@
 Feature: Deck
-    The deck is the foundation of the game. The deck contains 52 cards, consisting of hearts, clubs, spades and diamonds, and is shuffled every round.
+    The deck is the foundation of the game. The deck consists of 52 cards and is using the French suits, consisting of hearts, clubs, spades and diamonds. The deck is shuffled before every game.
+    https://en.wikipedia.org/wiki/Standard_52-card_deck
 
     Scenario: Deck is of the correct type
         Given an existing deck
