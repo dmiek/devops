@@ -4,7 +4,7 @@ Feature: Deck
     Scenario: Deck is of the correct type
         Given an existing deck
         When deck is shuffled
-        Then deck is of correct type
+        Then deck components are of correct type (list)
 
     Scenario: Deck only contains allowed colours
         Given an existing deck

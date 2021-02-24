@@ -52,7 +52,7 @@ def build_deck(decks_fixture):
     assert isinstance(decks_fixture["new"], list)
 
 
-@then('deck is of correct type')
+@then('deck components are of correct type (list)')
 def deck_type(decks_fixture):
     """ Testing deck is of correct type. """
     assert isinstance(decks_fixture["new"], list)
