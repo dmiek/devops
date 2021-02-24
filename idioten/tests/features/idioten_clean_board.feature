@@ -1,4 +1,5 @@
-Feature: Clean the board if empty lines present.
+Feature: Board clean-up
+    Cleans the board if empty lines are present.
 
   Scenario Outline: Remove empty lines from board
     Given an <existing> board

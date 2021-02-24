@@ -1,6 +1,6 @@
-Feature: Input
-  The player input to the game. Module for testing Idioten input functionality.
-  The input module takes input of length "1" only.
+Feature: Player input
+  Module is realising player input for the game.
+  The input module accepts pre-defined input only.
 
 
   Scenario Outline: Tests different input and asserts corresponding assessment returned

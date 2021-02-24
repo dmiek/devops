@@ -1,4 +1,5 @@
-Feature: Function returning empty rows.
+Feature: Empty row
+  Function returning a single empty row when needed.
 
   Scenario: Empty void board
     Given board is completely empty

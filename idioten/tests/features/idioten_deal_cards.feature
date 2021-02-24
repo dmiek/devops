@@ -1,4 +1,4 @@
-Feature: New cards
+Feature: Deal cards
 
   Scenario: Cards drawn from the deck no longer exists in the deck
     Given an existing deck
