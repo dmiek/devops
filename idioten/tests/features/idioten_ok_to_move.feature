@@ -1,6 +1,6 @@
-Feature: Input
-  The player input to the game. Module for testing Idioten input functionality.
-  The input module takes input of length "1" only.
+Feature: OK to move card
+  The module "ok_to_move" tests if a move-request is allowed or not.
+  Cards are only allowed to be moved to empty slots.
 
   Scenario Outline: Cards can only be moved to an empty location
     Given a board consisting of <start_board>

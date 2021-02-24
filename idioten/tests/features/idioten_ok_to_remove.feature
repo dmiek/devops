@@ -1,4 +1,5 @@
-Feature: Feature keeping track of valid removal of cards.
+Feature: OK to remove
+  Module is testing if remove-requests are allowed or not.
 
   Scenario Outline: Test if card is OK to remove or not
     Given a <start_row> of cards
