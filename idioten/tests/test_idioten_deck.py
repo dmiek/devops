@@ -92,4 +92,4 @@ def unique_card(decks_fixture):
 @then('new deck is different from previous deck')
 def new_deck_previous_deck(decks_fixture):
     """ Testing deck shuffling. """
-    assert decks_fixture["new"] != decks_fixture["current"]
+    assert decks_fixture["new"] !=decks_fixture["current"]
