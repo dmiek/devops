@@ -8,7 +8,7 @@ print(*rond)
 #print(*deck)
 
 
-def removeCard(g, board):
+def remove_card(g, board):
 
     row = board[-1]
     print(*row)
