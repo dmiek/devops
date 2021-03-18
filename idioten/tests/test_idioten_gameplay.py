@@ -6,9 +6,9 @@ from pytest_bdd import scenario, given, when, then
 
 @scenario(
     "features/idioten_gameplay.feature",
-    "Initiate game"
+    "Initiate gameplay"
 )
-def test_initiate_game():
+def test_initiate_gameplay():
     """
     Tests the initiating of a new game.
     """
