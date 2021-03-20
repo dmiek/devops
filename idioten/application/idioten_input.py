@@ -16,7 +16,7 @@ def kb_input():
         INPUTS["status"] = 'OK'
     else:
         INPUTS["status"] = 'NOK'
-    print(INPUTS)
+    #print(INPUTS)
     return INPUTS
 
 
