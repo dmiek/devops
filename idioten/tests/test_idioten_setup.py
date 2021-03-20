@@ -35,16 +35,6 @@ def decks_not_set_up(decks_fixture, game_fixture, start_deck):
 def board_populated(boards_fixture, board_start, game_fixture):
     """ Populating with different boards """
     game_fixture["board"] = boards_fixture[board_start]
-    assert game_fixture["board"] != boards_fixture["empty_board_single"]
-
-
-@given('board already empty')
-def board_already_empty(boards_fixture, game_fixture):
-    """
-    Tests that an already empty board does not cause any issues when setting up game.
-    """
-    game_fixture["board"] = boards_fixture["empty_board_single"]
-    assert game_fixture["board"] == boards_fixture["empty_board_single"]
 
 
 @when('game is set up')

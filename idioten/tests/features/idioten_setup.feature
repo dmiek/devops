@@ -25,6 +25,7 @@ Feature: Set up idioten
 
     Examples:
     | board_start             | board_end           |
+    | empty_board_single      | empty_board_single  |
     | empty_board_double      | empty_board_single  |
     | void                    | empty_board_single  |
     | populated_single_OK_pre | empty_board_single  |
