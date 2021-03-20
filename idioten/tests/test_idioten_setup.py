@@ -16,13 +16,6 @@ def test_different_start_decks():
     """ Tests that different types of decks can be restored and shuffled. """
 
 
-@scenario('features/idioten_setup.feature', 'Verify board set up and empty when setup')
-def test_board_setup():
-    """
-    Scenario for testing that board is empty after setup.
-    """
-
-
 @scenario(
     "features/idioten_setup.feature",
     "Game setup clears boards",
@@ -36,13 +29,6 @@ def test_board_clearing():
 def decks_not_set_up(decks_fixture, game_fixture, start_deck):
     """ Tests that previous and partial decks can be restored and shuffled. """
     game_fixture["deck"] = decks_fixture[start_deck]
-
-
-@given('board not set up')
-def board_not_setup(boards_fixture, game_fixture):
-    """ Tests that a void board can be set up. """
-    game_fixture["board"] = boards_fixture["void"]
-    assert game_fixture["board"] != boards_fixture["empty_board_single"]
 
 
 @given("<board_start>")
@@ -71,12 +57,6 @@ def setup_board(game_fixture):
 def deck_sizes_ok(decks_fixture, game_fixture, end_deck):
     """ Asserts that deck is of correct size. """
     assert len(game_fixture["deck"]) == len(decks_fixture[end_deck])
-
-
-@then('board is empty')
-def board_is_set_up(boards_fixture, game_fixture):
-    """ Asserts that board is set up. """
-    assert game_fixture["board"] == boards_fixture["empty_board_single"]
 
 
 @then('<board_end>')

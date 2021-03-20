@@ -18,12 +18,6 @@ Feature: Set up idioten
     | full_deck   | full_deck |
 
 
-  Scenario: Verify board set up and empty when setup
-    Given board not set up
-    When game is set up
-    Then board is empty
-
-
   Scenario Outline: Game setup clears boards
     Given <board_start>
     When game is set up
