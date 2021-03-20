@@ -9,7 +9,7 @@ INPUTS = {"keyboard": '', "status": 'unknown'}
 def kb_input():
     """
     Method for handling game input through keyboard.
-    Will only accept values defined in VALID_INPUT.
+    Determines if input is vald, where "valid" input is stated in VALID_INPUT.
     """
     INPUTS["keyboard"] = input('Waiting for input\n')
     if INPUTS["keyboard"] in VALID_INPUT:
