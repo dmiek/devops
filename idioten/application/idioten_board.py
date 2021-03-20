@@ -61,16 +61,7 @@ def dealCards(board, deck):
     return board
 
 
-def helpMenu(board):
-    print("*** HELP MENU ***")
-    print("d = deal cards")
-    print("e = end game")
-    print("m = move card to empty spot")
-    print("n = new game")
-    print("t = test mode")
-    print("1-4 = remove card in column")
-    print("*** END HELP MENU ***")
-    return board
+
 
 
 # def playGame(board):
