@@ -9,6 +9,15 @@ from idioten.application.idioten_empty_row import empty_row
 
 
 @pytest.fixture
+def game_fixture():
+    components = {
+        "deck": [],
+        "board": []
+    }
+    return components
+
+
+@pytest.fixture
 def boards_fixture():
     """ Dict holding all boards. """
     boards = {

@@ -1,5 +1,5 @@
-Feature: Set up idioten board
-  Set up the initial board of idioten.
+Feature: Set up idioten
+  Sets up the initial board and deck of idioten.
 
   Scenario: Verify board set up and empty when setup
     Given board not set up

@@ -23,41 +23,41 @@ def test_board_clearing():
 
 
 @given('board not set up')
-def board_not_setup(boards_fixture):
+def board_not_setup(boards_fixture, game_fixture):
     """ Tests that a void board can be set up. """
-    boards_fixture["current"] = boards_fixture["void"]
-    assert boards_fixture["current"] != boards_fixture["empty_board_single"]
+    game_fixture["board"] = boards_fixture["void"]
+    assert game_fixture["board"] != boards_fixture["empty_board_single"]
 
 
 @given("<board_start>")
-def board_populated(boards_fixture, board_start):
+def board_populated(boards_fixture, board_start, game_fixture):
     """ Populating with different boards """
-    boards_fixture["current"] = boards_fixture[board_start]
-    assert boards_fixture["current"] != boards_fixture["empty_board_single"]
+    game_fixture["board"] = boards_fixture[board_start]
+    assert game_fixture["board"] != boards_fixture["empty_board_single"]
 
 
 @given('board already empty')
-def board_already_empty(boards_fixture):
+def board_already_empty(boards_fixture, game_fixture):
     """
     Tests that an already empty board does not cause any issues when setting up game.
     """
-    boards_fixture["current"] = boards_fixture["empty_board_single"]
-    assert boards_fixture["current"] == boards_fixture["empty_board_single"]
+    game_fixture["board"] = boards_fixture["empty_board_single"]
+    assert game_fixture["board"] == boards_fixture["empty_board_single"]
 
 
 @when('game is set up')
-def setup_board(boards_fixture):
+def setup_board(game_fixture):
     """ Module sets up game. """
-    boards_fixture["current"] = game_setup()
+    game_setup(game_fixture)
 
 
 @then('board is empty')
-def board_is_set_up(boards_fixture):
+def board_is_set_up(boards_fixture, game_fixture):
     """ Asserts that board is set up. """
-    assert boards_fixture["current"] == boards_fixture["empty_board_single"]
+    assert game_fixture["board"] == boards_fixture["empty_board_single"]
 
 
 @then('<board_end>')
-def board_is_empty(boards_fixture, board_end):
+def board_is_empty(boards_fixture, board_end, game_fixture):
     """ Asserts that board is set up. """
-    assert boards_fixture["current"] == boards_fixture[board_end]
+    assert game_fixture["board"] == boards_fixture[board_end]
