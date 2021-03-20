@@ -7,7 +7,6 @@ from idioten.application.idioten_deck import create_deck
 
 def game_setup(game_components):
     """ Setting up new game from scratch. """
-    print("***")
     print("*** SETTING UP GAME ***")
     game_components["board"] = [empty_row()]
     print("board cleared")
