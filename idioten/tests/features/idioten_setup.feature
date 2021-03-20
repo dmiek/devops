@@ -23,6 +23,7 @@ Feature: Set up idioten
     When game is set up
     Then board is empty
 
+
   Scenario Outline: Game setup clears boards
     Given <board_start>
     When game is set up
