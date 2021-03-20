@@ -1,6 +1,23 @@
 Feature: Set up idioten
   Sets up the initial board and deck of idioten.
 
+
+  Scenario Outline: Verify deck is set up regardless of state
+    Given different types of <start_deck>
+    When game is set up
+    Then <end_deck> contains 52 cards
+
+    Examples:
+    | start_deck  | end_deck  |
+    | deck_empty  | full_deck |
+    | 1_card      | full_deck |
+    | 2_cards     | full_deck |
+    | 3_cards     | full_deck |
+    | 4_cards     | full_deck |
+    | 5_cards     | full_deck |
+    | full_deck   | full_deck |
+
+
   Scenario: Verify board set up and empty when setup
     Given board not set up
     When game is set up

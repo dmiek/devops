@@ -10,6 +10,7 @@ from idioten.application.idioten_empty_row import empty_row
 
 @pytest.fixture
 def game_fixture():
+    """ Fixture for holding game components. """
     components = {
         "deck": [],
         "board": []
@@ -231,9 +232,17 @@ def rows_fixture():
 @pytest.fixture
 def decks_fixture():
     """ Fixture for card deck. """
-    cards = {"current": create_deck()}
-    assert len(cards["current"]) == 52
-    assert isinstance(cards["current"], list)
+    cards = {
+        "current":      create_deck(),
+        "full_deck":    create_deck(),
+        "deck_empty":   [],
+        "1_card":       ['2D'],
+        "2_cards":      ['2D', '3H'],
+        "3_cards":      ['2D', '3H', 'AC'],
+        "4_cards":      ['2D', '3H', 'AC', 'KS'],
+        "5_cards":      ['2D', '3H', 'AC', 'KS', '5D']
+    }
+
     return cards
 
 
