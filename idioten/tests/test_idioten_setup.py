@@ -22,8 +22,9 @@ def test_board_clearing():
     """ Tests that all kinds of boards are cleared. """
 
 
-@given('board not setup')
+@given('board not set up')
 def board_not_setup(boards_fixture):
+    """ Tests that a void board can be set up. """
     boards_fixture["current"] = boards_fixture["void"]
     assert boards_fixture["current"] != boards_fixture["empty_board_single"]
 
@@ -35,16 +36,28 @@ def board_populated(boards_fixture, board_start):
     assert boards_fixture["current"] != boards_fixture["empty_board_single"]
 
 
+@given('board already empty')
+def board_already_empty(boards_fixture):
+    """
+    Tests that an already empty board does not cause any issues when setting up game.
+    """
+    boards_fixture["current"] = boards_fixture["empty_board_single"]
+    assert boards_fixture["current"] == boards_fixture["empty_board_single"]
+
+
 @when('game is set up')
 def setup_board(boards_fixture):
+    """ Module sets up game. """
     boards_fixture["current"] = game_setup()
 
 
 @then('board is empty')
 def board_is_set_up(boards_fixture):
+    """ Asserts that board is set up. """
     assert boards_fixture["current"] == boards_fixture["empty_board_single"]
 
 
 @then('<board_end>')
 def board_is_empty(boards_fixture, board_end):
+    """ Asserts that board is set up. """
     assert boards_fixture["current"] == boards_fixture[board_end]

@@ -188,7 +188,17 @@ def boards_fixture():
             ['5C', 'TD', 'KC', 'QS'],
             ['- ', '2C', '3S', 'KD'],
             ['- ', '- ', '7D', 'QH']
-        ]
+        ],
+        "scramble_1": 'dwadwadwadwadwa',
+        "scramble_2": 32131231.2321312,
+        "scramble_3": 32132132321312,
+        "scramble_4": True,
+        "scramble_5": False,
+        "scramble_6": 0x10,
+        "scramble_7": 321321312 + 1,
+        "scramble_8": 4.2e-4,
+        "scramble_9": 1.79e308,
+        "scramble_10": '2'
     }
     return boards
 
