@@ -2,7 +2,7 @@
 Module for handling game input.
 """
 
-VALID_INPUT = ('d', '1', '2', '3', '4', 'n', 'e', 'hello')
+VALID_INPUT = ('d', '1', '2', '3', '4', 'n', 'e', 'hello', 'help')
 INPUTS = {"keyboard": '', "status": 'unknown'}
 
 
