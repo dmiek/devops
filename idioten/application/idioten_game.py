@@ -2,25 +2,37 @@
 Idioten card game.
 """
 
+import sys
 
 from idioten_setup import game_setup
-from idioten_input import kb_input
+from idioten_input import get_input
 
 game_components = {}
-
-print('*** GAME STARTED ***')
-print('*** What do you want to do? ***')
-print('*** Press "N" to start a new game. ***')
-print('*** Type "help" to display HELP menu. ***')
-game_input = kb_input()
-print(game_input)
+game_running = 0
 
 
+def game_just_started():
+    valid_input = ['e', 'n']
+    print(
+        '*** GAME STARTED ***\n'
+        '*** What do you want to do? ***\n'
+        '*** Press "N" to start a new game. ***\n'
+        '*** Press "E" to exit. ***\n'
+        '*** Type "help" to display HELP menu. ***'
+    )
+    player_input = get_input(valid_input)
 
 
 
-def determine_input(game_input):
+def determine_input(g_input):
     """ Module for determining what actions is requested. """
+    if g_input == 'e':
+        sys.exit('*** Exiting game, thanks for playing! ***')
+    elif g_input == 'help':
+        help_menu()
+        return
+    else:
+        print('*** Do not know what to do. ***')
 
 
 def start_new_game(game_components):
@@ -29,12 +41,20 @@ def start_new_game(game_components):
     return game_components
 
 
-def helpMenu():
-    print("*** HELP MENU ***")
-    print("d = deal cards")
-    print("e = end game")
-    print("m = move card to empty spot")
-    print("n = new game")
-    print("t = test mode")
-    print("1-4 = remove card in column")
-    print("*** END HELP MENU ***")
+def help_menu():
+    print(
+        "*** HELP MENU ***\n",
+        "d = deal cards\n",
+        "e = end game\n",
+        "m = move card to empty spot\n",
+        "n = new game\n",
+        "t = test mode\n",
+        "1-4 = remove card in column\n",
+        "*** END HELP MENU ***"
+    )
+    return
+
+
+game_just_started()
+game_input = valid_input()
+determine_input(game_input)
