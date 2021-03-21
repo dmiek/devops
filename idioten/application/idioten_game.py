@@ -7,6 +7,7 @@ import sys
 from idioten_setup import game_setup
 from idioten_input import get_input
 from idioten_new_cards import deal_cards
+from idioten_clean_board import clean_board
 
 
 GAME_COMPS = {"game_running": 0}
@@ -52,7 +53,8 @@ def new_game(game_comps):
     while game_comps["game_running"] == 1:
         display_board(game_comps)
         determine_action(game_comps)
-
+        clean_board(game_comps
+                    )
 
 def help_menu():
     """ Provides guidance to the player. """
