@@ -22,3 +22,4 @@ Feature: Board clean-up
     | clean_double_OK_pre     | clean_double_OK_post    |
     | clean_triple_OK_pre     | clean_triple_OK_post    |
     | clean_quad_OK_pre       | clean_quad_OK_pre       |
+#    | clean_superdirty_OK_pre | clean_quad_OK_pre       |
