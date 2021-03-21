@@ -21,9 +21,7 @@ def existing_board(boards_fixture, existing):
 @when("empty rows are cleaned from existing board larger than 1 row")
 def remove_empty_rows(boards_fixture):
     """ When board is cleaned. """
-    boards_fixture = clean_board(boards_fixture)
-    return boards_fixture
-
+    clean_board(boards_fixture)
 
 
 @then("board is according to <end> board")

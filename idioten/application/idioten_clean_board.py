@@ -14,8 +14,8 @@ def clean_board(game_comps):
     while board_cleaned is not True:
         for i in range(len(game_comps["board"][last_row])):
             if game_comps["board"][last_row][i] != '- ':
-                print('row not empty, cannot remove')
                 return game_comps
         del game_comps["board"][last_row]
         if len(game_comps["board"]) <= 1:
+            print("board only 1 row")
             return game_comps
