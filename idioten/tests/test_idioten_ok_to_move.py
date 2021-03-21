@@ -16,7 +16,7 @@ def test_moving_card():
 @given("a board consisting of <start_board>")
 def start_board(boards_fixture, start_board):
     """ Setup a board to test. """
-    boards_fixture["play"] = boards_fixture[start_board]
+    boards_fixture["play"] = boards_fixture[start_board].copy()
     assert isinstance(boards_fixture["play"], list)
 
 

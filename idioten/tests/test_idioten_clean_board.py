@@ -14,7 +14,7 @@ def test_clean_board():
 @given("an <existing> board")
 def existing_board(boards_fixture, existing):
     """ Given an existing board of different appearances. """
-    boards_fixture["board"] = boards_fixture[existing]
+    boards_fixture["board"] = boards_fixture[existing].copy()
     assert isinstance(boards_fixture["board"], list) is True
 
 

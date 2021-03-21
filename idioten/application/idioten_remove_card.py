@@ -6,6 +6,7 @@ Function controlling how cards are removed from the board.
 from idioten.application.idioten_ok_to_remove import ok_to_remove
 from idioten.application.idioten_input_modifier import input_modifier
 
+# TODO: Refactor to use game_comps dict ("board" and "player_input").
 
 def remove_card(boards, k_b):
     """ Logic to remove cards from board. """

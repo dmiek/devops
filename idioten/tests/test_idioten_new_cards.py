@@ -54,7 +54,6 @@ def given_start_board(boards_fixture, start_board):
     """ Provides different boards for dealing cards to. """
     print(boards_fixture[start_board])
     boards_fixture["board"] = boards_fixture[start_board].copy()
-    boards_fixture["verif"] = boards_fixture[start_board].copy()
 
 
 @when("cards are drawn from the deck")
@@ -103,4 +102,4 @@ def board_is_according_to(boards_fixture, end_board, start_board):
     """ Verify cards are dealt to the correct row in each column. """
     assert boards_fixture["board"] == boards_fixture[end_board]
 
-# TODO: Add mirror TCs to verify test cases, to avoid assigning errors.
+# TODO: Add more test cases.

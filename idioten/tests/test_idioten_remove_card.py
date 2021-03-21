@@ -23,7 +23,7 @@ def test_empty_board_removal():
 @given("a board consisting of <start_board>")
 def empty_board(boards_fixture, start_board):
     """ Setup a board to test. """
-    boards_fixture["play"] = boards_fixture[start_board]
+    boards_fixture["play"] = boards_fixture[start_board].copy()
     assert type(boards_fixture["play"]) == list
 
 
@@ -37,3 +37,7 @@ def card_removal_attempted(boards_fixture, x):
 def board_after_removal(boards_fixture, end_board):
     """ Assert board is modified accordingly. """
     assert boards_fixture["play"] == boards_fixture[end_board]
+    print(boards_fixture["play"], boards_fixture[end_board])
+
+
+# TODO: Test test cases. Might not be working.
