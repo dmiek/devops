@@ -21,3 +21,4 @@ def deal_cards(game_comps):
             game_comps["new_round"][i] = '- '
     game_comps["board"].append(game_comps["new_round"])
     game_comps["new_round"] = []
+    return game_comps
