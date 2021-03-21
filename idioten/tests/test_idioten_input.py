@@ -2,7 +2,7 @@
 Module for testing Idioten input functionality.
 The input module takes input of length "1" only.
 """
-
+# TODO: Re-implement tests for input module.
 
 # from io import StringIO
 # from pytest_bdd import scenario, given, when, then

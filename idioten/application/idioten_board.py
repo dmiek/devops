@@ -98,10 +98,7 @@ def dealCards(board, deck):
 #         return board
 
 
-def displayBoard(board):
-    print("displaying current board")
-    for i in range(len(board)):
-        print(*board[i])
+
 
 
 def countCardsDealt():

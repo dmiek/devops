@@ -3,30 +3,26 @@ Module for handling game input.
 """
 
 
-INPUTS = {"keyboard": '', "status": 'unknown'}
-
-
-def kb_input(valid_input):
+def kb_input(game_comps):
     """
     Method for handling game input through keyboard.
     Determines if input is vald, where "valid" input is stated in VALID_INPUT.
     """
-    INPUTS["keyboard"] = input('Waiting for input\n')
-    if INPUTS["keyboard"] in valid_input:
-        INPUTS["status"] = 'OK'
+    game_comps["player_input"] = input('Waiting for input\n')
+    if game_comps["player_input"] in game_comps["valid_input"]:
+        game_comps["input_status"] = 'OK'
     else:
-        INPUTS["status"] = 'NOK'
-    #print(INPUTS)
-    return INPUTS
+        game_comps["input_status"] = 'NOK'
+    return game_comps
 
 
-def get_input(valid_input):
+def get_input(game_comps):
     """ Returns only valid input. """
-    ok_input = {}
-    ok_input["status"] = 'NOK'
-    while ok_input["status"] == 'NOK':
-        ok_input = kb_input(valid_input)
-        if ok_input["status"] == 'NOK':
+    game_comps["player_input"] = ''
+    game_comps["input_status"] = 'NOK'
+    while game_comps["input_status"] == 'NOK':
+        game_comps = kb_input(game_comps)
+        if game_comps["input_status"] == 'NOK':
             print('Input a valid value.')
         else:
-            return ok_input["keyboard"]
+            return game_comps

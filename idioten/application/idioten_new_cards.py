@@ -1,13 +1,19 @@
 """
-Module to control how cards are drawn from the deck.
+Module to control how cards are drawn from the deck and dealt to the board.
 """
 
 
-def new_cards(board):
+def new_cards(game_comps):
     """ Method to control how cards are drawn from the deck. """
     print("adding cards from deck to new round")
-    board["new_round"] = []
+    game_comps["new_round"] = []
     for _ in range(4):
-        board["new_round"].append(board["deck"][0])
-        board["deck"].pop(0)
-    return board
+        game_comps["new_round"].append(game_comps["deck"][0])
+        game_comps["deck"].pop(0)
+    return game_comps
+
+def deal_cards(game_comps):
+    """ Deal cards to the board from the deck. """
+    game_comps = new_cards(game_comps)
+    game_comps["board"].append(game_comps["new_round"])
+    game_comps["new_round"] = []
