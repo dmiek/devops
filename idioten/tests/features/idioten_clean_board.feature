@@ -3,7 +3,7 @@ Feature: Board clean-up
 
   Scenario Outline: Remove empty lines from board
     Given an <existing> board
-    When empty rows are cleaned from <existing> board larger than 1 row
+    When empty rows are cleaned from existing board larger than 1 row
     Then board is according to <end> board
 
     Examples:

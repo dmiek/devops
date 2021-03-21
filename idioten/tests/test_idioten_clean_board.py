@@ -14,18 +14,19 @@ def test_clean_board():
 @given("an <existing> board")
 def existing_board(boards_fixture, existing):
     """ Given an existing board of different appearances. """
-    assert isinstance(boards_fixture[existing], list) is True
+    boards_fixture["board"] = boards_fixture[existing]
+    assert isinstance(boards_fixture["board"], list) is True
 
 
-@when("empty rows are cleaned from <existing> board larger than 1 row")
-def remove_empty_rows(boards_fixture, existing):
+@when("empty rows are cleaned from existing board larger than 1 row")
+def remove_empty_rows(boards_fixture):
     """ When board is cleaned. """
-    cleaned = clean_board(boards_fixture, existing)
-    boards_fixture["cleaned"] = cleaned[existing]
+    boards_fixture = clean_board(boards_fixture)
     return boards_fixture
+
 
 
 @then("board is according to <end> board")
 def verify_board(boards_fixture, end):
     """ Verify board is according to end board. """
-    assert boards_fixture["cleaned"] == boards_fixture[end]
+    assert boards_fixture["board"] == boards_fixture[end]
