@@ -20,3 +20,15 @@ Feature: Deal cards
     Given an existing deck
     When cards are drawn from the deck
     Then the first four cards in the deck are drawn
+
+
+  Scenario Outline: Cards are dealt to the correct row, even if columns are uneven
+    Given a <start_board>
+    When cards are dealt to the board
+    Then board looks like <end_board>
+
+    Examples:
+    | start_board           | end_board             |
+    | single_even_pre       | single_even_post      |
+    | single_uneven_1_pre   | single_uneven_1_post  |
+    | single_uneven_2_pre   | single_uneven_2_post  |

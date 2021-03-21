@@ -27,6 +27,27 @@ def boards_fixture():
                  'QS', '4C', '9H', '4H', 'KS', 'TD', 'QH', 'KH', '9D', '5C', '5D', 'AS', '7H',
                  'AC', '7S', '3S', 'KD', '7C', 'AD', '4S', '8H', 'TH', 'JD', '2H', '9S', '6S'],
 
+        "single_even_pre": [
+            ['5C', 'TD', 'KC', 'QS'],
+        ],
+        "single_even_post": [
+            ['5C', 'TD', 'KC', 'QS'],
+            ['9C', '4D', 'AH', '8D']
+        ],
+        "single_uneven_1_pre":  [
+            ['- ', 'TD', 'KC', '- ']
+        ],
+        "single_uneven_1_post": [
+            ['9C', 'TD', 'KC', '8D'],
+            ['- ', '4D', 'AH', '- ']
+        ],
+        "single_uneven_2_pre": [
+            ['5C', '- ', '- ', 'QS']
+        ],
+        "single_uneven_2_post": [
+            ['5C', '4D', 'AH', 'QS'],
+            ['9C', '- ', '- ', '8D']
+        ],
         "empty_board_single": [
             empty_row()
         ],

@@ -3,7 +3,7 @@ Module testing the drawing of cards from the deck.
 """
 
 from pytest_bdd import scenario, given, when, then
-from idioten.application.idioten_new_cards import new_cards
+from idioten.application.idioten_new_cards import new_cards, deal_cards
 
 
 @scenario(
@@ -29,6 +29,15 @@ def test_drawn_order():
     """ Tests that cards from the deck is drawn in the correct order. """
 
 
+@scenario(
+    'features/idioten_new_cards.feature',
+    'Cards are dealt to the correct row, even if columns are uneven',
+    example_converters=dict(board_start=str, board_end=str)
+)
+def test_dealing_row():
+    """ Testing that cards are dealt to the correct row in each column. """
+
+
 @given("an existing deck")
 def given_deck(boards_fixture):
     """ Deck for testing present, and in specific order. """
@@ -40,11 +49,24 @@ def given_deck(boards_fixture):
     assert boards_fixture["deck"][4] == 'JS'
 
 
+@given('a <start_board>')
+def given_start_board(boards_fixture, start_board):
+    """ Provides different boards for dealing cards to. """
+    print(boards_fixture[start_board])
+    boards_fixture["board"] = boards_fixture[start_board].copy()
+    boards_fixture["verif"] = boards_fixture[start_board].copy()
+
+
 @when("cards are drawn from the deck")
 def draw_cards(boards_fixture):
     """ Drawing cards from the deck. """
-    boards_fixture = new_cards(boards_fixture)
-    return boards_fixture
+    new_cards(boards_fixture)
+
+
+@when('cards are dealt to the board')
+def deal_cards_to_board(boards_fixture):
+    """ Deal cards to boards. """
+    deal_cards(boards_fixture)
 
 
 @then("cards can no longer be found in the deck")
@@ -74,3 +96,11 @@ def draw_order(boards_fixture):
     assert boards_fixture["new_round"][2] == 'AH'
     assert boards_fixture["new_round"][3] == '8D'
     assert boards_fixture["deck"][0] == 'JS'
+
+
+@then('board looks like <end_board>')
+def board_is_according_to(boards_fixture, end_board, start_board):
+    """ Verify cards are dealt to the correct row in each column. """
+    assert boards_fixture["board"] == boards_fixture[end_board]
+
+# TODO: Add mirror TCs to verify test cases, to avoid assigning errors.
