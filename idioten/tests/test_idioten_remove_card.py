@@ -5,10 +5,6 @@ Tests the "remove card"-functionality.
 
 from pytest_bdd import given, when, then, scenario
 from idioten.application.idioten_remove_card import remove_card
-from idioten.application.idioten_empty_row import empty_row
-
-
-empty_ref_board = empty_row()
 
 
 @scenario(
@@ -23,21 +19,17 @@ def test_empty_board_removal():
 @given("a board consisting of <start_board>")
 def empty_board(boards_fixture, start_board):
     """ Setup a board to test. """
-    boards_fixture["play"] = boards_fixture[start_board].copy()
-    assert type(boards_fixture["play"]) == list
+    boards_fixture["board"] = boards_fixture[start_board].copy()
 
 
-@when("a card removal is attempted at <x> position")
-def card_removal_attempted(boards_fixture, x):
+@when("a card removal is attempted at <player_input> position")
+def card_removal_attempted(boards_fixture, player_input):
     """ Card is removed from board. """
-    boards_fixture["play"] = remove_card(boards_fixture["play"], x)
+    boards_fixture["player_input"] = player_input
+    remove_card(boards_fixture)
 
 
 @then("board is according to <end_board>")
 def board_after_removal(boards_fixture, end_board):
     """ Assert board is modified accordingly. """
-    assert boards_fixture["play"] == boards_fixture[end_board]
-    print(boards_fixture["play"], boards_fixture[end_board])
-
-
-# TODO: Test test cases. Might not be working.
+    assert boards_fixture["board"] == boards_fixture[end_board]

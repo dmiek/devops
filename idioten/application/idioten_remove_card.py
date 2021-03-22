@@ -6,28 +6,25 @@ Function controlling how cards are removed from the board.
 from idioten.application.idioten_ok_to_remove import ok_to_remove
 from idioten.application.idioten_input_modifier import input_modifier
 
-# TODO: Refactor to use game_comps dict ("board" and "player_input").
 
-def remove_card(boards, k_b):
+def remove_card(game_comps):
     """ Logic to remove cards from board. """
-
-    board = boards                      # extract playing board
-    print(board)
-    pos = input_modifier(k_b)           # modify input to coding logic
-    last_row = -1                       # used to ascend one level in board
+    print(game_comps["board"])
+    pos = input_modifier(game_comps["player_input"])            # modify input to coding logic
+    last_row = -1                                               # used to ascend one level in board
     print('attempting to remove card')
-    if len(board) < 1:
+    if len(game_comps["board"]) < 1:
         print('game not setup')
-        return board
+        return game_comps
 
     # check if column is already empty
-    row = board[0]  # check first row
+    row = game_comps["board"][0].copy()                                # check first row of board
     if row[pos] == '- ':
         print('column empty, cannot remove card')
-        return board
+        return game_comps
 
     # check length of board
-    if len(board) == 1:
+    if len(game_comps["board"]) == 1:
         # If column not empty, check if OK to remove
         print('assessing if OK to remove')
         print(row)
@@ -40,22 +37,22 @@ def remove_card(boards, k_b):
             print('removing card from position' + str(pos))
             row[pos] = '- '
             print(row)
-            board[0] = row
-            return board
+            game_comps["board"][0] = row
+            return game_comps
         # do not remove card from position
         print('card NOK to remove')
-        return board
+        return game_comps
 
     # if board is 2 rows or larger, continue to last row of board
     print('assessing if OK to remove')
-    row = board[last_row]  #
+    row = game_comps["board"][last_row].copy()
     print(row)
 
     # evaluate if position in last row is populated
     # if row is empty, ascend one row until non-empty row is found
     while row[pos] == '- ':
         last_row = last_row - 1
-        row = board[last_row]
+        row = game_comps["board"][last_row].copy()
         print('ascended one level')
     # when row is no longer empty
     print('row no longer empty')
@@ -66,9 +63,9 @@ def remove_card(boards, k_b):
         remove_ok_status = ok_to_remove(wor, pos)
         if remove_ok_status == 1:
             row[pos] = '- '
-            board[last_row] = row
+            game_comps["board"][last_row] = row
             print('removed card in column')
-            return board
+            return game_comps
 
         print('card NOK to remove')
-        return board
+        return game_comps
