@@ -29,8 +29,9 @@ def menu_called(menu_fixture):
     help_menu(menu_fixture)
 
 
-@then('<menu_content> is shown')
-def menu_content_shown(menu_fixture, menu_content):
+@then('<menu_content> is shown and <not_in_menu> not shown')
+def menu_content_shown(menu_fixture, menu_content, not_in_menu):
     """ Verify correct menu contents. """
-    print(menu_fixture[menu_content])
-    assert menu_fixture[menu_content][0] in menu_fixture["menu_output"][0]
+    for i in range(len(menu_fixture[menu_content])):
+        assert menu_fixture[menu_content][i] in menu_fixture["menu_output"].lower()
+    assert menu_fixture[not_in_menu][0] not in menu_fixture["menu_output"].lower()

@@ -298,11 +298,21 @@ def empty_row_fixture():
 def menu_fixture():
     """ Fixture for providing test data for menu module. """
     menu = {
-        "new_game_in":  ["new game"],
-        "end_game_in":  ["end game"],
+        "deal_cards":   ["deal cards"],
+        "end_game":     ["end game", "help menu", "end help menu"],
+        "move_card":    ["move card to"],
+        "new_game":     ["new game", "help menu", "end help menu"],
+        "end_new":      ["end game", "new game", "help menu", "end help menu"],
+        "deal_end_new": ["deal cards", "end game", "new game"],
+        "x":            ["x"],
+        "positions":    ["remove card in column"],
 
-        "n":            ['n'],
-        "e":            ['e'],
-        "ne":           ['n', 'e']
+        "d":    ['d'],
+        "e":    ['e'],
+        "m":    ['m'],
+        "n":    ['n'],
+        "en":   ['e', 'n'],
+        "den":  ['d', 'e', 'n'],
+        "1":    ['1']
     }
     return menu
