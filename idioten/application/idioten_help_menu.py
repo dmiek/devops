@@ -1,5 +1,5 @@
 """
-Module provides guidance to the player.
+Module provides guidance to the player depending on the current state of the game.
 """
 
 
