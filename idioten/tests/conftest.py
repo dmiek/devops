@@ -292,3 +292,17 @@ def empty_row_fixture():
     """ Empty row. """
     bench_board = ['- ', '- ', '- ', '- ']
     return bench_board
+
+
+@pytest.fixture()
+def menu_fixture():
+    """ Fixture for providing test data for menu module. """
+    menu = {
+        "new_game_in":  ["new game"],
+        "end_game_in":  ["end game"],
+
+        "n":            ['n'],
+        "e":            ['e'],
+        "ne":           ['n', 'e']
+    }
+    return menu

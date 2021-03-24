@@ -41,6 +41,7 @@ def determine_action(game_comps):
         return
     elif game_comps["player_input"] == 'n':
         new_game(game_comps)
+    # TODO: Add functionality for "removing card".
     else:
         print('*** Do not know what to do. ***')
 
@@ -53,23 +54,7 @@ def new_game(game_comps):
     while game_comps["game_running"] == 1:
         display_board(game_comps)
         determine_action(game_comps)
-        clean_board(game_comps
-                    )
-
-def help_menu():
-    """ Provides guidance to the player. """
-    # TODO Make menu dynamic depending on "valid input".
-    print(
-        "*** HELP MENU ***\n",
-        "d = deal cards\n",
-        "e = end game\n",
-        "m = move card to empty spot\n",
-        "n = new game\n",
-        "t = test mode\n",
-        "1-4 = remove card in column\n",
-        "*** END HELP MENU ***\n"
-    )
-    return
+        clean_board(game_comps)
 
 
 def display_board(game_comps):
