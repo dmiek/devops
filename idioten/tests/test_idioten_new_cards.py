@@ -79,6 +79,7 @@ def cards_not_in_deck(boards_fixture):
 def deck_size_reduced(boards_fixture):
     """ Testing that correct number of cards are drawn from the deck. """
     assert len(boards_fixture["deck"]) == 48
+    # TODO: Modify to take relative number instead of absolute.
 
 
 @then("cards to be dealt are four")
@@ -98,7 +99,7 @@ def draw_order(boards_fixture):
 
 
 @then('board looks like <end_board>')
-def board_is_according_to(boards_fixture, end_board, start_board):
+def board_is_according_to(boards_fixture, end_board):
     """ Verify cards are dealt to the correct row in each column. """
     assert boards_fixture["board"] == boards_fixture[end_board]
 
