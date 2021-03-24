@@ -15,8 +15,8 @@ def help_menu(game_comps):
     }
     for i in game_comps["valid_input"]:
         if i in game_comps["valid_input"]:
-            menu_output = menu_output + possible_input[i] + '\n'
+            menu_output += possible_input[i] + '\n'
 
-    menu_output = menu_output + '*** END HELP MENU ***\n'
+    menu_output += '*** END HELP MENU ***\n'
     game_comps["menu_output"] = menu_output
     return game_comps
