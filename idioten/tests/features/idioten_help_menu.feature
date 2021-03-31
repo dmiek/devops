@@ -15,8 +15,8 @@ Feature: Help menu
     | n           | new_game      | deal_cards  |
     | en          | end_new       | deal_cards  |
     | den         | deal_end_new  | x           |
-    | 1           | positions     | x           |
-    | 2           | positions     | x           |
-    | 3           | positions     | x           |
-    | 4           | positions     | x           |
-
+    | 1           | position      | x           |
+    | 2           | position      | x           |
+    | 3           | position      | x           |
+    | 4           | position      | x           |
+    | 1234        | position      | x           |

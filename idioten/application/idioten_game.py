@@ -17,15 +17,8 @@ GAME_COMPS = {"game_running": 0}
 def start_game(game_comps):
     """ First layer of gameplay. """
     game_comps["valid_input"] = ['e', 'n', 'help']
+    help_menu(game_comps)
     while game_comps["game_running"] == 0:
-        print(game_comps)
-        print(
-            '*** GAME STARTED ***\n'
-            '*** What do you want to do? ***\n'
-            '*** Press "N" to start a new game. ***\n'
-            '*** Press "E" to exit. ***\n'
-            '*** Type "help" to display HELP menu. ***\n'
-        )
         determine_action(game_comps)
 
 
@@ -51,7 +44,7 @@ def new_game(game_comps):
     """ Sets up a new game. """
     game_setup(game_comps)
     game_comps["game_running"] = 1
-    game_comps["valid_input"] = ['1', '2', '3', '4', 'd', 'e', 'help', 'm', 'n']
+    game_comps["valid_input"] = ['d', 'e', 'm', 'n', '1', '2', '3', '4','help']
     while game_comps["game_running"] == 1:
         display_board(game_comps)
         determine_action(game_comps)

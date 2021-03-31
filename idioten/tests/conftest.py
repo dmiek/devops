@@ -305,7 +305,7 @@ def menu_fixture():
         "end_new":      ["end game", "new game", "help menu", "end help menu"],
         "deal_end_new": ["deal cards", "end game", "new game"],
         "x":            ["x"],
-        "positions":    ["remove card in column"],
+        "position":     ["remove card in"],
 
         "d":    ['d'],
         "e":    ['e'],
@@ -317,6 +317,6 @@ def menu_fixture():
         "2":    ['2'],
         "3":    ['3'],
         "4":    ['4'],
-        "5":    ['5']
+        "1234": ['1', '2', '3', '4']
     }
     return menu
