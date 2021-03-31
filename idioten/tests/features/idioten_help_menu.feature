@@ -16,3 +16,7 @@ Feature: Help menu
     | en          | end_new       | deal_cards  |
     | den         | deal_end_new  | x           |
     | 1           | positions     | x           |
+    | 2           | positions     | x           |
+    | 3           | positions     | x           |
+    | 4           | positions     | x           |
+
