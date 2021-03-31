@@ -8,6 +8,7 @@ from idioten_setup import game_setup
 from idioten_input import get_input
 from idioten_new_cards import deal_cards
 from idioten_clean_board import clean_board
+from idioten_help_menu import help_menu
 
 
 GAME_COMPS = {"game_running": 0}
@@ -37,7 +38,7 @@ def determine_action(game_comps):
     elif game_comps["player_input"] == 'e':
         sys.exit('*** Exiting game, thanks for playing! ***')
     elif game_comps["player_input"] == 'help':
-        help_menu()
+        help_menu(game_comps)
         return
     elif game_comps["player_input"] == 'n':
         new_game(game_comps)

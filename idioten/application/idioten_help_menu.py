@@ -9,9 +9,13 @@ def help_menu(game_comps):
     possible_input = {
         'd':    'd = deal cards',
         'e':    'e = end game',
+        'help': 'help = show help menu',
         'm':    'm = move card to empty spot',
         'n':    'n = new game',
         '1':    '1-4 = remove card in column\n',
+        '2': '1-4 = remove card in column\n',
+        '3': '1-4 = remove card in column\n',
+        '4': '1-4 = remove card in column\n',
     }
     for i in game_comps["valid_input"]:
         if i in game_comps["valid_input"]:
