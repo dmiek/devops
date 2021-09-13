@@ -13,6 +13,7 @@ def create_deck():
     royals = ["A", "T", "J", "Q", "K"]
     deck = []
 
+
     for i in range(2, 10):
         cardfaces.append(str(i))
 
