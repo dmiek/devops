@@ -24,7 +24,7 @@ def test_allowed_ranks():
 
 @scenario("features/idioten_deck.feature", "Deck contains correct number of cards")
 def test_correct_number_of_cards():
-    """ Scenario for testing card deck size. """
+    """ Scenario for testing card dek size. """
 
 
 @scenario("features/idioten_deck.feature", "Deck is different from previous deck")
