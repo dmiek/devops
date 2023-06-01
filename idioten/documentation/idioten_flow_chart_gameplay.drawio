@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-01T11:08:27.687Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="DT1T0HIhiMjLs-_Grs6M" version="21.3.6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-01T11:11:28.747Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="VwKgQk8AJfyir6EWff_X" version="21.3.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1185" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -99,8 +99,26 @@
         <mxCell id="HrtiVOy2MkkOKKqFZ5dQ-29" value="Shuffle deck" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="160" y="280" width="80" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="HrtiVOy2MkkOKKqFZ5dQ-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="HrtiVOy2MkkOKKqFZ5dQ-31" target="HrtiVOy2MkkOKKqFZ5dQ-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HrtiVOy2MkkOKKqFZ5dQ-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="HrtiVOy2MkkOKKqFZ5dQ-31" target="HrtiVOy2MkkOKKqFZ5dQ-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HrtiVOy2MkkOKKqFZ5dQ-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="HrtiVOy2MkkOKKqFZ5dQ-31" target="HrtiVOy2MkkOKKqFZ5dQ-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="HrtiVOy2MkkOKKqFZ5dQ-31" value="Show&lt;br&gt;menu" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="160" y="440" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HrtiVOy2MkkOKKqFZ5dQ-37" value="Deal&lt;br&gt;cards" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="120" y="520" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HrtiVOy2MkkOKKqFZ5dQ-40" value="Remove&lt;br&gt;card" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="175" y="520" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HrtiVOy2MkkOKKqFZ5dQ-46" value="Move&lt;br&gt;card" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="240" y="520" width="40" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
