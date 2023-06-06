@@ -9,19 +9,25 @@ pipeline {
         }
         stage('Checkout from GitHub') {
             steps {
-
-                // Clean the workspace priod to checkout
+                
+                // Clean the workspace prior to checkout
                 echo 'Cleaning workspace'
                 cleanWs()
                 echo 'Workspace cleaned'
-
+                
                 // Checkout  code from GitHub repository
                 echo 'Checking out code from Github'
-                git 'https://github.com/dmiek/devops.git'
+                git 'https://github.com/dmiek/devops.git'  
                 echo 'Files checked out'
             }
         }
-        stage('Running Tests with PyTest-BDD') {
+        stage('Running Tests with PyTest and PyTest-BDD') {
+            steps {
+                echo 'Running PyTest'
+                sh 'pytest -rA'
+            }
+        }
+        stage('Creating Test Coverage with Coverage') {
             steps {
                 echo 'Erasing previous coverage report'
                 sh 'coverage erase'
@@ -34,7 +40,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 // Performing SonarQube analysis
-                sh '/var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/SonarQube_Scanner/bin/sonar-scanner -X -Dsonar.host.url=http://testaerfest.ddns.net:9000 -Dsonar.projectName=testaerfestsonar -Dsonar.projectVersion=1.0 -Dsonar.projectKey=sonartestaerfest -Dsonar.sources=. -Dsonar.projectBaseDir=/var/lib/jenkins/workspace/PipelineTest -Dsonar.python.coverage.reportPaths=/var/lib/jenkins/workspace/PipelineTest/coverage.xml'
+                sh '/var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/SonarQube_Scanner/bin/sonar-scanner -X -Dsonar.host.url=http://testaerfest.ddns.net:9000 -Dsonar.projectName=testaerfestsonar -Dsonar.projectVersion=1.0 -Dsonar.projectKey=sonartestaerfest -Dsonar.sources=. -Dsonar.projectBaseDir=/var/lib/jenkins/workspace/TotalTest -Dsonar.python.coverage.reportPaths=/var/lib/jenkins/workspace/TotalTest/coverage.xml -Dsonar.exclusions=*coverage*'
             }
         }
     }
