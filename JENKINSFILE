@@ -37,6 +37,34 @@ pipeline {
                 sh 'coverage xml -i'
             }
         }
+        stage('Stop current webpage container') {
+            steps {
+                script {
+                    try {
+                        sh 'docker stop $(docker ps -q --filter ancestor=taf-website-container )'
+                    } catch (Exception e) {
+                        echo 'Exception occurred'
+                    }
+                }
+              
+            }
+        }
+        stage('Build docker image') {
+            steps {
+                sh 'ls'
+                sh 'docker build -t taf-website-container .'
+            }
+        }
+        stage('Run website container') {
+            steps {
+                sh 'docker run -it -d -p 80:80 taf-website-container'
+            }
+        }
+        stage('Remove dangling images') {
+            steps {
+                sh 'docker rmi -f $(docker images -f "dangling=true" -q)'
+            }
+        }
         stage('SonarQube Analysis') {
             steps {
                 // Performing SonarQube analysis
