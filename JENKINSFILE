@@ -52,7 +52,7 @@ pipeline {
         stage('Build docker image') {
             steps {
                 sh 'ls'
-                sh 'docker build -t taf-website-container . idioten/website/Dockerfile'
+                sh 'docker build -t taf-website-container . -f idioten/website/Dockerfile'
             }
         }
         stage('Run website container') {
